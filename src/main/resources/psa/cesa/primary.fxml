@@ -1,16 +1,326 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
+<!--<?import heliostat.control.Heliostat?>-->
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="psa.cesa.PrimaryController">
-   <children>
-      <Label text="Primary View" />
-      <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary"/>
-   </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
+<VBox fx:id="root_vbox" alignment="CENTER" stylesheets="@CSS.css" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="psa.cesa.PrimaryController">
+    <children>
+        <MenuBar nodeOrientation="LEFT_TO_RIGHT" VBox.vgrow="ALWAYS">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About"/>
+                    </items>
+                </Menu>
+            </menus>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+        </MenuBar>
+        <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS">
+            <content>
+                <VBox fx:id="rows_vbox" alignment="CENTER" spacing="30.0">
+                    <children>
+                        <HBox alignment="CENTER" spacing="30.0">
+                            <children>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="16" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Button fx:id="button" onAction="#openValues" styleClass="button1" stylesheets="@CSS.css"/>
+                                <Label text="16" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Region HBox.hgrow="ALWAYS"/>
+                            </children>
+                            <padding>
+                                <Insets top="20.0"/>
+                            </padding>
+                        </HBox>
+                        <HBox spacing="30.0">
+                            <children>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="15" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label text="15" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Region HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+                        <HBox spacing="30.0">
+                            <children>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="14" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label text="14" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Region HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+                        <HBox spacing="30.0">
+                            <children>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="13" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label text="13" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Region HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+                        <HBox spacing="30.0">
+                            <children>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="12" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label text="12" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Region HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+                        <HBox spacing="30.0">
+                            <children>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="11" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label text="11" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Region HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+                        <HBox spacing="18.0">
+                            <children>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="10" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label text="10" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Region HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+                        <HBox spacing="18.0">
+                            <children>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="09" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label text="09" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Region HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+                        <HBox spacing="20.0">
+                            <children>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="08" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label text="08" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Region HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+                        <HBox spacing="25.0">
+                            <children>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="07" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label text="07" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Region HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+                        <HBox spacing="30.0">
+                            <children>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="06" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label text="06" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Region HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+                        <HBox spacing="30.0">
+                            <children>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="05" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label text="05" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Region HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+                        <HBox spacing="30.0">
+                            <children>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="04" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label text="04" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Region HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+                        <HBox spacing="30.0">
+                            <children>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="03" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label text="03" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Region HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+                        <HBox spacing="30.0">
+                            <children>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="02" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label text="02" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Region HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+                        <HBox spacing="30.0">
+                            <children>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label text="01" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Label text="01" textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0"/>
+                                    </font>
+                                </Label>
+                                <Region HBox.hgrow="ALWAYS"/>
+                            </children>
+                            <padding>
+                                <Insets bottom="20.0"/>
+                            </padding>
+                        </HBox>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+        <HBox prefHeight="0.0" prefWidth="1252.0" style="-fx-background-color: #C0C0C0;">
+            <children>
+                <Button mnemonicParsing="false" text="Grupo" />
+                <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS"/>
+                <Button mnemonicParsing="false" onAction="#zoomOut" text="-"/>
+                <Slider fx:id="zoom_slider" blockIncrement="1.0" max="19.0" min="1.0" snapToTicks="true" value="10.0"/>
+                <Button mnemonicParsing="false" onAction="#zoomIn" text="+"/>
+            </children>
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+        </HBox>
+    </children>
 </VBox>
