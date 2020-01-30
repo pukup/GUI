@@ -8,12 +8,13 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class HeliostatDAO {
+
     /**
      * @param rowId
      * @param heliostatAddress
      * @return
      */
-    public Heliostat poll(int rowId, int heliostatAddress) {
+    public static Heliostat poll(int rowId, int heliostatAddress) {
         StringBuilder stringBuilder = new StringBuilder();
         try {
             URLConnection urlConnection = new URL("http://localhost:8080/poll/" + rowId + "/" + heliostatAddress).openConnection();

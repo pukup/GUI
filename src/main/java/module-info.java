@@ -3,6 +3,6 @@ module psa.cesa {
     requires javafx.fxml;
     requires gson;
 
-    opens psa.cesa to javafx.fxml;
+    opens psa.cesa.view to javafx.fxml;
     exports psa.cesa;
 }
