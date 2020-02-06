@@ -5,13 +5,13 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="673.0" stylesheets="@CSS.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="psa.cesa.view.SecondaryController">
-   <Separator opacity="0.25" orientation="VERTICAL">
-      <HBox.margin>
-         <Insets bottom="13.0" left="3.0" top="14.0" />
-      </HBox.margin>
-   </Separator>
-    <VBox alignment="CENTER" stylesheets="@CSS.css" HBox.hgrow="ALWAYS">
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="673.0" stylesheets="@CSSPrimary.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="psa.cesa.view.ValuesController">
+    <Separator opacity="0.25" orientation="VERTICAL">
+        <HBox.margin>
+            <Insets bottom="13.0" left="3.0" top="14.0" />
+        </HBox.margin>
+    </Separator>
+    <VBox alignment="CENTER" stylesheets="@CSSPrimary.css" HBox.hgrow="ALWAYS">
         <children>
             <Separator opacity="0.25" prefWidth="200.0">
                 <VBox.margin>
@@ -30,7 +30,7 @@
                                     <Insets />
                                 </VBox.margin>
                             </ImageView>
-                            <Label style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 12;" stylesheets="@CSS.css" text="CESAOpera">
+                            <Label style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 12;" stylesheets="@CSSPrimary.css" text="CESAOpera">
                                 <VBox.margin>
                                     <Insets top="10.0" />
                                 </VBox.margin>
@@ -43,14 +43,14 @@
                     <Separator opacity="0.25" orientation="VERTICAL" prefHeight="200.0" />
                     <VBox HBox.hgrow="ALWAYS">
                         <children>
-                            <Label stylesheets="@CSS.css" text="Direccion">
+                            <Label stylesheets="@CSSPrimary.css" text="Dirección">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
                             </Label>
                             <TextField fx:id="tfAddress" alignment="TOP_RIGHT" editable="false" prefHeight="0.0" prefWidth="93.0">
                             </TextField>
-                            <Label stylesheets="@CSS.css" text="Estado">
+                            <Label stylesheets="@CSSPrimary.css" text="Estado">
                                 <VBox.margin>
                                     <Insets top="10.0" />
                                 </VBox.margin>
@@ -64,14 +64,14 @@
                     </VBox>
                     <VBox HBox.hgrow="ALWAYS">
                         <children>
-                            <Label stylesheets="@CSS.css" text="Evento">
+                            <Label stylesheets="@CSSPrimary.css" text="Evento">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
                             </Label>
                             <TextField fx:id="tfEvent" alignment="TOP_RIGHT" editable="false" prefHeight="0.0" prefWidth="93.0">
                             </TextField>
-                            <Label stylesheets="@CSS.css" text="Error">
+                            <Label stylesheets="@CSSPrimary.css" text="Error">
                                 <VBox.margin>
                                     <Insets top="10.0" />
                                 </VBox.margin>
@@ -85,14 +85,14 @@
                     </VBox>
                     <VBox HBox.hgrow="ALWAYS">
                         <children>
-                            <Label stylesheets="@CSS.css" text="Operacion">
+                            <Label stylesheets="@CSSPrimary.css" text="Operación">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
                             </Label>
                             <TextField fx:id="tfOperation" alignment="TOP_RIGHT" editable="false" prefHeight="0.0" prefWidth="93.0">
                             </TextField>
-                            <Label stylesheets="@CSS.css" text="Seguridad">
+                            <Label stylesheets="@CSSPrimary.css" text="Seguridad">
                                 <VBox.margin>
                                     <Insets top="10.0" />
                                 </VBox.margin>
@@ -106,14 +106,14 @@
                     </VBox>
                     <VBox HBox.hgrow="ALWAYS">
                         <children>
-                            <Label stylesheets="@CSS.css" text="Comunicaciones">
+                            <Label stylesheets="@CSSPrimary.css" text="Comunicaciones">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
                             </Label>
                             <TextField fx:id="tfCom" alignment="TOP_RIGHT" editable="false" prefHeight="0.0" prefWidth="93.0">
                             </TextField>
-                            <Label stylesheets="@CSS.css" text="Reloj">
+                            <Label stylesheets="@CSSPrimary.css" text="Reloj">
                                 <VBox.margin>
                                     <Insets top="10.0" />
                                 </VBox.margin>
@@ -136,14 +136,14 @@
                 <children>
                     <VBox prefHeight="39.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                         <children>
-                            <Label stylesheets="@CSS.css" text="Azimut">
+                            <Label stylesheets="@CSSPrimary.css" text="Azimut">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
                             </Label>
                             <TextField fx:id="tfAz" alignment="TOP_RIGHT" editable="false" prefWidth="93.0">
                             </TextField>
-                            <Label stylesheets="@CSS.css" text="Elevacion">
+                            <Label stylesheets="@CSSPrimary.css" text="Elevación">
                                 <VBox.margin>
                                     <Insets top="10.0" />
                                 </VBox.margin>
@@ -157,14 +157,14 @@
                     </VBox>
                     <VBox prefHeight="39.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                         <children>
-                            <Label stylesheets="@CSS.css" text="Movimiento az">
+                            <Label stylesheets="@CSSPrimary.css" text="Movimiento AZ">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
                             </Label>
                             <TextField fx:id="tfMotAz" alignment="TOP_RIGHT" editable="false" prefWidth="93.0">
                             </TextField>
-                            <Label stylesheets="@CSS.css" text="Movimiento el">
+                            <Label stylesheets="@CSSPrimary.css" text="Movimiento EL">
                                 <VBox.margin>
                                     <Insets top="10.0" />
                                 </VBox.margin>
@@ -178,14 +178,14 @@
                     </VBox>
                     <VBox prefHeight="39.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                         <children>
-                            <Label stylesheets="@CSS.css" text="Alcanzado az">
+                            <Label stylesheets="@CSSPrimary.css" text="Alcanzado AZ">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
                             </Label>
                             <TextField fx:id="tfStatusReachedAz" alignment="TOP_RIGHT" editable="false" prefWidth="93.0">
                             </TextField>
-                            <Label stylesheets="@CSS.css" text="Alcanzado el">
+                            <Label stylesheets="@CSSPrimary.css" text="Alcanzado EL">
                                 <VBox.margin>
                                     <Insets top="10.0" />
                                 </VBox.margin>
@@ -199,14 +199,14 @@
                     </VBox>
                     <VBox prefHeight="39.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                         <children>
-                            <Label stylesheets="@CSS.css" text="Balanceo az">
+                            <Label stylesheets="@CSSPrimary.css" text="Balanceo AZ">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
                             </Label>
                             <TextField fx:id="tfSwingAz" alignment="TOP_RIGHT" editable="false" prefWidth="93.0">
                             </TextField>
-                            <Label stylesheets="@CSS.css" text="Balanceo el">
+                            <Label stylesheets="@CSSPrimary.css" text="Balanceo EL">
                                 <VBox.margin>
                                     <Insets top="10.0" />
                                 </VBox.margin>
@@ -220,14 +220,14 @@
                     </VBox>
                     <VBox prefHeight="39.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                         <children>
-                            <Label stylesheets="@CSS.css" text="Notificacion az">
+                            <Label stylesheets="@CSSPrimary.css" text="Notificación AZ">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
                             </Label>
                             <TextField fx:id="tfNotAz" alignment="TOP_RIGHT" editable="false" prefWidth="93.0">
                             </TextField>
-                            <Label stylesheets="@CSS.css" text="Notificacion el">
+                            <Label stylesheets="@CSSPrimary.css" text="Notificación EL">
                                 <VBox.margin>
                                     <Insets top="10.0" />
                                 </VBox.margin>
@@ -246,7 +246,7 @@
                     <Insets />
                 </VBox.margin>
             </Separator>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                 <children>
                     <AnchorPane prefHeight="172.0" prefWidth="658.0" HBox.hgrow="ALWAYS">
                         <HBox.margin>
@@ -266,30 +266,59 @@
                         <children>
                             <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="200.0">
                                 <children>
-                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="147.0" text="Abatir">
+                                    <Button mnemonicParsing="false" styleClass="button-grey" text="Abatir">
                                         <HBox.margin>
-                                            <Insets bottom="10.0" left="3.0" right="3.0" top="10.0" />
+                                            <Insets left="3.0" right="3.0" top="10.0" />
                                         </HBox.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="147.0" text="Blanco tierrra">
+                                    <Button mnemonicParsing="false" styleClass="button-grey" text="Abatir por pasillo">
                                         <HBox.margin>
-                                            <Insets bottom="10.0" left="3.0" right="3.0" top="10.0" />
+                                            <Insets left="3.0" right="3.0" top="10.0" />
                                         </HBox.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="147.0" text="Abatir">
+                                    <Button mnemonicParsing="false" styleClass="button-grey" text="Inmoviliza">
                                         <HBox.margin>
-                                            <Insets bottom="10.0" left="3.0" right="3.0" top="10.0" />
+                                            <Insets left="3.0" right="3.0" top="10.0" />
                                         </HBox.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="147.0" text="Abatir">
+                                    <Button mnemonicParsing="false" styleClass="button-grey" text="Fuera de servicio">
                                         <HBox.margin>
-                                            <Insets left="3.0" right="3.0" />
+                                            <Insets left="3.0" right="3.0" top="10.0" />
+                                        </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" styleClass="button-grey" text="Foco emergencia">
+                                        <HBox.margin>
+                                            <Insets left="3.0" right="3.0" top="10.0" />
                                         </HBox.margin>
                                     </Button>
                                 </children>
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
+                            </HBox>
+                            <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="200.0">
+                                <children>
+                                    <Button mnemonicParsing="false" styleClass="button-grey" text="Seguimiento">
+                                        <HBox.margin>
+                                            <Insets bottom="10.0" left="3.0" right="3.0" top="10.0" />
+                                        </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" styleClass="button-grey" text="Seguimiento desfasado">
+                                        <HBox.margin>
+                                            <Insets bottom="10.0" left="3.0" right="3.0" top="10.0" />
+                                        </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" styleClass="button-grey" text="Seguimiento desfasado por pasillo">
+                                        <HBox.margin>
+                                            <Insets bottom="10.0" left="3.0" right="3.0" top="10.0" />
+                                        </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" styleClass="button-grey" text="Enfoque caldera">
+                                        <HBox.margin>
+                                            <Insets bottom="10.0" left="3.0" right="3.0" top="10.0" />
+                                        </HBox.margin>
+                                    </Button>
+                                </children>
                             </HBox>
                         </children>
                         <HBox.margin>
@@ -303,49 +332,35 @@
                     <Insets />
                 </VBox.margin>
             </Separator>
-            <HBox fillHeight="false" prefHeight="100.0" prefWidth="200.0">
-                <children>
-                    <VBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
-                        <HBox.margin>
-                            <Insets />
-                        </HBox.margin>
-                        <children>
-                            <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="200.0">
-                                <children>
-                                    <ComboBox maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Foco" HBox.hgrow="ALWAYS">
-                                        <HBox.margin>
-                                            <Insets bottom="10.0" left="3.0" right="3.0" top="10.0" />
-                                        </HBox.margin>
-                                    </ComboBox>
-                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Set">
-                                        <HBox.margin>
-                                            <Insets left="3.0" right="3.0" />
-                                        </HBox.margin>
-                                    </Button>
-                                    <Separator opacity="0.25" orientation="VERTICAL" prefHeight="200.0">
-                                        <HBox.margin>
-                                            <Insets left="3.0" right="3.0" />
-                                        </HBox.margin>
-                                    </Separator>
-                                    <ComboBox maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Punto significativo" HBox.hgrow="ALWAYS">
-                                        <HBox.margin>
-                                            <Insets bottom="10.0" left="3.0" right="3.0" top="10.0" />
-                                        </HBox.margin>
-                                    </ComboBox>
-                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Set">
-                                        <HBox.margin>
-                                            <Insets left="3.0" right="3.0" />
-                                        </HBox.margin>
-                                    </Button>
-                                </children>
-                                <VBox.margin>
-                                    <Insets />
-                                </VBox.margin>
-                            </HBox>
-                        </children>
-                    </VBox>
-                </children>
-            </HBox>
+                <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <ComboBox maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Foco" HBox.hgrow="ALWAYS">
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="3.0" right="3.0" top="10.0" />
+                            </HBox.margin>
+                        </ComboBox>
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="button-grey" text="Set">
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="3.0" right="3.0" top="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Separator opacity="0.25" orientation="VERTICAL" prefHeight="200.0" styleClass="button-grey">
+                            <HBox.margin>
+                                <Insets left="3.0" right="3.0" />
+                            </HBox.margin>
+                        </Separator>
+                        <ComboBox maxWidth="1.7976931348623157E308" prefWidth="150.0" promptText="Punto significativo" HBox.hgrow="ALWAYS">
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="3.0" right="3.0" top="10.0" />
+                            </HBox.margin>
+                        </ComboBox>
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" styleClass="button-grey" text="Set">
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="3.0" right="3.0" top="10.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
             <Separator opacity="0.25" prefWidth="200.0">
                 <VBox.margin>
                     <Insets />
@@ -355,21 +370,21 @@
                 <children>
                     <VBox prefHeight="39.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                         <children>
-                            <Label stylesheets="@CSS.css" text="Azimut">
+                            <Label stylesheets="@CSSPrimary.css" text="Azimut">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
                             </Label>
                             <TextField alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="150.0" />
-                            <Label stylesheets="@CSS.css" text="Elevacion">
+                            <Label stylesheets="@CSSPrimary.css" text="Elevacion">
                                 <VBox.margin>
                                     <Insets top="10.0" />
                                 </VBox.margin>
                             </Label>
                             <TextField alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="150.0" />
-                            <HBox alignment="BOTTOM_CENTER">
+                            <HBox alignment="CENTER">
                                 <children>
-                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="147.0" text="Set">
+                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="147.0" styleClass="button-grey" text="Set">
                                         <HBox.margin>
                                             <Insets top="10.0" />
                                         </HBox.margin>
@@ -391,13 +406,13 @@
                     </Separator>
                     <VBox prefHeight="39.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                         <children>
-                            <Label stylesheets="@CSS.css" text="Offset az">
+                            <Label stylesheets="@CSSPrimary.css" text="Offset az">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
                             </Label>
                             <TextField alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="150.0" />
-                            <Label stylesheets="@CSS.css" text="Offset el">
+                            <Label stylesheets="@CSSPrimary.css" text="Offset el">
                                 <VBox.margin>
                                     <Insets top="10.0" />
                                 </VBox.margin>
@@ -405,12 +420,12 @@
                             <TextField alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="150.0" />
                             <HBox alignment="BOTTOM_CENTER">
                                 <children>
-                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Get">
+                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" styleClass="button-grey" text="Get">
                                         <HBox.margin>
                                             <Insets right="3.0" top="10.0" />
                                         </HBox.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Set">
+                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" styleClass="button-grey" text="Set">
                                         <HBox.margin>
                                             <Insets left="3.0" top="10.0" />
                                         </HBox.margin>
@@ -432,13 +447,13 @@
                     </Separator>
                     <VBox prefHeight="39.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                         <children>
-                            <Label stylesheets="@CSS.css" text="Fecha">
+                            <Label stylesheets="@CSSPrimary.css" text="Fecha">
                                 <VBox.margin>
                                     <Insets />
                                 </VBox.margin>
                             </Label>
                             <TextField alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="150.0" />
-                            <Label stylesheets="@CSS.css" text="Hora">
+                            <Label stylesheets="@CSSPrimary.css" text="Hora">
                                 <VBox.margin>
                                     <Insets top="10.0" />
                                 </VBox.margin>
@@ -451,12 +466,12 @@
                             </HBox>
                             <HBox alignment="BOTTOM_CENTER">
                                 <children>
-                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Get">
+                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" styleClass="button-grey" text="Get">
                                         <HBox.margin>
                                             <Insets right="3.0" top="10.0" />
                                         </HBox.margin>
                                     </Button>
-                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Set">
+                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" styleClass="button-grey" text="Set">
                                         <HBox.margin>
                                             <Insets left="3.0" top="10.0" />
                                         </HBox.margin>
@@ -486,7 +501,7 @@
                         </HBox.margin>
                     </CheckBox>
                     <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                    <Button disable="true" mnemonicParsing="false" text="Teleconfigurar">
+                    <Button disable="true" mnemonicParsing="false" styleClass="button-grey" text="Teleconfigurar">
                         <HBox.margin>
                             <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
                         </HBox.margin>
@@ -503,9 +518,9 @@
             </Separator>
         </children>
     </VBox>
-   <Separator opacity="0.25" orientation="VERTICAL" prefHeight="200.0">
-      <HBox.margin>
-         <Insets bottom="13.0" right="3.0" top="14.0" />
-      </HBox.margin>
-   </Separator>
+    <Separator opacity="0.25" orientation="VERTICAL" prefHeight="200.0">
+        <HBox.margin>
+            <Insets bottom="13.0" right="3.0" top="14.0" />
+        </HBox.margin>
+    </Separator>
 </HBox>

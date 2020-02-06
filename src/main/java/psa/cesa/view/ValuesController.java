@@ -4,7 +4,7 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import psa.cesa.App;
 
-public class SecondaryController {
+public class ValuesController {
 
 //    @FXML
 //    private void switchToPrimary() throws IOException {

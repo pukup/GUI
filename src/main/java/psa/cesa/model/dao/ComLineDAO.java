@@ -1,22 +1,25 @@
-package psa.cesa.model;
+package psa.cesa.model.dao;
 
 import com.google.gson.Gson;
+import psa.cesa.model.ComLine;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class RowDAO {
-    /**
-     * It connects to the server URL and gets a <code>Row</code> array
-     *
-     * @return
-     */
-    public Row[] pollField() {
+
+/**
+ * It connects to the server URL and gets a <code>Row</code> array
+ *
+ * @return
+ */
+public class ComLineDAO {
+
+    public ComLine[] load(String url) {
         StringBuilder stringBuilder = new StringBuilder();
         try {
-            URLConnection urlConnection = new URL("http://localhost:8080/pollField/").openConnection();
+            URLConnection urlConnection = new URL(url).openConnection();
             InputStreamReader inputStreamReader = new InputStreamReader(urlConnection.getInputStream());
             char[] chars = new char[1024];
             int readedChar;
@@ -26,7 +29,7 @@ public class RowDAO {
             inputStreamReader.close();
             String s = stringBuilder.toString();
             Gson gson = new Gson();
-            return gson.fromJson(s, Row[].class);
+            return gson.fromJson(s, ComLine[].class);
         } catch (IOException e) {
             e.printStackTrace();
             return null;

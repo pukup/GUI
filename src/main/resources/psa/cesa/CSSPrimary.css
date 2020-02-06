@@ -7,10 +7,12 @@
 .scroll-pane {
     -fx-background-color: transparent;
 }
-
 .label{
     -fx-text-fill:white;
     -fx-font-size:9px;
+}
+.label1{
+    -fx-font-size:12px;
 }
 .text-field {
     -fx-border-color: white;
@@ -34,13 +36,33 @@
     -fx-border-width: 0.5px;
     -fx-border-color: white;
 }
-.button{
+.grey-pin{
+    -fx-background-color: grey;
+    -fx-shape: "M 0,0 L -4.454,-8.727 A 5 5 1 1 1 4.454,-8.727 L 0,0 z";
 }
-.button1{
+}.button-pin-blue{
     -fx-background-color: lightskyblue;
     -fx-shape: "M 0,0 L -4.454,-8.727 A 5 5 1 1 1 4.454,-8.727 L 0,0 z";
 }
-.button2{
+.button-pin-red{
     -fx-background-color: red;
     -fx-shape: "M 0,0 L -4.454,-8.727 A 5 5 1 1 1 4.454,-8.727 L 0,0 z";
+}.button-pin-orange{
+    -fx-background-color: orange;
+    -fx-shape: "M 0,0 L -4.454,-8.727 A 5 5 1 1 1 4.454,-8.727 L 0,0 z";
+}
+.button-grey {
+    -fx-background-color:
+        linear-gradient(#f2f2f2, #d6d6d6),
+        linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),
+        linear-gradient(#dddddd 0%, #f6f6f6 50%);
+    -fx-background-radius: 8,7,6;
+    -fx-background-insets: 0,1,2;
+    -fx-text-fill: black;
+    -fx-font-size:11 px;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}.button-emergency {
+    -fx-font-weight: bold;
+    -fx-background-color: orange;
+    -fx-shape: "M150 0 L75 200 L225 200 Z";
 }

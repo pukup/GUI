@@ -23,22 +23,14 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import psa.cesa.App;
-import psa.cesa.controller.HeliostatController;
+import psa.cesa.controller.RowController;
+import psa.cesa.model.ComLine;
 import psa.cesa.model.Heliostat;
-import psa.cesa.model.HeliostatDAO;
-import psa.cesa.model.Row;
-import psa.cesa.model.RowDAO;
 
 /**
  *
  */
 public class PrimaryController implements Initializable {
-
-    /**
-     *
-     */
-    private HeliostatController heliostatController = new HeliostatController();
-    private Heliostat[] heliostats;
 
     @FXML
     private VBox rows_vbox;
@@ -48,23 +40,55 @@ public class PrimaryController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        addRows();
+        //        addRows();
         zoom_slider.valueProperty().addListener((o, oldVal, newVal) -> zoom());
     }
 
+    /**
+     * It sets the GUI elements to represent the <code>Row</code> objects which are obtained from the server
+     */
     private void addRows() {
-//        Row[] rows = RowDAO.pollField();
+        ComLine[] Comlines = RowController.loadField();
+        for (ComLine comLine : Comlines) {
+            rows_vbox.getChildren().add(createGUIHbox(comLine));
+        }
+    }
+
+    private HBox createGUIHbox(ComLine comLine) {
         HBox hBox = new HBox();
         hBox.setSpacing(30.0);
         hBox.setAlignment(Pos.CENTER);
+        createRegion(hBox);
+        createLabel(comLine, hBox);
+        createButtons(comLine, hBox);
+        createLabel(comLine, hBox);
+        createRegion(hBox);
+        return hBox;
+    }
+
+    private void createRegion(HBox hBox) {
         Region region = new Region();
         hBox.setHgrow(region, Priority.ALWAYS);
         hBox.getChildren().add(region);
-        Label label = new Label("16");
+    }
+
+    private void createLabel(ComLine comLine, HBox hBox) {
+        Label label = new Label(String.valueOf(comLine.getId()));
         label.setFont(new Font(18));
         label.setTextFill(Color.WHITE);
         hBox.getChildren().add(label);
-        rows_vbox.getChildren().add(hBox);
+    }
+
+    private void createButtons(ComLine comLine, HBox hBox) {
+        for (Heliostat heliostat : comLine.getHeliostats().values()) {
+            Button button = new Button();
+            hBox.getChildren().add(button);
+        }
+    }
+
+    @FXML
+    private void emergency() {
+        // The ones in focus must go to kilter focus throw aisle.
     }
 
     @FXML
@@ -85,9 +109,16 @@ public class PrimaryController implements Initializable {
     }
 
     @FXML
-    private void openValues(ActionEvent event) throws IOException {
-        System.out.println(event.getSource().toString());
-        Scene scene = new Scene(loadFXML("secondary"));
+    public void openValues(ActionEvent event) throws IOException {
+        Scene scene = new Scene(loadFXML("values"));
+        Stage stage = new Stage();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void openGrouping(ActionEvent event) throws IOException {
+        Scene scene = new Scene(loadFXML("groups"));
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.show();

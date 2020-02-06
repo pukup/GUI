@@ -1,6 +1,7 @@
-package psa.cesa.model;
+package psa.cesa.model.dao;
 
 import com.google.gson.Gson;
+import psa.cesa.model.Heliostat;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
