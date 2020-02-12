@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--<?import heliostat.control.Heliostat?>-->
-
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-
-
-<?import psa.cesa.view.HeliostatButton?>
-<VBox fx:id="root_vbox" alignment="CENTER" stylesheets="@CSSPrimary.css"
+<?import psa.cesa.view.*?>
+<VBox fx:id="root_vbox" alignment="CENTER" stylesheets="@CSS.css"
       xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="psa.cesa.view.PrimaryController">
     <children>
@@ -43,16 +38,16 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label text="16" textFill="WHITE" styleClass="label1"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1609"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1607"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1605"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1603"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1601"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1602"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1604"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1606"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1608"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1610"/>
+                                <HeliostatButton fx:id="h1609"/>
+                                <HeliostatButton fx:id="h1607"/>
+                                <HeliostatButton fx:id="h1605"/>
+                                <HeliostatButton fx:id="h1603"/>
+                                <HeliostatButton fx:id="h1601"/>
+                                <HeliostatButton fx:id="h1602"/>
+                                <HeliostatButton fx:id="h1604"/>
+                                <HeliostatButton fx:id="h1606"/>
+                                <HeliostatButton fx:id="h1608"/>
+                                <HeliostatButton fx:id="h1610"/>
                                 <Label text="16" textFill="WHITE" styleClass="label1"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -64,19 +59,19 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label text="15" textFill="WHITE" styleClass="label1"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1511"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1509"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1507"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1505"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1503"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1501"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1500"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1502"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1504"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1506"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1508"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1510"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1512"/>
+                                <HeliostatButton fx:id="h1511"/>
+                                <HeliostatButton fx:id="h1509"/>
+                                <HeliostatButton fx:id="h1507"/>
+                                <HeliostatButton fx:id="h1505"/>
+                                <HeliostatButton fx:id="h1503"/>
+                                <HeliostatButton fx:id="h1501"/>
+                                <HeliostatButton fx:id="h1500"/>
+                                <HeliostatButton fx:id="h1502"/>
+                                <HeliostatButton fx:id="h1504"/>
+                                <HeliostatButton fx:id="h1506"/>
+                                <HeliostatButton fx:id="h1508"/>
+                                <HeliostatButton fx:id="h1510"/>
+                                <HeliostatButton fx:id="h1512"/>
                                 <Label text="15" textFill="WHITE" styleClass="label1"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -85,22 +80,22 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label text="14" textFill="WHITE" styleClass="label1"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1415"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1413"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1411"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1409"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1407"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1405"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1403"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1401"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1402"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1404"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1406"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1408"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1410"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1412"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1414"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1416"/>
+                                <HeliostatButton fx:id="h1415"/>
+                                <HeliostatButton fx:id="h1413"/>
+                                <HeliostatButton fx:id="h1411"/>
+                                <HeliostatButton fx:id="h1409"/>
+                                <HeliostatButton fx:id="h1407"/>
+                                <HeliostatButton fx:id="h1405"/>
+                                <HeliostatButton fx:id="h1403"/>
+                                <HeliostatButton fx:id="h1401"/>
+                                <HeliostatButton fx:id="h1402"/>
+                                <HeliostatButton fx:id="h1404"/>
+                                <HeliostatButton fx:id="h1406"/>
+                                <HeliostatButton fx:id="h1408"/>
+                                <HeliostatButton fx:id="h1410"/>
+                                <HeliostatButton fx:id="h1412"/>
+                                <HeliostatButton fx:id="h1414"/>
+                                <HeliostatButton fx:id="h1416"/>
                                 <Label text="14" textFill="WHITE" styleClass="label1"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -109,25 +104,25 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label text="13" textFill="WHITE" styleClass="label1"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1317"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1315"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1313"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1311"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1309"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1307"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1305"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1303"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1301"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1300"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1302"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1304"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1306"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1308"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1310"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1312"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1314"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1316"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1318"/>
+                                <HeliostatButton fx:id="h1317"/>
+                                <HeliostatButton fx:id="h1315"/>
+                                <HeliostatButton fx:id="h1313"/>
+                                <HeliostatButton fx:id="h1311"/>
+                                <HeliostatButton fx:id="h1309"/>
+                                <HeliostatButton fx:id="h1307"/>
+                                <HeliostatButton fx:id="h1305"/>
+                                <HeliostatButton fx:id="h1303"/>
+                                <HeliostatButton fx:id="h1301"/>
+                                <HeliostatButton fx:id="h1300"/>
+                                <HeliostatButton fx:id="h1302"/>
+                                <HeliostatButton fx:id="h1304"/>
+                                <HeliostatButton fx:id="h1306"/>
+                                <HeliostatButton fx:id="h1308"/>
+                                <HeliostatButton fx:id="h1310"/>
+                                <HeliostatButton fx:id="h1312"/>
+                                <HeliostatButton fx:id="h1314"/>
+                                <HeliostatButton fx:id="h1316"/>
+                                <HeliostatButton fx:id="h1318"/>
                                 <Label text="13" textFill="WHITE" styleClass="label1"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -136,26 +131,26 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label text="12" textFill="WHITE" styleClass="label1"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1219"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1217"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1215"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1213"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1211"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1209"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1207"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1205"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1203"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1201"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1202"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1204"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1206"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1208"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1210"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1212"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1214"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1216"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1218"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1320"/>
+                                <HeliostatButton fx:id="h1219"/>
+                                <HeliostatButton fx:id="h1217"/>
+                                <HeliostatButton fx:id="h1215"/>
+                                <HeliostatButton fx:id="h1213"/>
+                                <HeliostatButton fx:id="h1211"/>
+                                <HeliostatButton fx:id="h1209"/>
+                                <HeliostatButton fx:id="h1207"/>
+                                <HeliostatButton fx:id="h1205"/>
+                                <HeliostatButton fx:id="h1203"/>
+                                <HeliostatButton fx:id="h1201"/>
+                                <HeliostatButton fx:id="h1202"/>
+                                <HeliostatButton fx:id="h1204"/>
+                                <HeliostatButton fx:id="h1206"/>
+                                <HeliostatButton fx:id="h1208"/>
+                                <HeliostatButton fx:id="h1210"/>
+                                <HeliostatButton fx:id="h1212"/>
+                                <HeliostatButton fx:id="h1214"/>
+                                <HeliostatButton fx:id="h1216"/>
+                                <HeliostatButton fx:id="h1218"/>
+                                <HeliostatButton fx:id="h1320"/>
                                 <Label text="12" textFill="WHITE" styleClass="label1"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -164,29 +159,29 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label text="11" textFill="WHITE" styleClass="label1"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1121"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1119"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1117"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1115"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1113"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1111"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1109"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1107"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1105"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1103"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1101"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1100"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1102"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1104"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1106"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1108"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1110"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1112"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1114"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1116"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1118"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1120"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1122"/>
+                                <HeliostatButton fx:id="h1121"/>
+                                <HeliostatButton fx:id="h1119"/>
+                                <HeliostatButton fx:id="h1117"/>
+                                <HeliostatButton fx:id="h1115"/>
+                                <HeliostatButton fx:id="h1113"/>
+                                <HeliostatButton fx:id="h1111"/>
+                                <HeliostatButton fx:id="h1109"/>
+                                <HeliostatButton fx:id="h1107"/>
+                                <HeliostatButton fx:id="h1105"/>
+                                <HeliostatButton fx:id="h1103"/>
+                                <HeliostatButton fx:id="h1101"/>
+                                <HeliostatButton fx:id="h1100"/>
+                                <HeliostatButton fx:id="h1102"/>
+                                <HeliostatButton fx:id="h1104"/>
+                                <HeliostatButton fx:id="h1106"/>
+                                <HeliostatButton fx:id="h1108"/>
+                                <HeliostatButton fx:id="h1110"/>
+                                <HeliostatButton fx:id="h1112"/>
+                                <HeliostatButton fx:id="h1114"/>
+                                <HeliostatButton fx:id="h1116"/>
+                                <HeliostatButton fx:id="h1118"/>
+                                <HeliostatButton fx:id="h1120"/>
+                                <HeliostatButton fx:id="h1122"/>
                                 <Label text="11" textFill="WHITE" styleClass="label1"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -195,38 +190,38 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label text="10" textFill="WHITE" styleClass="label1"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1031"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1029"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1027"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1025"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1023"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1021"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1019"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1017"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1015"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1013"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1011"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1009"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1007"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1005"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1003"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1001"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1002"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1004"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1006"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1008"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1010"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1012"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1014"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1016"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1018"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1020"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1022"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1024"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1026"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1028"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1030"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h1032"/>
+                                <HeliostatButton fx:id="h1031"/>
+                                <HeliostatButton fx:id="h1029"/>
+                                <HeliostatButton fx:id="h1027"/>
+                                <HeliostatButton fx:id="h1025"/>
+                                <HeliostatButton fx:id="h1023"/>
+                                <HeliostatButton fx:id="h1021"/>
+                                <HeliostatButton fx:id="h1019"/>
+                                <HeliostatButton fx:id="h1017"/>
+                                <HeliostatButton fx:id="h1015"/>
+                                <HeliostatButton fx:id="h1013"/>
+                                <HeliostatButton fx:id="h1011"/>
+                                <HeliostatButton fx:id="h1009"/>
+                                <HeliostatButton fx:id="h1007"/>
+                                <HeliostatButton fx:id="h1005"/>
+                                <HeliostatButton fx:id="h1003"/>
+                                <HeliostatButton fx:id="h1001"/>
+                                <HeliostatButton fx:id="h1002"/>
+                                <HeliostatButton fx:id="h1004"/>
+                                <HeliostatButton fx:id="h1006"/>
+                                <HeliostatButton fx:id="h1008"/>
+                                <HeliostatButton fx:id="h1010"/>
+                                <HeliostatButton fx:id="h1012"/>
+                                <HeliostatButton fx:id="h1014"/>
+                                <HeliostatButton fx:id="h1016"/>
+                                <HeliostatButton fx:id="h1018"/>
+                                <HeliostatButton fx:id="h1020"/>
+                                <HeliostatButton fx:id="h1022"/>
+                                <HeliostatButton fx:id="h1024"/>
+                                <HeliostatButton fx:id="h1026"/>
+                                <HeliostatButton fx:id="h1028"/>
+                                <HeliostatButton fx:id="h1030"/>
+                                <HeliostatButton fx:id="h1032"/>
                                 <Label text="10" textFill="WHITE" styleClass="label1"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -235,37 +230,37 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label text="09" textFill="WHITE" styleClass="label1"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0929"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0927"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0925"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0923"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0921"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0919"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0917"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0915"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0913"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0911"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0909"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0907"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0905"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0903"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0901"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0900"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0902"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0904"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0906"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0908"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0910"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0912"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0914"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0916"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0918"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0920"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0922"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0924"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0926"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0928"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0930"/>
+                                <HeliostatButton fx:id="h0929"/>
+                                <HeliostatButton fx:id="h0927"/>
+                                <HeliostatButton fx:id="h0925"/>
+                                <HeliostatButton fx:id="h0923"/>
+                                <HeliostatButton fx:id="h0921"/>
+                                <HeliostatButton fx:id="h0919"/>
+                                <HeliostatButton fx:id="h0917"/>
+                                <HeliostatButton fx:id="h0915"/>
+                                <HeliostatButton fx:id="h0913"/>
+                                <HeliostatButton fx:id="h0911"/>
+                                <HeliostatButton fx:id="h0909"/>
+                                <HeliostatButton fx:id="h0907"/>
+                                <HeliostatButton fx:id="h0905"/>
+                                <HeliostatButton fx:id="h0903"/>
+                                <HeliostatButton fx:id="h0901"/>
+                                <HeliostatButton fx:id="h0900"/>
+                                <HeliostatButton fx:id="h0902"/>
+                                <HeliostatButton fx:id="h0904"/>
+                                <HeliostatButton fx:id="h0906"/>
+                                <HeliostatButton fx:id="h0908"/>
+                                <HeliostatButton fx:id="h0910"/>
+                                <HeliostatButton fx:id="h0912"/>
+                                <HeliostatButton fx:id="h0914"/>
+                                <HeliostatButton fx:id="h0916"/>
+                                <HeliostatButton fx:id="h0918"/>
+                                <HeliostatButton fx:id="h0920"/>
+                                <HeliostatButton fx:id="h0922"/>
+                                <HeliostatButton fx:id="h0924"/>
+                                <HeliostatButton fx:id="h0926"/>
+                                <HeliostatButton fx:id="h0928"/>
+                                <HeliostatButton fx:id="h0930"/>
                                 <Label text="09" textFill="WHITE" styleClass="label1"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -274,34 +269,34 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label text="08" textFill="WHITE" styleClass="label1"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0827"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0825"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0823"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0821"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0819"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0817"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0815"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0813"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0811"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0809"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0807"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0805"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0803"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0801"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0802"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0804"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0806"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0808"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0810"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0812"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0814"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0816"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0818"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0820"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0822"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0824"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0826"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0828"/>
+                                <HeliostatButton fx:id="h0827"/>
+                                <HeliostatButton fx:id="h0825"/>
+                                <HeliostatButton fx:id="h0823"/>
+                                <HeliostatButton fx:id="h0821"/>
+                                <HeliostatButton fx:id="h0819"/>
+                                <HeliostatButton fx:id="h0817"/>
+                                <HeliostatButton fx:id="h0815"/>
+                                <HeliostatButton fx:id="h0813"/>
+                                <HeliostatButton fx:id="h0811"/>
+                                <HeliostatButton fx:id="h0809"/>
+                                <HeliostatButton fx:id="h0807"/>
+                                <HeliostatButton fx:id="h0805"/>
+                                <HeliostatButton fx:id="h0803"/>
+                                <HeliostatButton fx:id="h0801"/>
+                                <HeliostatButton fx:id="h0802"/>
+                                <HeliostatButton fx:id="h0804"/>
+                                <HeliostatButton fx:id="h0806"/>
+                                <HeliostatButton fx:id="h0808"/>
+                                <HeliostatButton fx:id="h0810"/>
+                                <HeliostatButton fx:id="h0812"/>
+                                <HeliostatButton fx:id="h0814"/>
+                                <HeliostatButton fx:id="h0816"/>
+                                <HeliostatButton fx:id="h0818"/>
+                                <HeliostatButton fx:id="h0820"/>
+                                <HeliostatButton fx:id="h0822"/>
+                                <HeliostatButton fx:id="h0824"/>
+                                <HeliostatButton fx:id="h0826"/>
+                                <HeliostatButton fx:id="h0828"/>
                                 <Label text="08" textFill="WHITE" styleClass="label1"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -310,29 +305,29 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label text="07" textFill="WHITE" styleClass="label1"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0721"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0719"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0717"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0715"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0713"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0711"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0709"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0707"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0705"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0703"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0701"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0700"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0702"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0704"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0706"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0708"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0710"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0712"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0714"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0716"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0718"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0720"/>
-                                <HeliostatButton onAction="#openValues" fx:id="h0722"/>
+                                <HeliostatButton fx:id="h0721"/>
+                                <HeliostatButton fx:id="h0719"/>
+                                <HeliostatButton fx:id="h0717"/>
+                                <HeliostatButton fx:id="h0715"/>
+                                <HeliostatButton fx:id="h0713"/>
+                                <HeliostatButton fx:id="h0711"/>
+                                <HeliostatButton fx:id="h0709"/>
+                                <HeliostatButton fx:id="h0707"/>
+                                <HeliostatButton fx:id="h0705"/>
+                                <HeliostatButton fx:id="h0703"/>
+                                <HeliostatButton fx:id="h0701"/>
+                                <HeliostatButton fx:id="h0700"/>
+                                <HeliostatButton fx:id="h0702"/>
+                                <HeliostatButton fx:id="h0704"/>
+                                <HeliostatButton fx:id="h0706"/>
+                                <HeliostatButton fx:id="h0708"/>
+                                <HeliostatButton fx:id="h0710"/>
+                                <HeliostatButton fx:id="h0712"/>
+                                <HeliostatButton fx:id="h0714"/>
+                                <HeliostatButton fx:id="h0716"/>
+                                <HeliostatButton fx:id="h0718"/>
+                                <HeliostatButton fx:id="h0720"/>
+                                <HeliostatButton fx:id="h0722"/>
                                 <Label text="07" textFill="WHITE" styleClass="label1"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -341,26 +336,26 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label text="06" textFill="WHITE" styleClass="label1"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
+                                <HeliostatButton fx:id="h0619"/>
+                                <HeliostatButton fx:id="h0617"/>
+                                <HeliostatButton fx:id="h0615"/>
+                                <HeliostatButton fx:id="h0613"/>
+                                <HeliostatButton fx:id="h0611"/>
+                                <HeliostatButton fx:id="h0609"/>
+                                <HeliostatButton fx:id="h0607"/>
+                                <HeliostatButton fx:id="h0605"/>
+                                <HeliostatButton fx:id="h0603"/>
+                                <HeliostatButton fx:id="h0601"/>
+                                <HeliostatButton fx:id="h0602"/>
+                                <HeliostatButton fx:id="h0604"/>
+                                <HeliostatButton fx:id="h0606"/>
+                                <HeliostatButton fx:id="h0608"/>
+                                <HeliostatButton fx:id="h0610"/>
+                                <HeliostatButton fx:id="h0612"/>
+                                <HeliostatButton fx:id="h0614"/>
+                                <HeliostatButton fx:id="h0616"/>
+                                <HeliostatButton fx:id="h0618"/>
+                                <HeliostatButton fx:id="h0620"/>
                                 <Label text="06" textFill="WHITE" styleClass="label1"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -369,23 +364,23 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label text="05" textFill="WHITE" styleClass="label1"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
+                                <HeliostatButton fx:id="h0515"/>
+                                <HeliostatButton fx:id="h0513"/>
+                                <HeliostatButton fx:id="h0511"/>
+                                <HeliostatButton fx:id="h0509"/>
+                                <HeliostatButton fx:id="h0507"/>
+                                <HeliostatButton fx:id="h0505"/>
+                                <HeliostatButton fx:id="h0503"/>
+                                <HeliostatButton fx:id="h0501"/>
+                                <HeliostatButton fx:id="h0500"/>
+                                <HeliostatButton fx:id="h0502"/>
+                                <HeliostatButton fx:id="h0504"/>
+                                <HeliostatButton fx:id="h0506"/>
+                                <HeliostatButton fx:id="h0508"/>
+                                <HeliostatButton fx:id="h0510"/>
+                                <HeliostatButton fx:id="h0512"/>
+                                <HeliostatButton fx:id="h0514"/>
+                                <HeliostatButton fx:id="h0516"/>
                                 <Label text="05" textFill="WHITE" styleClass="label1"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -394,22 +389,22 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label text="04" textFill="WHITE" styleClass="label1"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
+                                <HeliostatButton fx:id="h0415"/>
+                                <HeliostatButton fx:id="h0413"/>
+                                <HeliostatButton fx:id="h0411"/>
+                                <HeliostatButton fx:id="h0409"/>
+                                <HeliostatButton fx:id="h0407"/>
+                                <HeliostatButton fx:id="h0405"/>
+                                <HeliostatButton fx:id="h0403"/>
+                                <HeliostatButton fx:id="h0401"/>
+                                <HeliostatButton fx:id="h0402"/>
+                                <HeliostatButton fx:id="h0404"/>
+                                <HeliostatButton fx:id="h0406"/>
+                                <HeliostatButton fx:id="h0408"/>
+                                <HeliostatButton fx:id="h0410"/>
+                                <HeliostatButton fx:id="h0412"/>
+                                <HeliostatButton fx:id="h0414"/>
+                                <HeliostatButton fx:id="h0416"/>
                                 <Label text="04" textFill="WHITE" styleClass="label1"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -418,19 +413,19 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label text="03" textFill="WHITE" styleClass="label1"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
+                                <HeliostatButton fx:id="h0311"/>
+                                <HeliostatButton fx:id="h0309"/>
+                                <HeliostatButton fx:id="h0307"/>
+                                <HeliostatButton fx:id="h0305"/>
+                                <HeliostatButton fx:id="h0303"/>
+                                <HeliostatButton fx:id="h0301"/>
+                                <HeliostatButton fx:id="h0300"/>
+                                <HeliostatButton fx:id="h0302"/>
+                                <HeliostatButton fx:id="h0304"/>
+                                <HeliostatButton fx:id="h0306"/>
+                                <HeliostatButton fx:id="h0308"/>
+                                <HeliostatButton fx:id="h0310"/>
+                                <HeliostatButton fx:id="h0312"/>
                                 <Label text="03" textFill="WHITE" styleClass="label1"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -439,16 +434,16 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label text="02" textFill="WHITE" styleClass="label1"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
+                                <HeliostatButton fx:id="h0209"/>
+                                <HeliostatButton fx:id="h0207"/>
+                                <HeliostatButton fx:id="h0205"/>
+                                <HeliostatButton fx:id="h0203"/>
+                                <HeliostatButton fx:id="h0201"/>
+                                <HeliostatButton fx:id="h0202"/>
+                                <HeliostatButton fx:id="h0204"/>
+                                <HeliostatButton fx:id="h0206"/>
+                                <HeliostatButton fx:id="h0208"/>
+                                <HeliostatButton fx:id="h0210"/>
                                 <Label text="02" textFill="WHITE" styleClass="label1"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -457,15 +452,15 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label text="01" textFill="WHITE" styleClass="label1"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
-                                <HeliostatButton onAction="#openValues"/>
+                                <HeliostatButton fx:id="h0107"/>
+                                <HeliostatButton fx:id="h0105"/>
+                                <HeliostatButton fx:id="h0103"/>
+                                <HeliostatButton fx:id="h0101"/>
+                                <HeliostatButton fx:id="h0100"/>
+                                <HeliostatButton fx:id="h0102"/>
+                                <HeliostatButton fx:id="h0104"/>
+                                <HeliostatButton fx:id="h0106"/>
+                                <HeliostatButton fx:id="h0108"/>
                                 <Label text="01" textFill="WHITE" styleClass="label1"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>

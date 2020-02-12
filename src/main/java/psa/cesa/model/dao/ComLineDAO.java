@@ -16,6 +16,10 @@ import java.net.URLConnection;
  */
 public class ComLineDAO {
 
+    /**
+     * @param url
+     * @return
+     */
     public ComLine[] load(String url) {
         StringBuilder stringBuilder = new StringBuilder();
         try {

@@ -1,7 +1,5 @@
 package psa.cesa.model;
 
-import java.nio.ByteBuffer;
-
 /**
  * DAO which represents a physical heliostat.
  */

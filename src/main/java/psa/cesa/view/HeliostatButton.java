@@ -1,32 +1,34 @@
 package psa.cesa.view;
 
-import javafx.css.StyleClass;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.stage.Stage;
+import javafx.scene.layout.VBox;
 import psa.cesa.App;
 import psa.cesa.model.Heliostat;
-import psa.cesa.view.PrimaryController;
 
 import java.io.IOException;
 
 /**
  * It manages the <code>StyleClass</code> of buttons to change them according to <code>Heliostat</code> attributes values.
  */
-public class HeliostatButton extends Button {
+public class HeliostatButton extends VBox {
 
     /**
      * @param heliostat is an <code>Heliostat</code> object representation.
      */
+    @FXML
+    private int ComLineId;
     private Heliostat heliostat;
 
     public HeliostatButton() {
-        this.getStyleClass().add("grey-pin");
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("heliostatButton.fxml"));
+        fxmlLoader.setRoot(this);
+        fxmlLoader.setController(this);
+        try {
+            fxmlLoader.load();
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
+        }
     }
 
     public Heliostat getHeliostat() {
@@ -35,6 +37,11 @@ public class HeliostatButton extends Button {
 
     public void setHeliostat(Heliostat heliostat) {
         this.heliostat = heliostat;
+    }
+
+    @FXML
+    protected void openValues() throws IOException {
+        ValuesController valuesController = new ValuesController(heliostat);
     }
 
     /**
