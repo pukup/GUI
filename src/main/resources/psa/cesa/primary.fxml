@@ -150,7 +150,7 @@
                                 <HeliostatButton fx:id="h1214"/>
                                 <HeliostatButton fx:id="h1216"/>
                                 <HeliostatButton fx:id="h1218"/>
-                                <HeliostatButton fx:id="h1320"/>
+                                <HeliostatButton fx:id="h1220"/>
                                 <Label text="12" textFill="WHITE" styleClass="label1"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>

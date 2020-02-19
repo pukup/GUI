@@ -19,6 +19,7 @@ public class HeliostatButton extends VBox {
     @FXML
     private int ComLineId;
     private Heliostat heliostat;
+    private ValuesController valuesController;
 
     public HeliostatButton() {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("heliostatButton.fxml"));
@@ -31,17 +32,24 @@ public class HeliostatButton extends VBox {
         }
     }
 
-    public Heliostat getHeliostat() {
-        return heliostat;
-    }
-
     public void setHeliostat(Heliostat heliostat) {
         this.heliostat = heliostat;
+        if (valuesController != null && valuesController.tfAddress != null)
+            valuesController.setHeliostat(heliostat);
+        setStates();
+    }
+
+    private void setStates() {
+        showState0();
+        showState1();
+        showEventOperation();
+        showEventSecurity();
+        showEventCom();
     }
 
     @FXML
     protected void openValues() throws IOException {
-        ValuesController valuesController = new ValuesController(heliostat);
+        valuesController = new ValuesController();
     }
 
     /**
@@ -152,6 +160,34 @@ public class HeliostatButton extends VBox {
             case 0x1:
                 //                Fuera de servicio
                 this.getStyleClass().add("grey-pin");
+                break;
+            case 0x2:
+                //                Heliostato teleconfigurado
+                this.getStyleClass().add("grey-pin");
+                break;
+        }
+    }
+
+    public void showEventSecurity() {
+        int coupleBits1 = 0xc & heliostat.getEvent();
+        switch (coupleBits1) {
+            case 0x4:
+                //                  Código de cliente erróneo
+                this.getStyleClass().add("grey-pin");
+                break;
+        }
+    }
+
+    public void showEventCom() {
+        int coupleBits2 = 0x30 & heliostat.getEvent();
+        switch (coupleBits2) {
+            case 0x10:
+                //                Fallo de comunicaciones
+                this.getStyleClass().add("red-pin");
+                break;
+            case 0x20:
+                //                No acpeta el comando
+                this.getStyleClass().add("red-pin");
                 break;
         }
     }

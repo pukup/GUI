@@ -20,8 +20,7 @@ public class ValuesController implements Initializable {
 
     private Heliostat heliostat;
 
-    public ValuesController(Heliostat heliostat) {
-        this.heliostat = heliostat;
+    public ValuesController() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("values.fxml"));
             Scene scene = null;
@@ -36,9 +35,11 @@ public class ValuesController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        while (true) {
-            setValues();
-        }
+    }
+
+    public void setHeliostat(Heliostat heliostat) {
+        this.heliostat = heliostat;
+        setValues();
     }
 
     private void setValues() {

@@ -23,8 +23,20 @@ public class Heliostat {
     private int positionAZ, positionEL;
     private int setPointAZ, setPointEL;
 
-    public Heliostat(int id) {
+    private Heliostat() {
+        this(0, 0, 0, 0, 0, 0, 0, 0, 0);
+    }
+
+    public Heliostat(int id, int state, int event, int diagnosisAZ, int diagnosisEL, int positionAZ, int positionEL, int setPointAZ, int setPointEL) {
         this.id = id;
+        this.state = state;
+        this.event = event;
+        this.diagnosisAZ = diagnosisAZ;
+        this.diagnosisEL = diagnosisEL;
+        this.positionAZ = positionAZ;
+        this.positionEL = positionEL;
+        this.setPointAZ = setPointAZ;
+        this.setPointEL = setPointEL;
     }
 
     public int getId() {
@@ -450,5 +462,4 @@ public class Heliostat {
         }
         return diagnosisEl3.toString();
     }
-
 }

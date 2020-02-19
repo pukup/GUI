@@ -15,8 +15,8 @@ public class ComLine {
     private String portDir;
     private Map<Integer, Heliostat> heliostats;
 
-    public ComLine(int id) {
-        this.id = id;
+    public ComLine() {
+        this(0, null, null);
     }
 
     public ComLine(int id, String portDir, Map<Integer, Heliostat> heliostats) {
