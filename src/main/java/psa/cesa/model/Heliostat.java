@@ -181,16 +181,16 @@ public class Heliostat {
         StringBuilder state1 = new StringBuilder();
         int nibble1 = 0xf0 & state;
         if ((nibble1 & 0x80) == 0x80) {
-            state1.append("Aviso error");
+            state1.append("Error");
         }
         if ((nibble1 & 0x40) == 0x40) {
-            state1.append(" Aviso evento");
+            state1.append("Evento");
         }
         if ((nibble1 & 0x20) == 0x20) {
-            state1.append(" Consigna alcanzada EL");
+            state1.append("Consigna EL alcanzada");
         }
         if ((nibble1 & 0x10) == 0x10) {
-            state1.append(" Consigna alcanzada AZ");
+            state1.append("Consigna AZ alcanzada");
         }
         return state1.toString();
     }
@@ -201,7 +201,7 @@ public class Heliostat {
      * @return operation event message.
      */
     public String eventOperationToString() {
-        StringBuilder operation = new StringBuilder("Operación ");
+        StringBuilder operation = new StringBuilder();
         int coupleBits0 = 0x3 & event;
         switch (coupleBits0) {
             case 0x0:
@@ -223,7 +223,7 @@ public class Heliostat {
      * @return security event message.
      */
     public String eventSecurityToString() {
-        StringBuilder security = new StringBuilder("Seguridad ");
+        StringBuilder security = new StringBuilder();
         int coupleBits1 = 0xc & event;
         switch (coupleBits1) {
             case 0x0:
@@ -242,18 +242,17 @@ public class Heliostat {
      * @return communications event message.
      */
     public String eventComToString() {
-        StringBuilder communications = new StringBuilder("Comunicaciones ");
+        StringBuilder communications = new StringBuilder();
         int coupleBits2 = 0x30 & event;
-        communications.append(event);
         switch (coupleBits2) {
             case 0x0:
                 communications.append("OK");
                 break;
             case 0x10:
-                communications.append("Fallo de comunicaciones");
+                communications.append("Fallo");
                 break;
             case 0x20:
-                communications.append("No acpeta el comando");
+                communications.append("No acpeta comando");
                 break;
         }
         return communications.toString();
@@ -265,7 +264,7 @@ public class Heliostat {
      * @return clock event message.
      */
     public String eventCLToString() {
-        StringBuilder clock = new StringBuilder("Reloj ");
+        StringBuilder clock = new StringBuilder();
         int coupleBits3 = 0xc0 & event;
         switch (coupleBits3) {
             case 0x0:

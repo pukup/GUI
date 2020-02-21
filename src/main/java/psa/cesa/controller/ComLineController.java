@@ -1,10 +1,7 @@
 package psa.cesa.controller;
 
 import psa.cesa.model.ComLine;
-import psa.cesa.model.Heliostat;
 import psa.cesa.model.dao.ComLineDAO;
-
-import java.util.Map;
 
 public class ComLineController {
 

@@ -1,23 +1,25 @@
 package psa.cesa.controller;
 
 import psa.cesa.model.ComLine;
-import psa.cesa.view.PrimaryController;
+import psa.cesa.view.Primary;
 
 import java.util.TimerTask;
 
-public class TimerCacheTask extends TimerTask {
+public class TimerHeliostatRefreshTask extends TimerTask {
 
-    PrimaryController primaryController;
+    private Primary primary;
+
     private ComLine comLine16, comLine15, comLine14, comLine13, comLine12, comLine11, comLine10, comLine9, comLine8, comLine7, comLine6, comLine5, comLine4, comLine3, comLine2, comLine1;
 
-    public TimerCacheTask(PrimaryController primaryController) {
-        this.primaryController = primaryController;
+    public TimerHeliostatRefreshTask(Primary primary) {
+        this.primary = primary;
+        getCache();
     }
 
     @Override
     public void run() {
         getCache();
-        setPrimaryControllerRows();
+        primary.setRows();
     }
 
     public ComLine getComLine16() {
@@ -101,9 +103,5 @@ public class TimerCacheTask extends TimerTask {
         comLine3 = ComLineController.getCache(3);
         comLine2 = ComLineController.getCache(2);
         comLine1 = ComLineController.getCache(1);
-    }
-
-    private void setPrimaryControllerRows() {
-        primaryController.setRows();
     }
 }

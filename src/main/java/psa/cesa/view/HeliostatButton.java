@@ -1,8 +1,13 @@
 package psa.cesa.view;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import psa.cesa.App;
 import psa.cesa.model.Heliostat;
 
@@ -17,29 +22,43 @@ public class HeliostatButton extends VBox {
      * @param heliostat is an <code>Heliostat</code> object representation.
      */
     @FXML
-    private int ComLineId;
+    TextField tfAddress, tfStatusCode, tfWarning, tfError, tfOperation, tfSecurity, tfCom, tfClock, tfAz, tfEl, tfMotAz, tfMotEl, tfStatusReachedAz, tfStatusReachedEl, tfSwingAz, tfSwingEl, tfNotAz, tfNotEl;
+
+    @FXML
+    private Button button;
+
+    private int comLineId;
+
     private Heliostat heliostat;
-    private ValuesController valuesController;
+
+    private Scene valuesScene;
 
     public HeliostatButton() {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("heliostatButton.fxml"));
-        fxmlLoader.setRoot(this);
-        fxmlLoader.setController(this);
         try {
-            fxmlLoader.load();
+            loadButton();
+            loadValues();
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
     }
 
-    public void setHeliostat(Heliostat heliostat) {
-        this.heliostat = heliostat;
-        if (valuesController != null && valuesController.tfAddress != null)
-            valuesController.setHeliostat(heliostat);
-        setStates();
+    private void loadButton() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("heliostatButton.fxml"));
+        fxmlLoader.setRoot(this);
+        fxmlLoader.setController(this);
+        fxmlLoader.load();
     }
 
-    private void setStates() {
+    private void loadValues() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("values.fxml"));
+        fxmlLoader.setController(this);
+        valuesScene = new Scene(fxmlLoader.load());
+    }
+
+    public void setHeliostat(int comLineId, Heliostat heliostat) {
+        this.comLineId = comLineId;
+        this.heliostat = heliostat;
+        setValues();
         showState0();
         showState1();
         showEventOperation();
@@ -48,8 +67,33 @@ public class HeliostatButton extends VBox {
     }
 
     @FXML
-    protected void openValues() throws IOException {
-        valuesController = new ValuesController();
+    protected void openValues(ActionEvent event) {
+        Stage stage = new Stage();
+        stage.setScene(valuesScene);
+        stage.show();
+    }
+
+    public void setValues() {
+        if (tfAddress != null) {
+            tfAddress.setText(String.format("%s modbus:%d-%d", this.getId(), comLineId, heliostat.getId()));
+            tfStatusCode.setText(heliostat.state0ToString());
+            tfWarning.setText(heliostat.state1ToString());
+            tfError.setText("");
+            tfOperation.setText(heliostat.eventOperationToString());
+            tfSecurity.setText(heliostat.eventSecurityToString());
+            tfCom.setText(heliostat.eventComToString());
+            tfClock.setText(heliostat.eventCLToString());
+            tfAz.setText(String.valueOf(heliostat.getPositionAZ()));
+            tfEl.setText(String.valueOf(heliostat.getPositionEL()));
+            tfMotAz.setText(heliostat.diagnosisAz0ToString());
+            tfMotEl.setText(heliostat.diagnosisEl0ToString());
+            tfStatusReachedAz.setText(heliostat.diagnosisAz1ToString());
+            tfStatusReachedEl.setText(heliostat.diagnosisEl1ToString());
+            tfSwingAz.setText(heliostat.diagnosisAz2ToString());
+            tfSwingEl.setText(heliostat.diagnosisEl2ToString());
+            tfNotAz.setText(heliostat.diagnosisAz3ToString());
+            tfNotEl.setText(heliostat.diagnosisEl3ToString());
+        }
     }
 
     /**
@@ -60,68 +104,67 @@ public class HeliostatButton extends VBox {
         switch (nibble0) {
             case 0x0:
                 //                                state0.append("Operación local");
-                //                                this.setStyle("button-pin-blue");
-                this.getStyleClass().add("button-pin-blue");
+                button.getStyleClass().add("blue-pin");
                 break;
             case 0x1:
                 //                Consiga fija
-                this.getStyleClass().add("button-pin-blue");
+                button.getStyleClass().add("blue-pin");
                 break;
             case 0x2:
                 //                Busqueda de ceros
-                this.getStyleClass().add("button-pin-blue");
+                button.getStyleClass().add("blue-pin");
                 break;
             case 0x3:
                 //                Fuera de servicio
-                this.getStyleClass().add("button-pin-grey");
+                button.getStyleClass().add("grey-pin");
                 break;
             case 0x4:
                 //                Posición de defensa
-                this.getStyleClass().add("button-pin-blue");
+                button.getStyleClass().add("blue-pin");
                 break;
             case 0x5:
                 //                Abatimiento normal
-                this.getStyleClass().add("button-pin-blue");
+                button.getStyleClass().add("blue-pin");
                 break;
             case 0x6:
                 //                Blanco tierra
-                this.getStyleClass().add("button-pin-blue");
+                button.getStyleClass().add("blue-pin");
                 break;
             case 0x7:
                 //                Blanco pasillo 1
-                this.getStyleClass().add("button-pin-blue");
+                button.getStyleClass().add("blue-pin");
                 break;
             case 0x8:
                 //                Blanco pasillo 2
-                this.getStyleClass().add("button-pin-blue");
+                button.getStyleClass().add("blue-pin");
                 break;
             case 0x9:
                 //                Blanco pasillo 3
-                this.getStyleClass().add("button-pin-blue");
+                button.getStyleClass().add("blue-pin");
                 break;
             case 0xa:
                 //                Blanco pasillo 4
-                this.getStyleClass().add("button-pin-blue");
+                button.getStyleClass().add("blue-pin");
                 break;
             case 0xb:
                 //                Seguimiento desfasado
-                this.getStyleClass().add("button-pin-orange");
+                button.getStyleClass().add("orange-pin");
                 break;
             case 0xc:
                 //                Blanco de emergencia
-                this.getStyleClass().add("button-pin-blue");
+                button.getStyleClass().add("blue-pin");
                 break;
             case 0xd:
                 //                Seguimiento normal a caldera
-                this.getStyleClass().add("button-pin-red");
+                button.getStyleClass().add("red-pin");
                 break;
             case 0xe:
                 //                Foco
-                this.getStyleClass().add("button-pin-red");
+                button.getStyleClass().add("red-pin");
                 break;
             case 0xf:
                 //                Seguimiento normal al sol
-                this.getStyleClass().add("button-pin-red");
+                button.getStyleClass().add("red-pin");
                 break;
         }
     }
@@ -133,19 +176,19 @@ public class HeliostatButton extends VBox {
         int nibble1 = 0xf0 & heliostat.getState();
         if ((nibble1 & 0x80) == 0x80) {
             //            Aviso error
-            this.getStyleClass().add("button-pin-orange");
+            button.getStyleClass().add("orange-pin");
         }
         if ((nibble1 & 0x40) == 0x40) {
             //            Aviso evento
-            this.getStyleClass().add("button-pin-orange");
+            button.getStyleClass().add("orange-pin");
         }
         if ((nibble1 & 0x20) == 0x20) {
             //            Consigna alcanzada EL
-            this.getStyleClass().add("button-pin-orange");
+            button.getStyleClass().add("orange-pin");
         }
         if ((nibble1 & 0x10) == 0x10) {
             //            Consigna alcanzada AZ
-            this.getStyleClass().add("button-pin-orange");
+            button.getStyleClass().add("orange-pin");
         }
     }
 
@@ -159,11 +202,11 @@ public class HeliostatButton extends VBox {
         switch (coupleBits0) {
             case 0x1:
                 //                Fuera de servicio
-                this.getStyleClass().add("grey-pin");
+                button.getStyleClass().add("grey-pin");
                 break;
             case 0x2:
                 //                Heliostato teleconfigurado
-                this.getStyleClass().add("grey-pin");
+                button.getStyleClass().add("grey-pin");
                 break;
         }
     }
@@ -173,7 +216,7 @@ public class HeliostatButton extends VBox {
         switch (coupleBits1) {
             case 0x4:
                 //                  Código de cliente erróneo
-                this.getStyleClass().add("grey-pin");
+                button.getStyleClass().add("grey-pin");
                 break;
         }
     }
@@ -183,11 +226,11 @@ public class HeliostatButton extends VBox {
         switch (coupleBits2) {
             case 0x10:
                 //                Fallo de comunicaciones
-                this.getStyleClass().add("red-pin");
+                button.getStyleClass().add("black-pin");
                 break;
             case 0x20:
                 //                No acpeta el comando
-                this.getStyleClass().add("red-pin");
+                button.getStyleClass().add("red-pin");
                 break;
         }
     }

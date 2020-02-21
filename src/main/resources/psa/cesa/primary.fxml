@@ -6,7 +6,7 @@
 <?import psa.cesa.view.*?>
 <VBox fx:id="root_vbox" alignment="CENTER" stylesheets="@CSS.css"
       xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="psa.cesa.view.PrimaryController">
+      fx:controller="psa.cesa.view.Primary">
     <children>
         <MenuBar nodeOrientation="LEFT_TO_RIGHT" VBox.vgrow="ALWAYS">
             <menus>
