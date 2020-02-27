@@ -2,8 +2,6 @@ package psa.cesa.view;
 
 import javafx.scene.control.Alert;
 
-import java.io.ObjectInputFilter;
-
 public class Message {
 
     public static void show(String contenido) {

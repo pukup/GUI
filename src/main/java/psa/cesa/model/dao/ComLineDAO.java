@@ -1,9 +1,7 @@
 package psa.cesa.model.dao;
 
 import com.google.gson.Gson;
-import javafx.application.Platform;
 import psa.cesa.model.ComLine;
-import psa.cesa.view.Message;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -22,20 +20,13 @@ public class ComLineDAO {
      * @param url
      * @return
      */
-    public ComLine getCache(String url) {
-        try {
-            String s = getString(url);
-            Gson gson = new Gson();
-            return gson.fromJson(s, ComLine.class);
-        } catch (IOException e) {
-            Platform.runLater(() -> {
-                Message.show(e.toString());
-            });
-            return null;
-        }
+    public ComLine getAPICache(String url) throws IOException {
+        String s = getAPIString(url);
+        Gson gson = new Gson();
+        return gson.fromJson(s, ComLine.class);
     }
 
-    private String getString(String url) throws IOException {
+    private String getAPIString(String url) throws IOException {
         StringBuilder stringBuilder = new StringBuilder();
         URLConnection urlConnection = new URL(url).openConnection();
         InputStreamReader inputStreamReader = new InputStreamReader(urlConnection.getInputStream());

@@ -70,6 +70,12 @@ public class Primary implements Initializable {
         loadTimer();
     }
 
+    private void loadTimer() {
+        Timer timer = new Timer("TimerHeliostatsRefresh");
+        timerCacheTask = new TimerHeliostatRefreshTask(this);
+        timer.schedule(timerCacheTask, 0, 1000);
+    }
+
     @FXML
     private void zoom() {
         rows_vbox.styleProperty().bind(Bindings.format("-fx-font-size: %.2fpt;", zoom_slider.getValue()));
@@ -85,12 +91,6 @@ public class Primary implements Initializable {
     private void zoomOut(ActionEvent event) {
         double sliderVal = zoom_slider.getValue();
         zoom_slider.setValue(sliderVal -= 1);
-    }
-
-    private void loadTimer() {
-        Timer timer = new Timer("TimerHeliostatsStyles");
-        timerCacheTask = new TimerHeliostatRefreshTask(this);
-        timer.schedule(timerCacheTask, 0, 1000);
     }
 
     @FXML
@@ -113,21 +113,21 @@ public class Primary implements Initializable {
     }
 
     public void setRows() {
-        setRow16();
-        setRow15();
-        setRow14();
-        setRow13();
-        setRow12();
-        setRow11();
-        setRow10();
-        setRow09();
-        setRow08();
-        setRow07();
-        setRow06();
-        setRow05();
-        setRow04();
-        setRow03();
-        setRow02();
+        //        setRow16();
+        //        setRow15();
+        //        setRow14();
+        //        setRow13();
+        //        setRow12();
+        //        setRow11();
+        //        setRow10();
+        //        setRow09();
+        //        setRow08();
+        //        setRow07();
+        //        setRow06();
+        //        setRow05();
+        //        setRow04();
+        //        setRow03();
+        //        setRow02();
         setRow01();
     }
 
@@ -468,15 +468,15 @@ public class Primary implements Initializable {
     }
 
     private void setRow01() {
-        h0107.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(4));
-        h0105.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(3));
-        h0103.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(2));
-        h0101.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(1));
+        //        h0107.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(4));
+        //        h0105.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(3));
+        //        h0103.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(2));
+        //        h0101.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(1));
         h0100.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(1));
-        h0102.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(2));
-        h0104.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(3));
-        h0106.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(4));
-        h0108.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(5));
+        //        h0102.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(2));
+        //        h0104.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(3));
+        //        h0106.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(4));
+        //        h0108.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(5));
     }
 
 

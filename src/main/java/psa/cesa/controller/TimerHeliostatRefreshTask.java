@@ -87,21 +87,21 @@ public class TimerHeliostatRefreshTask extends TimerTask {
     }
 
     private void getCache() {
-        comLine16 = ComLineController.getCache(16);
-        comLine15 = ComLineController.getCache(15);
-        comLine14 = ComLineController.getCache(14);
-        comLine13 = ComLineController.getCache(13);
-        comLine12 = ComLineController.getCache(12);
-        comLine11 = ComLineController.getCache(11);
-        comLine10 = ComLineController.getCache(10);
-        comLine9 = ComLineController.getCache(9);
-        comLine8 = ComLineController.getCache(8);
-        comLine7 = ComLineController.getCache(7);
-        comLine6 = ComLineController.getCache(6);
-        comLine5 = ComLineController.getCache(5);
-        comLine4 = ComLineController.getCache(4);
-        comLine3 = ComLineController.getCache(3);
-        comLine2 = ComLineController.getCache(2);
-        comLine1 = ComLineController.getCache(1);
+        //        comLine16 = ComLineController.getCache(16);
+        //        comLine15 = ComLineController.getCache(15);
+        //        comLine14 = ComLineController.getCache(14);
+        //        comLine13 = ComLineController.getCache(13);
+        //        comLine12 = ComLineController.getCache(12);
+        //        comLine11 = ComLineController.getCache(11);
+        //        comLine10 = ComLineController.getCache(10);
+        //        comLine9 = ComLineController.getCache(9);
+        //        comLine8 = ComLineController.getCache(8);
+        //        comLine7 = ComLineController.getCache(7);
+        //        comLine6 = ComLineController.getCache(6);
+        //        comLine5 = ComLineController.getCache(5);
+        //        comLine4 = ComLineController.getCache(4);
+        //        comLine3 = ComLineController.getCache(3);
+        //        comLine2 = ComLineController.getCache(2);
+        comLine1 = ComLineController.getAPICache(1);
     }
 }

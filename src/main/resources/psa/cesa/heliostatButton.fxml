@@ -3,6 +3,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.VBox?>
 <fx:root type="javafx.scene.layout.VBox" xmlns:fx="http://javafx.com/fxml">
-    <Button fx:id="button" stylesheets="@CSS.css" styleClass="grey-pin" onAction="#openValues"/>
+    <Button fx:id="button" stylesheets="@CSS.css" styleClass="heliostat" onAction="#openValues"/>
 </fx:root>
 

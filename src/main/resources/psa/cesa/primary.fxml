@@ -4,9 +4,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import psa.cesa.view.*?>
-<VBox fx:id="root_vbox" alignment="CENTER" stylesheets="@CSS.css"
-      xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="psa.cesa.view.Primary">
+<VBox fx:id="root_vbox" alignment="CENTER" stylesheets="@CSS.css" xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="psa.cesa.view.Primary">
     <children>
         <MenuBar nodeOrientation="LEFT_TO_RIGHT" VBox.vgrow="ALWAYS">
             <menus>
@@ -37,7 +36,7 @@
                         <HBox alignment="CENTER" spacing="30.0">
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
-                                <Label text="16" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="16" textFill="WHITE"/>
                                 <HeliostatButton fx:id="h1609"/>
                                 <HeliostatButton fx:id="h1607"/>
                                 <HeliostatButton fx:id="h1605"/>
@@ -48,7 +47,7 @@
                                 <HeliostatButton fx:id="h1606"/>
                                 <HeliostatButton fx:id="h1608"/>
                                 <HeliostatButton fx:id="h1610"/>
-                                <Label text="16" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="16" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
                             <padding>
@@ -58,7 +57,7 @@
                         <HBox spacing="30.0">
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
-                                <Label text="15" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="15" textFill="WHITE"/>
                                 <HeliostatButton fx:id="h1511"/>
                                 <HeliostatButton fx:id="h1509"/>
                                 <HeliostatButton fx:id="h1507"/>
@@ -72,14 +71,14 @@
                                 <HeliostatButton fx:id="h1508"/>
                                 <HeliostatButton fx:id="h1510"/>
                                 <HeliostatButton fx:id="h1512"/>
-                                <Label text="15" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="15" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
                         </HBox>
                         <HBox spacing="30.0">
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
-                                <Label text="14" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="14" textFill="WHITE"/>
                                 <HeliostatButton fx:id="h1415"/>
                                 <HeliostatButton fx:id="h1413"/>
                                 <HeliostatButton fx:id="h1411"/>
@@ -96,14 +95,14 @@
                                 <HeliostatButton fx:id="h1412"/>
                                 <HeliostatButton fx:id="h1414"/>
                                 <HeliostatButton fx:id="h1416"/>
-                                <Label text="14" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="14" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
                         </HBox>
                         <HBox spacing="30.0">
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
-                                <Label text="13" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="13" textFill="WHITE"/>
                                 <HeliostatButton fx:id="h1317"/>
                                 <HeliostatButton fx:id="h1315"/>
                                 <HeliostatButton fx:id="h1313"/>
@@ -123,14 +122,14 @@
                                 <HeliostatButton fx:id="h1314"/>
                                 <HeliostatButton fx:id="h1316"/>
                                 <HeliostatButton fx:id="h1318"/>
-                                <Label text="13" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="13" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
                         </HBox>
                         <HBox spacing="30.0">
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
-                                <Label text="12" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="12" textFill="WHITE"/>
                                 <HeliostatButton fx:id="h1219"/>
                                 <HeliostatButton fx:id="h1217"/>
                                 <HeliostatButton fx:id="h1215"/>
@@ -151,14 +150,14 @@
                                 <HeliostatButton fx:id="h1216"/>
                                 <HeliostatButton fx:id="h1218"/>
                                 <HeliostatButton fx:id="h1220"/>
-                                <Label text="12" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="12" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
                         </HBox>
                         <HBox spacing="30.0">
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
-                                <Label text="11" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="11" textFill="WHITE"/>
                                 <HeliostatButton fx:id="h1121"/>
                                 <HeliostatButton fx:id="h1119"/>
                                 <HeliostatButton fx:id="h1117"/>
@@ -182,14 +181,14 @@
                                 <HeliostatButton fx:id="h1118"/>
                                 <HeliostatButton fx:id="h1120"/>
                                 <HeliostatButton fx:id="h1122"/>
-                                <Label text="11" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="11" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
                         </HBox>
                         <HBox spacing="18.0">
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
-                                <Label text="10" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="10" textFill="WHITE"/>
                                 <HeliostatButton fx:id="h1031"/>
                                 <HeliostatButton fx:id="h1029"/>
                                 <HeliostatButton fx:id="h1027"/>
@@ -222,14 +221,14 @@
                                 <HeliostatButton fx:id="h1028"/>
                                 <HeliostatButton fx:id="h1030"/>
                                 <HeliostatButton fx:id="h1032"/>
-                                <Label text="10" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="10" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
                         </HBox>
                         <HBox spacing="18.0">
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
-                                <Label text="09" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="09" textFill="WHITE"/>
                                 <HeliostatButton fx:id="h0929"/>
                                 <HeliostatButton fx:id="h0927"/>
                                 <HeliostatButton fx:id="h0925"/>
@@ -261,14 +260,14 @@
                                 <HeliostatButton fx:id="h0926"/>
                                 <HeliostatButton fx:id="h0928"/>
                                 <HeliostatButton fx:id="h0930"/>
-                                <Label text="09" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="09" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
                         </HBox>
                         <HBox spacing="20.0">
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
-                                <Label text="08" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="08" textFill="WHITE"/>
                                 <HeliostatButton fx:id="h0827"/>
                                 <HeliostatButton fx:id="h0825"/>
                                 <HeliostatButton fx:id="h0823"/>
@@ -297,14 +296,14 @@
                                 <HeliostatButton fx:id="h0824"/>
                                 <HeliostatButton fx:id="h0826"/>
                                 <HeliostatButton fx:id="h0828"/>
-                                <Label text="08" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="08" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
                         </HBox>
                         <HBox spacing="25.0">
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
-                                <Label text="07" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="07" textFill="WHITE"/>
                                 <HeliostatButton fx:id="h0721"/>
                                 <HeliostatButton fx:id="h0719"/>
                                 <HeliostatButton fx:id="h0717"/>
@@ -328,14 +327,14 @@
                                 <HeliostatButton fx:id="h0718"/>
                                 <HeliostatButton fx:id="h0720"/>
                                 <HeliostatButton fx:id="h0722"/>
-                                <Label text="07" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="07" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
                         </HBox>
                         <HBox spacing="30.0">
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
-                                <Label text="06" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="06" textFill="WHITE"/>
                                 <HeliostatButton fx:id="h0619"/>
                                 <HeliostatButton fx:id="h0617"/>
                                 <HeliostatButton fx:id="h0615"/>
@@ -356,14 +355,14 @@
                                 <HeliostatButton fx:id="h0616"/>
                                 <HeliostatButton fx:id="h0618"/>
                                 <HeliostatButton fx:id="h0620"/>
-                                <Label text="06" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="06" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
                         </HBox>
                         <HBox spacing="30.0">
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
-                                <Label text="05" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="05" textFill="WHITE"/>
                                 <HeliostatButton fx:id="h0515"/>
                                 <HeliostatButton fx:id="h0513"/>
                                 <HeliostatButton fx:id="h0511"/>
@@ -381,14 +380,14 @@
                                 <HeliostatButton fx:id="h0512"/>
                                 <HeliostatButton fx:id="h0514"/>
                                 <HeliostatButton fx:id="h0516"/>
-                                <Label text="05" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="05" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
                         </HBox>
                         <HBox spacing="30.0">
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
-                                <Label text="04" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="04" textFill="WHITE"/>
                                 <HeliostatButton fx:id="h0415"/>
                                 <HeliostatButton fx:id="h0413"/>
                                 <HeliostatButton fx:id="h0411"/>
@@ -405,14 +404,14 @@
                                 <HeliostatButton fx:id="h0412"/>
                                 <HeliostatButton fx:id="h0414"/>
                                 <HeliostatButton fx:id="h0416"/>
-                                <Label text="04" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="04" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
                         </HBox>
                         <HBox spacing="30.0">
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
-                                <Label text="03" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="03" textFill="WHITE"/>
                                 <HeliostatButton fx:id="h0311"/>
                                 <HeliostatButton fx:id="h0309"/>
                                 <HeliostatButton fx:id="h0307"/>
@@ -426,14 +425,14 @@
                                 <HeliostatButton fx:id="h0308"/>
                                 <HeliostatButton fx:id="h0310"/>
                                 <HeliostatButton fx:id="h0312"/>
-                                <Label text="03" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="03" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
                         </HBox>
                         <HBox spacing="30.0">
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
-                                <Label text="02" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="02" textFill="WHITE"/>
                                 <HeliostatButton fx:id="h0209"/>
                                 <HeliostatButton fx:id="h0207"/>
                                 <HeliostatButton fx:id="h0205"/>
@@ -444,14 +443,14 @@
                                 <HeliostatButton fx:id="h0206"/>
                                 <HeliostatButton fx:id="h0208"/>
                                 <HeliostatButton fx:id="h0210"/>
-                                <Label text="02" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="02" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
                         </HBox>
                         <HBox spacing="30.0">
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
-                                <Label text="01" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="01" textFill="WHITE"/>
                                 <HeliostatButton fx:id="h0107"/>
                                 <HeliostatButton fx:id="h0105"/>
                                 <HeliostatButton fx:id="h0103"/>
@@ -461,7 +460,7 @@
                                 <HeliostatButton fx:id="h0104"/>
                                 <HeliostatButton fx:id="h0106"/>
                                 <HeliostatButton fx:id="h0108"/>
-                                <Label text="01" textFill="WHITE" styleClass="label1"/>
+                                <Label styleClass="label1" text="01" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
                             <padding>
@@ -472,29 +471,34 @@
                 </VBox>
             </content>
         </ScrollPane>
-        <HBox prefHeight="0.0" prefWidth="1252.0" style="-fx-background-color: #C0C0C0;">
+        <HBox prefHeight="0.0" prefWidth="1252.0" style="-fx-background-color: #3C3F41;">
             <children>
-                <Button mnemonicParsing="false" text="       Seleccionar grupo       " onAction="#openGrouping">
+                <Button mnemonicParsing="false" onAction="#openGrouping" styleClass="button-grey"
+                        text="Seleccionar grupo">
                     <HBox.margin>
-                        <Insets left="3.0" right="3.0" top="3.0"/>
+                        <Insets bottom="6.0" left="6.0" right="6.0" top="6.0"/>
                     </HBox.margin>
                 </Button>
                 <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS"/>
-                <Button mnemonicParsing="false" styleClass="button-emergency" text="!" onAction="#emergency">
+                <Button mnemonicParsing="false" onAction="#emergency" styleClass="button-emergency" text="!">
                     <HBox.margin>
                         <Insets bottom="3.0" top="3.0"/>
                     </HBox.margin>
                 </Button>
                 <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS"/>
-                <Button mnemonicParsing="false" onAction="#zoomOut" text=" - ">
+                <Button mnemonicParsing="false" onAction="#zoomOut" styleClass="button-grey" text=" - ">
                     <HBox.margin>
-                        <Insets top="3.0"/>
+                        <Insets bottom="6.0" top="6.0" right="6.0" left="6.0"/>
                     </HBox.margin>
                 </Button>
-                <Slider fx:id="zoom_slider" blockIncrement="1.0" max="19.0" min="1.0" snapToTicks="true" value="10.0"/>
-                <Button mnemonicParsing="false" onAction="#zoomIn" text="+">
+                <Slider fx:id="zoom_slider" blockIncrement="1.0" max="19.0" min="1.0" snapToTicks="true" value="10.0">
                     <HBox.margin>
-                        <Insets top="3.0"/>
+                        <Insets bottom="6.0" top="12.0"/>
+                    </HBox.margin>
+                </Slider>
+                <Button mnemonicParsing="false" onAction="#zoomIn" styleClass="button-grey" text="+">
+                    <HBox.margin>
+                        <Insets bottom="6.0" top="6.0" right="6.0" left="6.0"/>
                     </HBox.margin>
                 </Button>
             </children>
