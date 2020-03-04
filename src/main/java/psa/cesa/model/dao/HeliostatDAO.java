@@ -7,7 +7,7 @@ import java.net.URLConnection;
 
 public class HeliostatDAO {
 
-    public String command(String url) throws IOException {
+    public String send(String url) throws IOException {
         StringBuilder stringBuilder = new StringBuilder();
         URLConnection urlConnection = new URL(url).openConnection();
         InputStreamReader inputStreamReader = new InputStreamReader(urlConnection.getInputStream());
@@ -19,15 +19,4 @@ public class HeliostatDAO {
         inputStreamReader.close();
         return stringBuilder.toString();
     }
-
-    //    public String command(String url) throws IOException {
-    //        BufferedReader in = new BufferedReader(new InputStreamReader(new URL(url).openConnection().getInputStream()));
-    //        String inputLine;
-    //        StringBuffer stringBuffer = new StringBuffer();
-    //        while ((inputLine = in.readLine()) != null) {
-    //            stringBuffer.append(inputLine);
-    //        }
-    //        in.close();
-    //        return inputLine;
-    //    }
 }

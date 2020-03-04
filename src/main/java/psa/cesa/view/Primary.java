@@ -473,7 +473,7 @@ public class Primary implements Initializable {
         //        h0103.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(2));
         //        h0101.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(1));
         h0100.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(1));
-        //        h0102.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(2));
+        h0102.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(2));
         //        h0104.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(3));
         //        h0106.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(4));
         //        h0108.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(5));

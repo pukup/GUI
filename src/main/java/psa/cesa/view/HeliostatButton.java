@@ -1,14 +1,14 @@
 package psa.cesa.view;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import psa.cesa.App;
@@ -22,32 +22,35 @@ import java.io.IOException;
  */
 public class HeliostatButton extends VBox {
 
+    @FXML
+    TextField tfAddress, tfModbus, tfStatusCode, tfWarning, tfOperation, tfSecurity, tfCom, tfClock, tfAz, tfEl, tfMotAz, tfMotEl, tfStatusReachedAz, tfStatusReachedEl, tfSwingAz, tfSwingEl, tfNotAz, tfNotEl;
+    @FXML
+    ImageView ivAZ;
+    @FXML
+    ComboBox<Integer> cbFocus;
+    @FXML
+    TextField tfFocusX, tfFocusY, tfFocusZ;
+    @FXML
+    TextField tfAzB, tfElB, tfOffAz, tfOffEl, tfDate, tfHour;
+    @FXML
+    TextArea textArea;
     /**
      * @param button
      * @param heliostat is an <code>Heliostat</code> object representation.
      */
     @FXML
     private Button button;
-
-    @FXML
-    TextField tfAddress, tfModbus, tfStatusCode, tfWarning, tfOperation, tfSecurity, tfCom, tfClock, tfAz, tfEl, tfMotAz, tfMotEl, tfStatusReachedAz, tfStatusReachedEl, tfSwingAz, tfSwingEl, tfNotAz, tfNotEl;
-
-    @FXML
-    ComboBox<String> cbFocus;
-    ObservableList<String> focusList = FXCollections.observableArrayList("Foco0", "Foco1", "Foco2", "Foco3", "Foco4", "Foco5", "Foco6", "Foco7", "Foco8", "Foco9");
-//
-//    @FXML
-//    ComboBox<String> cbPoint;
-//    ObservableList<String> pointList = FXCollections.observableArrayList("Punto0", "Punto1", "Punto2", "Punto3", "Punto4", "Punto5", "Punto6", "Punto7", "Punto8", "Punto9");
-
     private int comLineId;
 
     private Heliostat heliostat;
+
+    private HeliostatController heliostatController;
 
     private Scene valuesScene;
 
     public HeliostatButton() {
         try {
+            heliostatController = new HeliostatController();
             loadButton();
             loadValues();
         } catch (IOException exception) {
@@ -77,52 +80,95 @@ public class HeliostatButton extends VBox {
 
     @FXML
     private void dejection(ActionEvent event) {
-        tfWarning.setText(new HeliostatController().command(comLineId, heliostat.getId(), "a"));
+        textArea.appendText(command("a") + "\n");
     }
 
     @FXML
     private void aisle(ActionEvent event) {
-        new HeliostatController().command(comLineId, heliostat.getId(), "b");
+        textArea.appendText(command("b") + "\n");
     }
 
     @FXML
     private void kilter(ActionEvent event) {
-        new HeliostatController().command(comLineId, heliostat.getId(), "d");
+        textArea.appendText(command("d") + "\n");
     }
 
     @FXML
     private void boiler(ActionEvent event) {
-        new HeliostatController().command(comLineId, heliostat.getId(), "e");
+        textArea.appendText(command("e") + "\n");
     }
 
     @FXML
     private void immobilize(ActionEvent event) {
-        new HeliostatController().command(comLineId, heliostat.getId(), "i");
+        textArea.appendText(command("i") + "\n");
     }
 
     @FXML
     private void outService(ActionEvent event) {
-        new HeliostatController().command(comLineId, heliostat.getId(), "l");
+        textArea.appendText(command("l") + "\n");
     }
 
     @FXML
     private void tracking(ActionEvent event) {
-        new HeliostatController().command(comLineId, heliostat.getId(), "n");
+        textArea.appendText(command("n") + "\n");
     }
 
     @FXML
     private void emergency(ActionEvent event) {
-        new HeliostatController().command(comLineId, heliostat.getId(), "q");
+        textArea.appendText(command("q") + "\n");
     }
 
     @FXML
     private void kilterAisle(ActionEvent event) {
-        new HeliostatController().command(comLineId, heliostat.getId(), "s");
+        textArea.appendText(command("s") + "\n");
+    }
+
+    private String command(String b) {
+        return heliostatController.command(comLineId, heliostat.getId(), b);
     }
 
     @FXML
     private void setFocus() {
+        textArea.appendText(heliostatController.focus(comLineId, heliostat.getId(), cbFocus.getValue()) + "\n");
+    }
 
+    @FXML
+    private void newFocus() {
+        int focus = cbFocus.getValue();
+        int x = Integer.getInteger(tfFocusX.getText());
+        int y = Integer.getInteger(tfFocusY.getText());
+        int z = Integer.getInteger(tfFocusZ.getText());
+        textArea.appendText(heliostatController.newFocus(comLineId, heliostat.getId(), focus, x, y, z) + "\n");
+    }
+
+    @FXML
+    private void setAzEl() {
+        int az = Integer.valueOf(tfAzB.getText());
+        int el = Integer.valueOf(tfElB.getText());
+        heliostatController.setAz(comLineId, heliostat.getId(), az);
+        heliostatController.setEl(comLineId, heliostat.getId(), el);
+    }
+
+    @FXML
+    private void getOffset() {
+        tfOffAz.setText(heliostatController.getOffsetAz(comLineId, heliostat.getId()));
+        tfOffEl.setText(heliostatController.getOffsetEl(comLineId, heliostat.getId()));
+    }
+
+    @FXML
+    private void setOffset() {
+
+    }
+
+    @FXML
+    private void getHour() {
+        tfDate.setText(heliostatController.getHour(comLineId, heliostat.getId()));
+        tfHour.setText(heliostatController.getHour(comLineId, heliostat.getId()));
+    }
+
+    @FXML
+    private void setHour() {
+        heliostatController.setHour(comLineId, heliostat.getId());
     }
 
     public void setHeliostat(int comLineId, Heliostat heliostat) {
@@ -132,34 +178,35 @@ public class HeliostatButton extends VBox {
         setSkins();
     }
 
+    public void setValues() {
+        if (tfAddress != null) {
+            tfAddress.setText(String.format("" + this.getId()));
+            tfModbus.setText(String.format("%d - %d", comLineId, heliostat.getId()));
+            tfWarning.setText(heliostat.state1ToString());
+            tfStatusCode.setText(heliostat.state0ToString());
+            tfOperation.setText(heliostat.eventOperationToString());
+            tfSecurity.setText(heliostat.eventSecurityToString());
+            tfCom.setText(heliostat.eventComToString());
+            tfClock.setText(heliostat.eventCLToString());
+            tfAz.setText(String.valueOf(heliostat.getPositionAZ()));
+            tfEl.setText(String.valueOf(heliostat.getPositionEL()));
+            tfMotAz.setText(heliostat.diagnosisAz0ToString());
+            tfMotEl.setText(heliostat.diagnosisEl0ToString());
+            tfStatusReachedAz.setText(heliostat.diagnosisAz1ToString());
+            tfStatusReachedEl.setText(heliostat.diagnosisEl1ToString());
+            tfSwingAz.setText(heliostat.diagnosisAz2ToString());
+            tfSwingEl.setText(heliostat.diagnosisEl2ToString());
+            tfNotAz.setText(heliostat.diagnosisAz3ToString());
+            tfNotEl.setText(heliostat.diagnosisEl3ToString());
+        }
+    }
+
     private void setSkins() {
         setSkinState0();
         setSkinState1();
         setSkinEventOperation();
         setSkinEventSecurity();
         setSkinEventCom();
-    }
-
-    public void setValues() {
-//        cbFocus.setItems(focusList);
-//        cbPoint.setItems(pointList);
-        tfAddress.setText(String.format("" + this.getId()));
-        tfModbus.setText(String.format("%d - %d", comLineId, heliostat.getId()));
-        tfStatusCode.setText(heliostat.state0ToString());
-        tfOperation.setText(heliostat.eventOperationToString());
-        tfSecurity.setText(heliostat.eventSecurityToString());
-        tfCom.setText(heliostat.eventComToString());
-        tfClock.setText(heliostat.eventCLToString());
-        tfAz.setText(String.valueOf(heliostat.getPositionAZ()));
-        tfEl.setText(String.valueOf(heliostat.getPositionEL()));
-        tfMotAz.setText(heliostat.diagnosisAz0ToString());
-        tfMotEl.setText(heliostat.diagnosisEl0ToString());
-        tfStatusReachedAz.setText(heliostat.diagnosisAz1ToString());
-        tfStatusReachedEl.setText(heliostat.diagnosisEl1ToString());
-        tfSwingAz.setText(heliostat.diagnosisAz2ToString());
-        tfSwingEl.setText(heliostat.diagnosisEl2ToString());
-        tfNotAz.setText(heliostat.diagnosisAz3ToString());
-        tfNotEl.setText(heliostat.diagnosisEl3ToString());
     }
 
     /**
