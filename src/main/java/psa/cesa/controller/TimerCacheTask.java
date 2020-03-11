@@ -5,21 +5,40 @@ import psa.cesa.view.Primary;
 
 import java.util.TimerTask;
 
-public class TimerHeliostatRefreshTask extends TimerTask {
+public class TimerCacheTask extends TimerTask {
 
     private Primary primary;
 
     private ComLine comLine16, comLine15, comLine14, comLine13, comLine12, comLine11, comLine10, comLine9, comLine8, comLine7, comLine6, comLine5, comLine4, comLine3, comLine2, comLine1;
 
-    public TimerHeliostatRefreshTask(Primary primary) {
+    public TimerCacheTask(Primary primary) {
         this.primary = primary;
         getCache();
+    }
+
+    private void getCache() {
+        //        comLine16 = ComLineController.getAPICache(16);
+        //        comLine15 = ComLineController.getAPICache(15);
+        //        comLine14 = ComLineController.getAPICache(14);
+        //        comLine13 = ComLineController.getAPICache(13);
+        //        comLine12 = ComLineController.getAPICache(12);
+        //        comLine11 = ComLineController.getAPICache(11);
+        //        comLine10 = ComLineController.getAPICache(10);
+        //        comLine9 = ComLineController.getAPICache(9);
+        //        comLine8 = ComLineController.getAPICache(8);
+        //        comLine7 = ComLineController.getAPICache(7);
+        //        comLine6 = ComLineController.getAPICache(6);
+        //        comLine5 = ComLineController.getAPICache(5);
+        //        comLine4 = ComLineController.getAPICache(4);
+        //        comLine3 = ComLineController.getAPICache(3);
+        //        comLine2 = ComLineController.getAPICache(2);
+        comLine1 = ComLineController.getAPICache(1);
     }
 
     @Override
     public void run() {
         getCache();
-        primary.setRows();
+        primary.refreshRows();
     }
 
     public ComLine getComLine16() {
@@ -84,24 +103,5 @@ public class TimerHeliostatRefreshTask extends TimerTask {
 
     public ComLine getComLine1() {
         return comLine1;
-    }
-
-    private void getCache() {
-        //        comLine16 = ComLineController.getCache(16);
-        //        comLine15 = ComLineController.getCache(15);
-        //        comLine14 = ComLineController.getCache(14);
-        //        comLine13 = ComLineController.getCache(13);
-        //        comLine12 = ComLineController.getCache(12);
-        //        comLine11 = ComLineController.getCache(11);
-        //        comLine10 = ComLineController.getCache(10);
-        //        comLine9 = ComLineController.getCache(9);
-        //        comLine8 = ComLineController.getCache(8);
-        //        comLine7 = ComLineController.getCache(7);
-        //        comLine6 = ComLineController.getCache(6);
-        //        comLine5 = ComLineController.getCache(5);
-        //        comLine4 = ComLineController.getCache(4);
-        //        comLine3 = ComLineController.getCache(3);
-        //        comLine2 = ComLineController.getCache(2);
-        comLine1 = ComLineController.getAPICache(1);
     }
 }

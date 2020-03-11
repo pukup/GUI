@@ -11,7 +11,7 @@ import javafx.scene.control.Slider;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import psa.cesa.App;
-import psa.cesa.controller.TimerHeliostatRefreshTask;
+import psa.cesa.controller.TimerCacheTask;
 
 import java.io.IOException;
 import java.net.URL;
@@ -23,7 +23,7 @@ import java.util.Timer;
  */
 public class Primary implements Initializable {
 
-    private TimerHeliostatRefreshTask timerCacheTask;
+    private TimerCacheTask timerCacheTask;
 
     @FXML
     private VBox rows_vbox;
@@ -72,7 +72,7 @@ public class Primary implements Initializable {
 
     private void loadTimer() {
         Timer timer = new Timer("TimerHeliostatsRefresh");
-        timerCacheTask = new TimerHeliostatRefreshTask(this);
+        timerCacheTask = new TimerCacheTask(this);
         timer.schedule(timerCacheTask, 0, 1000);
     }
 
@@ -112,383 +112,383 @@ public class Primary implements Initializable {
         // or something.
     }
 
-    public void setRows() {
-        //        setRow16();
-        //        setRow15();
-        //        setRow14();
-        //        setRow13();
-        //        setRow12();
-        //        setRow11();
-        //        setRow10();
-        //        setRow09();
-        //        setRow08();
-        //        setRow07();
-        //        setRow06();
-        //        setRow05();
-        //        setRow04();
-        //        setRow03();
-        //        setRow02();
-        setRow01();
+    public void refreshRows() {
+        refreshRow16();
+        refreshRow15();
+        refreshRow14();
+        refreshRow13();
+        refreshRow12();
+        refreshRow11();
+        refreshRow10();
+        refreshRow09();
+        refreshRow08();
+        refreshRow07();
+        refreshRow06();
+        refreshRow05();
+        refreshRow04();
+        refreshRow03();
+        refreshRow02();
+        refreshRow01();
     }
 
-    private void setRow16() {
-        h1609.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(146));
-        h1607.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(145));
-        h1605.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(144));
-        h1603.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(143));
-        h1601.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(142));
-        h1602.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(150));
-        h1604.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(151));
-        h1606.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(152));
-        h1608.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(153));
-        h1610.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(154));
+    private void refreshRow16() {
+        h1609.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(146));
+        h1607.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(145));
+        h1605.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(144));
+        h1603.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(143));
+        h1601.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(142));
+        h1602.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(150));
+        h1604.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(151));
+        h1606.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(152));
+        h1608.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(153));
+        h1610.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(154));
     }
 
-    private void setRow15() {
-        h1511.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(141));
-        h1509.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(140));
-        h1507.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(139));
-        h1505.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(138));
-        h1503.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(137));
-        h1501.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(136));
-        h1500.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(143));
-        h1502.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(144));
-        h1504.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(145));
-        h1506.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(146));
-        h1508.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(147));
-        h1510.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(148));
-        h1512.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(149));
+    private void refreshRow15() {
+        h1511.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(141));
+        h1509.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(140));
+        h1507.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(139));
+        h1505.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(138));
+        h1503.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(137));
+        h1501.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(136));
+        h1500.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(143));
+        h1502.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(144));
+        h1504.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(145));
+        h1506.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(146));
+        h1508.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(147));
+        h1510.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(148));
+        h1512.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(149));
     }
 
-    private void setRow14() {
-        h1415.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(135));
-        h1413.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(134));
-        h1411.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(133));
-        h1409.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(132));
-        h1407.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(131));
-        h1405.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(130));
-        h1403.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(129));
-        h1401.setHeliostat(timerCacheTask.getComLine16().getId(), timerCacheTask.getComLine16().getHeliostats().get(128));
-        h1402.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(135));
-        h1404.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(136));
-        h1406.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(137));
-        h1408.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(138));
-        h1410.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(139));
-        h1412.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(140));
-        h1414.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(141));
-        h1416.setHeliostat(timerCacheTask.getComLine8().getId(), timerCacheTask.getComLine8().getHeliostats().get(142));
+    private void refreshRow14() {
+        h1415.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(135));
+        h1413.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(134));
+        h1411.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(133));
+        h1409.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(132));
+        h1407.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(131));
+        h1405.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(130));
+        h1403.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(129));
+        h1401.refreshHeliostat(timerCacheTask.getComLine16().getHeliostats().get(128));
+        h1402.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(135));
+        h1404.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(136));
+        h1406.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(137));
+        h1408.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(138));
+        h1410.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(139));
+        h1412.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(140));
+        h1414.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(141));
+        h1416.refreshHeliostat(timerCacheTask.getComLine8().getHeliostats().get(142));
     }
 
-    private void setRow13() {
-        h1317.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(127));
-        h1315.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(126));
-        h1313.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(125));
-        h1311.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(124));
-        h1309.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(123));
-        h1307.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(122));
-        h1305.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(121));
-        h1303.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(120));
-        h1301.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(119));
-        h1300.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(125));
-        h1302.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(126));
-        h1304.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(127));
-        h1306.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(128));
-        h1308.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(129));
-        h1310.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(130));
-        h1312.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(131));
-        h1314.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(132));
-        h1316.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(133));
-        h1318.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(134));
+    private void refreshRow13() {
+        h1317.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(127));
+        h1315.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(126));
+        h1313.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(125));
+        h1311.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(124));
+        h1309.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(123));
+        h1307.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(122));
+        h1305.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(121));
+        h1303.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(120));
+        h1301.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(119));
+        h1300.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(125));
+        h1302.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(126));
+        h1304.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(127));
+        h1306.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(128));
+        h1308.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(129));
+        h1310.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(130));
+        h1312.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(131));
+        h1314.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(132));
+        h1316.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(133));
+        h1318.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(134));
     }
 
-    private void setRow12() {
-        h1219.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(118));
-        h1217.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(117));
-        h1215.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(116));
-        h1213.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(115));
-        h1211.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(114));
-        h1209.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(113));
-        h1207.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(112));
-        h1205.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(111));
-        h1203.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(110));
-        h1201.setHeliostat(timerCacheTask.getComLine15().getId(), timerCacheTask.getComLine15().getHeliostats().get(109));
-        h1202.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(115));
-        h1204.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(116));
-        h1206.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(117));
-        h1208.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(118));
-        h1210.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(119));
-        h1212.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(120));
-        h1214.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(121));
-        h1216.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(122));
-        h1218.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(123));
-        h1220.setHeliostat(timerCacheTask.getComLine7().getId(), timerCacheTask.getComLine7().getHeliostats().get(124));
+    private void refreshRow12() {
+        h1219.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(118));
+        h1217.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(117));
+        h1215.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(116));
+        h1213.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(115));
+        h1211.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(114));
+        h1209.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(113));
+        h1207.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(112));
+        h1205.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(111));
+        h1203.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(110));
+        h1201.refreshHeliostat(timerCacheTask.getComLine15().getHeliostats().get(109));
+        h1202.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(115));
+        h1204.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(116));
+        h1206.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(117));
+        h1208.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(118));
+        h1210.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(119));
+        h1212.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(120));
+        h1214.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(121));
+        h1216.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(122));
+        h1218.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(123));
+        h1220.refreshHeliostat(timerCacheTask.getComLine7().getHeliostats().get(124));
     }
 
-    private void setRow11() {
-        h1121.setHeliostat(timerCacheTask.getComLine14().getId(), timerCacheTask.getComLine14().getHeliostats().get(108));
-        h1119.setHeliostat(timerCacheTask.getComLine14().getId(), timerCacheTask.getComLine14().getHeliostats().get(107));
-        h1117.setHeliostat(timerCacheTask.getComLine14().getId(), timerCacheTask.getComLine14().getHeliostats().get(106));
-        h1115.setHeliostat(timerCacheTask.getComLine14().getId(), timerCacheTask.getComLine14().getHeliostats().get(105));
-        h1113.setHeliostat(timerCacheTask.getComLine14().getId(), timerCacheTask.getComLine14().getHeliostats().get(104));
-        h1111.setHeliostat(timerCacheTask.getComLine14().getId(), timerCacheTask.getComLine14().getHeliostats().get(103));
-        h1109.setHeliostat(timerCacheTask.getComLine14().getId(), timerCacheTask.getComLine14().getHeliostats().get(102));
-        h1107.setHeliostat(timerCacheTask.getComLine14().getId(), timerCacheTask.getComLine14().getHeliostats().get(101));
-        h1105.setHeliostat(timerCacheTask.getComLine14().getId(), timerCacheTask.getComLine14().getHeliostats().get(100));
-        h1103.setHeliostat(timerCacheTask.getComLine14().getId(), timerCacheTask.getComLine14().getHeliostats().get(99));
-        h1101.setHeliostat(timerCacheTask.getComLine14().getId(), timerCacheTask.getComLine14().getHeliostats().get(98));
-        h1100.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(103));
-        h1102.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(104));
-        h1104.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(105));
-        h1106.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(106));
-        h1108.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(107));
-        h1110.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(108));
-        h1112.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(109));
-        h1114.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(110));
-        h1116.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(111));
-        h1118.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(112));
-        h1120.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(113));
-        h1122.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(114));
+    private void refreshRow11() {
+        h1121.refreshHeliostat(timerCacheTask.getComLine14().getHeliostats().get(108));
+        h1119.refreshHeliostat(timerCacheTask.getComLine14().getHeliostats().get(107));
+        h1117.refreshHeliostat(timerCacheTask.getComLine14().getHeliostats().get(106));
+        h1115.refreshHeliostat(timerCacheTask.getComLine14().getHeliostats().get(105));
+        h1113.refreshHeliostat(timerCacheTask.getComLine14().getHeliostats().get(104));
+        h1111.refreshHeliostat(timerCacheTask.getComLine14().getHeliostats().get(103));
+        h1109.refreshHeliostat(timerCacheTask.getComLine14().getHeliostats().get(102));
+        h1107.refreshHeliostat(timerCacheTask.getComLine14().getHeliostats().get(101));
+        h1105.refreshHeliostat(timerCacheTask.getComLine14().getHeliostats().get(100));
+        h1103.refreshHeliostat(timerCacheTask.getComLine14().getHeliostats().get(99));
+        h1101.refreshHeliostat(timerCacheTask.getComLine14().getHeliostats().get(98));
+        h1100.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(103));
+        h1102.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(104));
+        h1104.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(105));
+        h1106.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(106));
+        h1108.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(107));
+        h1110.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(108));
+        h1112.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(109));
+        h1114.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(110));
+        h1116.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(111));
+        h1118.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(112));
+        h1120.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(113));
+        h1122.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(114));
     }
 
-    private void setRow10() {
-        h1031.setHeliostat(timerCacheTask.getComLine14().getId(), timerCacheTask.getComLine14().getHeliostats().get(97));
-        h1029.setHeliostat(timerCacheTask.getComLine14().getId(), timerCacheTask.getComLine14().getHeliostats().get(96));
-        h1027.setHeliostat(timerCacheTask.getComLine14().getId(), timerCacheTask.getComLine14().getHeliostats().get(95));
-        h1025.setHeliostat(timerCacheTask.getComLine14().getId(), timerCacheTask.getComLine14().getHeliostats().get(94));
-        h1023.setHeliostat(timerCacheTask.getComLine14().getId(), timerCacheTask.getComLine14().getHeliostats().get(93));
-        h1021.setHeliostat(timerCacheTask.getComLine14().getId(), timerCacheTask.getComLine14().getHeliostats().get(92));
-        h1019.setHeliostat(timerCacheTask.getComLine14().getId(), timerCacheTask.getComLine14().getHeliostats().get(91));
-        h1017.setHeliostat(timerCacheTask.getComLine13().getId(), timerCacheTask.getComLine13().getHeliostats().get(90));
-        h1015.setHeliostat(timerCacheTask.getComLine13().getId(), timerCacheTask.getComLine13().getHeliostats().get(89));
-        h1013.setHeliostat(timerCacheTask.getComLine13().getId(), timerCacheTask.getComLine13().getHeliostats().get(88));
-        h1011.setHeliostat(timerCacheTask.getComLine13().getId(), timerCacheTask.getComLine13().getHeliostats().get(87));
-        h1009.setHeliostat(timerCacheTask.getComLine13().getId(), timerCacheTask.getComLine13().getHeliostats().get(86));
-        h1007.setHeliostat(timerCacheTask.getComLine13().getId(), timerCacheTask.getComLine13().getHeliostats().get(85));
-        h1005.setHeliostat(timerCacheTask.getComLine13().getId(), timerCacheTask.getComLine13().getHeliostats().get(84));
-        h1003.setHeliostat(timerCacheTask.getComLine13().getId(), timerCacheTask.getComLine13().getHeliostats().get(83));
-        h1001.setHeliostat(timerCacheTask.getComLine13().getId(), timerCacheTask.getComLine13().getHeliostats().get(82));
-        h1002.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(87));
-        h1004.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(88));
-        h1006.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(89));
-        h1008.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(90));
-        h1010.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(91));
-        h1012.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(92));
-        h1014.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(93));
-        h1016.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(94));
-        h1018.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(95));
-        h1020.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(96));
-        h1022.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(97));
-        h1024.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(98));
-        h1026.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(99));
-        h1028.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(100));
-        h1030.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(101));
-        h1032.setHeliostat(timerCacheTask.getComLine6().getId(), timerCacheTask.getComLine6().getHeliostats().get(102));
+    private void refreshRow10() {
+        h1031.refreshHeliostat(timerCacheTask.getComLine14().getHeliostats().get(97));
+        h1029.refreshHeliostat(timerCacheTask.getComLine14().getHeliostats().get(96));
+        h1027.refreshHeliostat(timerCacheTask.getComLine14().getHeliostats().get(95));
+        h1025.refreshHeliostat(timerCacheTask.getComLine14().getHeliostats().get(94));
+        h1023.refreshHeliostat(timerCacheTask.getComLine14().getHeliostats().get(93));
+        h1021.refreshHeliostat(timerCacheTask.getComLine14().getHeliostats().get(92));
+        h1019.refreshHeliostat(timerCacheTask.getComLine14().getHeliostats().get(91));
+        h1017.refreshHeliostat(timerCacheTask.getComLine13().getHeliostats().get(90));
+        h1015.refreshHeliostat(timerCacheTask.getComLine13().getHeliostats().get(89));
+        h1013.refreshHeliostat(timerCacheTask.getComLine13().getHeliostats().get(88));
+        h1011.refreshHeliostat(timerCacheTask.getComLine13().getHeliostats().get(87));
+        h1009.refreshHeliostat(timerCacheTask.getComLine13().getHeliostats().get(86));
+        h1007.refreshHeliostat(timerCacheTask.getComLine13().getHeliostats().get(85));
+        h1005.refreshHeliostat(timerCacheTask.getComLine13().getHeliostats().get(84));
+        h1003.refreshHeliostat(timerCacheTask.getComLine13().getHeliostats().get(83));
+        h1001.refreshHeliostat(timerCacheTask.getComLine13().getHeliostats().get(82));
+        h1002.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(87));
+        h1004.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(88));
+        h1006.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(89));
+        h1008.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(90));
+        h1010.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(91));
+        h1012.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(92));
+        h1014.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(93));
+        h1016.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(94));
+        h1018.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(95));
+        h1020.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(96));
+        h1022.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(97));
+        h1024.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(98));
+        h1026.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(99));
+        h1028.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(100));
+        h1030.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(101));
+        h1032.refreshHeliostat(timerCacheTask.getComLine6().getHeliostats().get(102));
     }
 
-    private void setRow09() {
-        h0929.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(81));
-        h0927.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(80));
-        h0925.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(79));
-        h0923.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(78));
-        h0921.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(77));
-        h0919.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(76));
-        h0917.setHeliostat(timerCacheTask.getComLine13().getId(), timerCacheTask.getComLine13().getHeliostats().get(75));
-        h0915.setHeliostat(timerCacheTask.getComLine13().getId(), timerCacheTask.getComLine13().getHeliostats().get(74));
-        h0913.setHeliostat(timerCacheTask.getComLine13().getId(), timerCacheTask.getComLine13().getHeliostats().get(73));
-        h0911.setHeliostat(timerCacheTask.getComLine13().getId(), timerCacheTask.getComLine13().getHeliostats().get(72));
-        h0909.setHeliostat(timerCacheTask.getComLine13().getId(), timerCacheTask.getComLine13().getHeliostats().get(71));
-        h0907.setHeliostat(timerCacheTask.getComLine13().getId(), timerCacheTask.getComLine13().getHeliostats().get(70));
-        h0905.setHeliostat(timerCacheTask.getComLine13().getId(), timerCacheTask.getComLine13().getHeliostats().get(69));
-        h0903.setHeliostat(timerCacheTask.getComLine13().getId(), timerCacheTask.getComLine13().getHeliostats().get(68));
-        h0901.setHeliostat(timerCacheTask.getComLine13().getId(), timerCacheTask.getComLine13().getHeliostats().get(67));
-        h0900.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(71));
-        h0902.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(72));
-        h0904.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(73));
-        h0906.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(74));
-        h0908.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(75));
-        h0910.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(76));
-        h0912.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(77));
-        h0914.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(78));
-        h0916.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(79));
-        h0918.setHeliostat(timerCacheTask.getComLine5().getId(), timerCacheTask.getComLine5().getHeliostats().get(80));
-        h0920.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(81));
-        h0922.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(82));
-        h0924.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(83));
-        h0926.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(84));
-        h0928.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(85));
-        h0930.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(86));
+    private void refreshRow09() {
+        h0929.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(81));
+        h0927.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(80));
+        h0925.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(79));
+        h0923.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(78));
+        h0921.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(77));
+        h0919.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(76));
+        h0917.refreshHeliostat(timerCacheTask.getComLine13().getHeliostats().get(75));
+        h0915.refreshHeliostat(timerCacheTask.getComLine13().getHeliostats().get(74));
+        h0913.refreshHeliostat(timerCacheTask.getComLine13().getHeliostats().get(73));
+        h0911.refreshHeliostat(timerCacheTask.getComLine13().getHeliostats().get(72));
+        h0909.refreshHeliostat(timerCacheTask.getComLine13().getHeliostats().get(71));
+        h0907.refreshHeliostat(timerCacheTask.getComLine13().getHeliostats().get(70));
+        h0905.refreshHeliostat(timerCacheTask.getComLine13().getHeliostats().get(69));
+        h0903.refreshHeliostat(timerCacheTask.getComLine13().getHeliostats().get(68));
+        h0901.refreshHeliostat(timerCacheTask.getComLine13().getHeliostats().get(67));
+        h0900.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(71));
+        h0902.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(72));
+        h0904.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(73));
+        h0906.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(74));
+        h0908.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(75));
+        h0910.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(76));
+        h0912.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(77));
+        h0914.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(78));
+        h0916.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(79));
+        h0918.refreshHeliostat(timerCacheTask.getComLine5().getHeliostats().get(80));
+        h0920.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(81));
+        h0922.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(82));
+        h0924.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(83));
+        h0926.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(84));
+        h0928.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(85));
+        h0930.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(86));
     }
 
-    private void setRow08() {
-        h0827.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(66));
-        h0825.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(65));
-        h0823.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(64));
-        h0821.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(63));
-        h0819.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(62));
-        h0817.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(61));
-        h0815.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(60));
-        h0813.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(59));
-        h0811.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(58));
-        h0809.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(57));
-        h0807.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(56));
-        h0805.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(55));
-        h0803.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(54));
-        h0801.setHeliostat(timerCacheTask.getComLine12().getId(), timerCacheTask.getComLine12().getHeliostats().get(53));
-        h0802.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(57));
-        h0804.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(58));
-        h0806.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(59));
-        h0808.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(60));
-        h0810.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(61));
-        h0812.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(62));
-        h0814.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(63));
-        h0816.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(64));
-        h0818.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(65));
-        h0820.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(66));
-        h0822.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(67));
-        h0824.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(68));
-        h0826.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(69));
-        h0828.setHeliostat(timerCacheTask.getComLine4().getId(), timerCacheTask.getComLine4().getHeliostats().get(70));
+    private void refreshRow08() {
+        h0827.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(66));
+        h0825.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(65));
+        h0823.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(64));
+        h0821.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(63));
+        h0819.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(62));
+        h0817.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(61));
+        h0815.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(60));
+        h0813.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(59));
+        h0811.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(58));
+        h0809.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(57));
+        h0807.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(56));
+        h0805.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(55));
+        h0803.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(54));
+        h0801.refreshHeliostat(timerCacheTask.getComLine12().getHeliostats().get(53));
+        h0802.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(57));
+        h0804.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(58));
+        h0806.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(59));
+        h0808.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(60));
+        h0810.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(61));
+        h0812.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(62));
+        h0814.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(63));
+        h0816.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(64));
+        h0818.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(65));
+        h0820.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(66));
+        h0822.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(67));
+        h0824.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(68));
+        h0826.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(69));
+        h0828.refreshHeliostat(timerCacheTask.getComLine4().getHeliostats().get(70));
     }
 
-    private void setRow07() {
-        h0721.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(52));
-        h0719.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(51));
-        h0717.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(50));
-        h0715.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(49));
-        h0713.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(48));
-        h0711.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(47));
-        h0709.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(46));
-        h0707.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(45));
-        h0705.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(44));
-        h0703.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(43));
-        h0701.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(42));
-        h0700.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(45));
-        h0702.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(46));
-        h0704.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(47));
-        h0706.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(48));
-        h0708.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(49));
-        h0710.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(50));
-        h0712.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(51));
-        h0714.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(52));
-        h0716.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(53));
-        h0718.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(54));
-        h0720.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(55));
-        h0722.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(56));
+    private void refreshRow07() {
+        h0721.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(52));
+        h0719.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(51));
+        h0717.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(50));
+        h0715.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(49));
+        h0713.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(48));
+        h0711.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(47));
+        h0709.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(46));
+        h0707.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(45));
+        h0705.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(44));
+        h0703.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(43));
+        h0701.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(42));
+        h0700.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(45));
+        h0702.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(46));
+        h0704.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(47));
+        h0706.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(48));
+        h0708.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(49));
+        h0710.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(50));
+        h0712.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(51));
+        h0714.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(52));
+        h0716.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(53));
+        h0718.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(54));
+        h0720.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(55));
+        h0722.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(56));
     }
 
-    private void setRow06() {
-        h0619.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(41));
-        h0617.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(40));
-        h0615.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(39));
-        h0613.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(38));
-        h0611.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(37));
-        h0609.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(36));
-        h0607.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(35));
-        h0605.setHeliostat(timerCacheTask.getComLine11().getId(), timerCacheTask.getComLine11().getHeliostats().get(34));
-        h0603.setHeliostat(timerCacheTask.getComLine10().getId(), timerCacheTask.getComLine10().getHeliostats().get(33));
-        h0601.setHeliostat(timerCacheTask.getComLine10().getId(), timerCacheTask.getComLine10().getHeliostats().get(32));
-        h0602.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(35));
-        h0604.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(36));
-        h0606.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(37));
-        h0608.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(38));
-        h0610.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(39));
-        h0612.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(40));
-        h0614.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(41));
-        h0616.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(42));
-        h0618.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(43));
-        h0620.setHeliostat(timerCacheTask.getComLine3().getId(), timerCacheTask.getComLine3().getHeliostats().get(44));
+    private void refreshRow06() {
+        h0619.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(41));
+        h0617.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(40));
+        h0615.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(39));
+        h0613.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(38));
+        h0611.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(37));
+        h0609.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(36));
+        h0607.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(35));
+        h0605.refreshHeliostat(timerCacheTask.getComLine11().getHeliostats().get(34));
+        h0603.refreshHeliostat(timerCacheTask.getComLine10().getHeliostats().get(33));
+        h0601.refreshHeliostat(timerCacheTask.getComLine10().getHeliostats().get(32));
+        h0602.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(35));
+        h0604.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(36));
+        h0606.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(37));
+        h0608.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(38));
+        h0610.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(39));
+        h0612.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(40));
+        h0614.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(41));
+        h0616.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(42));
+        h0618.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(43));
+        h0620.refreshHeliostat(timerCacheTask.getComLine3().getHeliostats().get(44));
     }
 
-    private void setRow05() {
-        h0515.setHeliostat(timerCacheTask.getComLine10().getId(), timerCacheTask.getComLine10().getHeliostats().get(31));
-        h0513.setHeliostat(timerCacheTask.getComLine10().getId(), timerCacheTask.getComLine10().getHeliostats().get(30));
-        h0511.setHeliostat(timerCacheTask.getComLine10().getId(), timerCacheTask.getComLine10().getHeliostats().get(29));
-        h0509.setHeliostat(timerCacheTask.getComLine10().getId(), timerCacheTask.getComLine10().getHeliostats().get(28));
-        h0507.setHeliostat(timerCacheTask.getComLine10().getId(), timerCacheTask.getComLine10().getHeliostats().get(27));
-        h0505.setHeliostat(timerCacheTask.getComLine10().getId(), timerCacheTask.getComLine10().getHeliostats().get(26));
-        h0503.setHeliostat(timerCacheTask.getComLine10().getId(), timerCacheTask.getComLine10().getHeliostats().get(25));
-        h0501.setHeliostat(timerCacheTask.getComLine10().getId(), timerCacheTask.getComLine10().getHeliostats().get(24));
-        h0500.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(26));
-        h0502.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(27));
-        h0504.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(28));
-        h0506.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(29));
-        h0508.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(30));
-        h0510.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(31));
-        h0512.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(32));
-        h0514.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(33));
-        h0516.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(34));
+    private void refreshRow05() {
+        h0515.refreshHeliostat(timerCacheTask.getComLine10().getHeliostats().get(31));
+        h0513.refreshHeliostat(timerCacheTask.getComLine10().getHeliostats().get(30));
+        h0511.refreshHeliostat(timerCacheTask.getComLine10().getHeliostats().get(29));
+        h0509.refreshHeliostat(timerCacheTask.getComLine10().getHeliostats().get(28));
+        h0507.refreshHeliostat(timerCacheTask.getComLine10().getHeliostats().get(27));
+        h0505.refreshHeliostat(timerCacheTask.getComLine10().getHeliostats().get(26));
+        h0503.refreshHeliostat(timerCacheTask.getComLine10().getHeliostats().get(25));
+        h0501.refreshHeliostat(timerCacheTask.getComLine10().getHeliostats().get(24));
+        h0500.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(26));
+        h0502.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(27));
+        h0504.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(28));
+        h0506.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(29));
+        h0508.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(30));
+        h0510.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(31));
+        h0512.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(32));
+        h0514.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(33));
+        h0516.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(34));
     }
 
-    private void setRow04() {
-        h0415.setHeliostat(timerCacheTask.getComLine10().getId(), timerCacheTask.getComLine10().getHeliostats().get(23));
-        h0413.setHeliostat(timerCacheTask.getComLine10().getId(), timerCacheTask.getComLine10().getHeliostats().get(22));
-        h0411.setHeliostat(timerCacheTask.getComLine10().getId(), timerCacheTask.getComLine10().getHeliostats().get(21));
-        h0409.setHeliostat(timerCacheTask.getComLine10().getId(), timerCacheTask.getComLine10().getHeliostats().get(20));
-        h0407.setHeliostat(timerCacheTask.getComLine10().getId(), timerCacheTask.getComLine10().getHeliostats().get(19));
-        h0405.setHeliostat(timerCacheTask.getComLine10().getId(), timerCacheTask.getComLine10().getHeliostats().get(18));
-        h0403.setHeliostat(timerCacheTask.getComLine10().getId(), timerCacheTask.getComLine10().getHeliostats().get(17));
-        h0401.setHeliostat(timerCacheTask.getComLine10().getId(), timerCacheTask.getComLine10().getHeliostats().get(16));
-        h0402.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(18));
-        h0404.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(19));
-        h0406.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(20));
-        h0408.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(21));
-        h0410.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(22));
-        h0412.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(23));
-        h0414.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(24));
-        h0416.setHeliostat(timerCacheTask.getComLine2().getId(), timerCacheTask.getComLine2().getHeliostats().get(25));
+    private void refreshRow04() {
+        h0415.refreshHeliostat(timerCacheTask.getComLine10().getHeliostats().get(23));
+        h0413.refreshHeliostat(timerCacheTask.getComLine10().getHeliostats().get(22));
+        h0411.refreshHeliostat(timerCacheTask.getComLine10().getHeliostats().get(21));
+        h0409.refreshHeliostat(timerCacheTask.getComLine10().getHeliostats().get(20));
+        h0407.refreshHeliostat(timerCacheTask.getComLine10().getHeliostats().get(19));
+        h0405.refreshHeliostat(timerCacheTask.getComLine10().getHeliostats().get(18));
+        h0403.refreshHeliostat(timerCacheTask.getComLine10().getHeliostats().get(17));
+        h0401.refreshHeliostat(timerCacheTask.getComLine10().getHeliostats().get(16));
+        h0402.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(18));
+        h0404.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(19));
+        h0406.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(20));
+        h0408.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(21));
+        h0410.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(22));
+        h0412.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(23));
+        h0414.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(24));
+        h0416.refreshHeliostat(timerCacheTask.getComLine2().getHeliostats().get(25));
     }
 
-    private void setRow03() {
-        h0311.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(15));
-        h0309.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(14));
-        h0307.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(13));
-        h0305.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(12));
-        h0303.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(11));
-        h0301.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(10));
-        h0300.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(11));
-        h0302.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(12));
-        h0304.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(13));
-        h0306.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(14));
-        h0308.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(15));
-        h0310.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(16));
-        h0312.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(17));
+    private void refreshRow03() {
+        h0311.refreshHeliostat(timerCacheTask.getComLine9().getHeliostats().get(15));
+        h0309.refreshHeliostat(timerCacheTask.getComLine9().getHeliostats().get(14));
+        h0307.refreshHeliostat(timerCacheTask.getComLine9().getHeliostats().get(13));
+        h0305.refreshHeliostat(timerCacheTask.getComLine9().getHeliostats().get(12));
+        h0303.refreshHeliostat(timerCacheTask.getComLine9().getHeliostats().get(11));
+        h0301.refreshHeliostat(timerCacheTask.getComLine9().getHeliostats().get(10));
+        h0300.refreshHeliostat(timerCacheTask.getComLine1().getHeliostats().get(11));
+        h0302.refreshHeliostat(timerCacheTask.getComLine1().getHeliostats().get(12));
+        h0304.refreshHeliostat(timerCacheTask.getComLine1().getHeliostats().get(13));
+        h0306.refreshHeliostat(timerCacheTask.getComLine1().getHeliostats().get(14));
+        h0308.refreshHeliostat(timerCacheTask.getComLine1().getHeliostats().get(15));
+        h0310.refreshHeliostat(timerCacheTask.getComLine1().getHeliostats().get(16));
+        h0312.refreshHeliostat(timerCacheTask.getComLine1().getHeliostats().get(17));
     }
 
-    private void setRow02() {
-        h0209.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(9));
-        h0207.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(8));
-        h0205.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(7));
-        h0203.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(6));
-        h0201.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(5));
-        h0202.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(6));
-        h0204.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(7));
-        h0206.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(8));
-        h0208.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(9));
-        h0210.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(10));
+    private void refreshRow02() {
+        h0209.refreshHeliostat(timerCacheTask.getComLine9().getHeliostats().get(9));
+        h0207.refreshHeliostat(timerCacheTask.getComLine9().getHeliostats().get(8));
+        h0205.refreshHeliostat(timerCacheTask.getComLine9().getHeliostats().get(7));
+        h0203.refreshHeliostat(timerCacheTask.getComLine9().getHeliostats().get(6));
+        h0201.refreshHeliostat(timerCacheTask.getComLine9().getHeliostats().get(5));
+        h0202.refreshHeliostat(timerCacheTask.getComLine1().getHeliostats().get(6));
+        h0204.refreshHeliostat(timerCacheTask.getComLine1().getHeliostats().get(7));
+        h0206.refreshHeliostat(timerCacheTask.getComLine1().getHeliostats().get(8));
+        h0208.refreshHeliostat(timerCacheTask.getComLine1().getHeliostats().get(9));
+        h0210.refreshHeliostat(timerCacheTask.getComLine1().getHeliostats().get(10));
     }
 
-    private void setRow01() {
-        //        h0107.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(4));
-        //        h0105.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(3));
-        //        h0103.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(2));
-        //        h0101.setHeliostat(timerCacheTask.getComLine9().getId(), timerCacheTask.getComLine9().getHeliostats().get(1));
-        h0100.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(1));
-        h0102.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(2));
-        //        h0104.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(3));
-        //        h0106.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(4));
-        //        h0108.setHeliostat(timerCacheTask.getComLine1().getId(), timerCacheTask.getComLine1().getHeliostats().get(5));
+    private void refreshRow01() {
+        //        h0107.refreshHeliostat(timerCacheTask.getComLine9().getHeliostats().get(4));
+        //        h0105.refreshHeliostat(timerCacheTask.getComLine9().getHeliostats().get(3));
+        //        h0103.refreshHeliostat(timerCacheTask.getComLine9().getHeliostats().get(2));
+        //        h0101.refreshHeliostat(timerCacheTask.getComLine9().getHeliostats().get(1));
+        h0100.refreshHeliostat(timerCacheTask.getComLine1().getHeliostats().get(1));
+        //        h0102.refreshHeliostat(timerCacheTask.getComLine1().getHeliostats().get(2));
+        //        h0104.refreshHeliostat(timerCacheTask.getComLine1().getHeliostats().get(3));
+        //        h0106.refreshHeliostat(timerCacheTask.getComLine1().getHeliostats().get(4));
+        //        h0108.refreshHeliostat(timerCacheTask.getComLine1().getHeliostats().get(5));
     }
 
 
     //        /**
     //         * It sets the GUI elements to represent the <code>Row</code> objects which are obtained from the server
     //         */
-    //        private void addRows() {
-    //            ComLine[] Comlines = ComLineController.loadField();
-    //            for (ComLine comLine : Comlines) {
-    //                rows_vbox.getChildren().add(createGUIHbox(comLine));
+    //            private void addRows() {
+    //                ComLine[] Comlines = ComLineController.loadField();
+    //                for (ComLine comLine : Comlines) {
+    //                    rows_vbox.getChildren().add(createGUIHbox(comLine));
+    //                }
     //            }
-    //        }
     //
     //        private HBox createGUIHbox(ComLine comLine) {
     //            HBox hBox = new HBox();

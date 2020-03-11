@@ -16,7 +16,7 @@ public class ComLineController {
             return comLineDAO.getAPICache("http://localhost:8080/getCache?comLineId=" + comLineId);
         } catch (IOException e) {
             Platform.runLater(() -> {
-                Message.show(e.getMessage());
+                Message.showExit(e.getMessage());
             });
             return null;
         }

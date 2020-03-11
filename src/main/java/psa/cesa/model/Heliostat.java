@@ -5,6 +5,7 @@ package psa.cesa.model;
  */
 public class Heliostat {
     /**
+     * @param comLineId represents the communication line.
      * @param id Represents the modbus slave address.
      * @param state Static and dynamic positions representation.
      * @param event Operation, security, communications and such events.
@@ -16,6 +17,7 @@ public class Heliostat {
      * @param setPointEL Elevation set point.
      */
 
+    private int comLineId;
     private int id;
     private int state;
     private int event;
@@ -37,6 +39,18 @@ public class Heliostat {
         this.positionEL = positionEL;
         this.setPointAZ = setPointAZ;
         this.setPointEL = setPointEL;
+    }
+
+    public Heliostat(int comLineId) {
+        this.comLineId = comLineId;
+    }
+
+    public int getComLineId() {
+        return comLineId;
+    }
+
+    public void setComLineId(int comLineId) {
+        this.comLineId = comLineId;
     }
 
     public int getId() {
@@ -111,6 +125,18 @@ public class Heliostat {
         this.setPointEL = setPointEL;
     }
 
+    public void setAttributes(Heliostat heliostat) {
+        this.id = heliostat.getId();
+        this.state = heliostat.getState();
+        this.event = heliostat.getEvent();
+        this.diagnosisAZ = heliostat.getDiagnosysAZ();
+        this.diagnosisEL = heliostat.getDiagnosysEL();
+        this.positionAZ = heliostat.getPositionAZ();
+        this.positionEL = heliostat.getPositionEL();
+        this.setPointAZ = heliostat.getSetPointAZ();
+        this.setPointEL = heliostat.getSetPointEL();
+    }
+
     /**
      * Converts the least significant nibble from state byte to a string message.
      *
@@ -127,16 +153,16 @@ public class Heliostat {
                 state0.append("Consiga fija");
                 break;
             case 0x2:
-                state0.append("Busqueda de ceros");
+                state0.append("Busqueda ceros");
                 break;
             case 0x3:
-                state0.append("Fuera de servicio");
+                state0.append("Fuera servicio");
                 break;
             case 0x4:
-                state0.append("Posición de defensa");
+                state0.append("Posición defensa");
                 break;
             case 0x5:
-                state0.append("Abatimiento normal");
+                state0.append("Abatimiento");
                 break;
             case 0x6:
                 state0.append("Blanco tierra");
@@ -157,16 +183,16 @@ public class Heliostat {
                 state0.append("Seguimiento desfasado");
                 break;
             case 0xc:
-                state0.append("Blanco de emergencia");
+                state0.append("Blanco emergencia");
                 break;
             case 0xd:
-                state0.append("Seguimiento normal a caldera");
+                state0.append("Seguimiento caldera");
                 break;
             case 0xe:
                 state0.append("Foco");
                 break;
             case 0xf:
-                state0.append("Seguimiento normal al sol");
+                state0.append("Seguimiento solar");
                 break;
         }
         return state0.toString();
@@ -180,17 +206,17 @@ public class Heliostat {
     public String state1ToString() {
         StringBuilder state1 = new StringBuilder();
         int nibble1 = 0xf0 & state;
-        if ((nibble1 & 0x80) == 0x80) {
-            state1.append("Error");
+        if ((nibble1 & 0x00) == 0x00) {
+            state1.append(" ");
+        }
+        if (((nibble1 & 0x10) == 0x10) || ((nibble1 & 0x20) == 0x20)) {
+            state1.append("Consigna alcanzada");
         }
         if ((nibble1 & 0x40) == 0x40) {
-            state1.append("Evento");
+            state1.append("Evento ");
         }
-        if ((nibble1 & 0x20) == 0x20) {
-            state1.append("Consigna EL alcanzada");
-        }
-        if ((nibble1 & 0x10) == 0x10) {
-            state1.append("Consigna AZ alcanzada");
+        if ((nibble1 & 0x80) == 0x80) {
+            state1.append("Error");
         }
         return state1.toString();
     }
@@ -205,7 +231,7 @@ public class Heliostat {
         int coupleBits0 = 0x3 & event;
         switch (coupleBits0) {
             case 0x0:
-                operation.append("OK");
+                operation.append(" ");
                 break;
             case 0x1:
                 operation.append("Fuera de servicio");
@@ -227,10 +253,10 @@ public class Heliostat {
         int coupleBits1 = 0xc & event;
         switch (coupleBits1) {
             case 0x0:
-                security.append("OK");
+                security.append(" ");
                 break;
             case 0x4:
-                security.append("Código de cliente erróneo");
+                security.append("Código cliente erróneo");
                 break;
         }
         return security.toString();
@@ -246,7 +272,7 @@ public class Heliostat {
         int coupleBits2 = 0x30 & event;
         switch (coupleBits2) {
             case 0x0:
-                communications.append("OK");
+                communications.append(" ");
                 break;
             case 0x10:
                 communications.append("Fallo");
@@ -264,20 +290,20 @@ public class Heliostat {
      * @return clock event message.
      */
     public String eventCLToString() {
-        StringBuilder clock = new StringBuilder();
+        StringBuilder controlLocal = new StringBuilder();
         int coupleBits3 = 0xc0 & event;
         switch (coupleBits3) {
             case 0x0:
-                clock.append("OK");
+                controlLocal.append(" ");
                 break;
             case 0x40:
-                clock.append("Fallo del micro esclavo");
+                controlLocal.append("Fallo del micro esclavo");
                 break;
             case 0x80:
-                clock.append("Fallo batería");
+                controlLocal.append("Fallo batería");
                 break;
         }
-        return clock.toString();
+        return controlLocal.toString();
     }
 
     /**
@@ -286,11 +312,11 @@ public class Heliostat {
      * @return diagnosis azimuth message.
      */
     public String diagnosisAz0ToString() {
-        StringBuilder diagnosisAz0 = new StringBuilder("Movimiento ");
+        StringBuilder diagnosisAz0 = new StringBuilder();
         int coupleBits0 = 0x3 & diagnosisAZ;
         switch (coupleBits0) {
             case 0x0:
-                diagnosisAz0.append("OK");
+                diagnosisAz0.append(" ");
                 break;
             case 0x1:
                 diagnosisAz0.append("No mueve con motor ON");
@@ -311,11 +337,11 @@ public class Heliostat {
      * @return diagnosis azimuth message.
      */
     public String diagnosisAz1ToString() {
-        StringBuilder diagnosisAz1 = new StringBuilder("Oscilación ");
+        StringBuilder diagnosisAz1 = new StringBuilder();
         int coupleBits1 = 0xc & diagnosisAZ;
         switch (coupleBits1) {
             case 0x0:
-                diagnosisAz1.append("OK");
+                diagnosisAz1.append(" ");
                 break;
             case 0x4:
                 diagnosisAz1.append("Fallo oscila");
@@ -333,11 +359,11 @@ public class Heliostat {
      * @return diagnosis azimuth message.
      */
     public String diagnosisAz2ToString() {
-        StringBuilder diagnosisAz2 = new StringBuilder("Posición ");
+        StringBuilder diagnosisAz2 = new StringBuilder();
         int coupleBits2 = 0x30 & diagnosisAZ;
         switch (coupleBits2) {
             case 0x0:
-                diagnosisAz2.append("OK");
+                diagnosisAz2.append(" ");
                 break;
             case 0x10:
                 diagnosisAz2.append("Posición extrema oeste");
@@ -359,7 +385,7 @@ public class Heliostat {
         int coupleBits3 = 0xc0 & diagnosisAZ;
         switch (coupleBits3) {
             case 0x0:
-                diagnosisAz3.append("OK");
+                diagnosisAz3.append(" ");
                 break;
             case 0x40:
                 diagnosisAz3.append("Cero encontrado");
@@ -377,11 +403,11 @@ public class Heliostat {
      * @return diagnosis elevation message.
      */
     public String diagnosisEl0ToString() {
-        StringBuilder diagnosisEl0 = new StringBuilder("Movimiento ");
+        StringBuilder diagnosisEl0 = new StringBuilder();
         int coupleBits0 = 0x3 & diagnosisEL;
         switch (coupleBits0) {
             case 0x0:
-                diagnosisEl0.append("OK");
+                diagnosisEl0.append(" ");
                 break;
             case 0x1:
                 diagnosisEl0.append("No mueve con motor ON");
@@ -402,11 +428,11 @@ public class Heliostat {
      * @return diagnosis elevation message.
      */
     public String diagnosisEl1ToString() {
-        StringBuilder diagnosisEl1 = new StringBuilder("Oscilación ");
+        StringBuilder diagnosisEl1 = new StringBuilder();
         int coupleBits1 = 0xc & diagnosisEL;
         switch (coupleBits1) {
             case 0x0:
-                diagnosisEl1.append("OK");
+                diagnosisEl1.append(" ");
                 break;
             case 0x4:
                 diagnosisEl1.append("Fallo oscila");
@@ -424,11 +450,11 @@ public class Heliostat {
      * @return diagnosis elevation message.
      */
     public String diagnosisEl2ToString() {
-        StringBuilder diagnosisEl2 = new StringBuilder("Posición ");
+        StringBuilder diagnosisEl2 = new StringBuilder();
         int coupleBits2 = 0x30 & diagnosisEL;
         switch (coupleBits2) {
             case 0x0:
-                diagnosisEl2.append("OK");
+                diagnosisEl2.append(" ");
                 break;
             case 0x10:
                 diagnosisEl2.append("Posición extrema oeste");
@@ -446,11 +472,11 @@ public class Heliostat {
      * @return diagnosis elevation message.
      */
     public String diagnosisEl3ToString() {
-        StringBuilder diagnosisEl3 = new StringBuilder("Aviso ");
+        StringBuilder diagnosisEl3 = new StringBuilder("");
         int coupleBits3 = 0xc0 & diagnosisEL;
         switch (coupleBits3) {
             case 0x0:
-                diagnosisEl3.append("OK");
+                diagnosisEl3.append(" ");
                 break;
             case 0x40:
                 diagnosisEl3.append("Cero encontrado");

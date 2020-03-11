@@ -63,66 +63,6 @@
 .image-view{
     -fx-background-color: transparent;
 }
-.heliostat {
-    -fx-shape: "M 0 0 L -4.454 -8.727 A 5 5 1 1 1 4.454 -8.727 L 0 0 z";
-}
-.heliostat:hover {
-    -fx-background-color:
-        -fx-shadow-highlight-color,
-        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
-        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
-}
-.heliostat:selected:pressed {
-    -fx-background-color:
-        -fx-focus-color,
-        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
-        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
-}
-.hand {
-    -fx-shape: "M 325 575 Q 350 525 325 500 Q 275 450 250 375 L 250 275 C 250 200 300 225 300 275 L 300 350 Q 325 375 325 350 L 325 125 C 325 75 375 75 375 125 L 375 350 Q 400 375 400 350 L 400 75 C 400 25 450 25 450 75 L 450 350 Q 475 375 475 350 L 475 125 C 475 50 525 75 525 125 L 525 350 Q 525 375 550 350 L 550 175 C 550 100 600 150 600 175 L 600 350 Q 600 425 550 500 Q 525 525 550 575 L 325 575 ";
-}
-.hand:hover {
-    -fx-background-color:
-        -fx-shadow-highlight-color,
-        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
-        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
-}
-.hand:selected:pressed {
-    -fx-background-color:
-        -fx-focus-color,
-        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
-        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
-}
-.cross{
-    -fx-shape: "M 375 275 L 250 375 L 275 400 L 400 300 L 525 400 L 550 375 L 425 275 L 550 175 L 525 150 L 400 250 L 275 150 L 250 175 L 375 275 ";
-}
-.cross:hover {
-    -fx-background-color:
-        -fx-shadow-highlight-color,
-        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
-        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
-}
-.cross:selected:pressed {
-    -fx-background-color:
-        -fx-focus-color,
-        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
-        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
-}
-.shield{
-    -fx-shape: "M 400 175 C 400 200 300 225 300 200 Q 325 300 400 400 Q 475 300 500 200 C 500 225 400 200 400 175 ";
-}
-.shield:hover {
-    -fx-background-color:
-        -fx-shadow-highlight-color,
-        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
-        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
-}
-.shield:selected:pressed {
-    -fx-background-color:
-        -fx-focus-color,
-        linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
-        linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
-}
 .triangle{
     -fx-shape: "M150 0 L75 200 L225 200 Z";
 }
@@ -137,24 +77,6 @@
         -fx-focus-color,
         linear-gradient(to bottom, derive(-fx-color,-22%) 0%, derive(-fx-color,-15%) 100%),
         linear-gradient(to bottom, derive(-fx-color,-15%) 0%, derive(-fx-color,-10%) 50%, derive(-fx-color,-8%) 98%, derive(-fx-color,-12%) 100%);
-}
-.black {
-    -fx-background-color: black;
-}
-.grey {
-    -fx-background-color: grey;
-}
-.red {
-    -fx-background-color: red;
-}
-.orange {
-    -fx-background-color: orange;
-}
-.blue {
-    -fx-background-color: blue;
-}
-.yellow {
-    -fx-background-color: yellow;
 }
 .button-grey {
     -fx-background-color: #C8C8C8;

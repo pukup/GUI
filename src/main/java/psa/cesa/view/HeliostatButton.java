@@ -1,5 +1,6 @@
 package psa.cesa.view;
 
+import javafx.beans.NamedArg;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,9 +24,9 @@ import java.io.IOException;
 public class HeliostatButton extends VBox {
 
     @FXML
-    TextField tfAddress, tfModbus, tfStatusCode, tfWarning, tfOperation, tfSecurity, tfCom, tfClock, tfAz, tfEl, tfMotAz, tfMotEl, tfStatusReachedAz, tfStatusReachedEl, tfSwingAz, tfSwingEl, tfNotAz, tfNotEl;
+    TextField tfAddress, tfModbus, tfStatusCode, tfWarning, tfOperation, tfSecurity, tfCom, tfCL, tfAz, tfEl, tfMotAz, tfMotEl, tfStatusReachedAz, tfStatusReachedEl, tfSwingAz, tfSwingEl, tfNotAz, tfNotEl;
     @FXML
-    ImageView ivAZ;
+    ImageView iEl1, iAz;
     @FXML
     ComboBox<Integer> cbFocus;
     @FXML
@@ -34,13 +35,8 @@ public class HeliostatButton extends VBox {
     TextField tfAzB, tfElB, tfOffAz, tfOffEl, tfDate, tfHour;
     @FXML
     TextArea textArea;
-    /**
-     * @param button
-     * @param heliostat is an <code>Heliostat</code> object representation.
-     */
     @FXML
     private Button button;
-    private int comLineId;
 
     private Heliostat heliostat;
 
@@ -48,11 +44,11 @@ public class HeliostatButton extends VBox {
 
     private Scene valuesScene;
 
-    public HeliostatButton() {
+    public HeliostatButton(@NamedArg("comLineId") int comLineId) {
         try {
-            heliostatController = new HeliostatController();
             loadButton();
-            loadValues();
+            heliostat = new Heliostat(comLineId);
+            heliostatController = new HeliostatController();
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
@@ -65,14 +61,11 @@ public class HeliostatButton extends VBox {
         fxmlLoader.load();
     }
 
-    private void loadValues() throws IOException {
+    @FXML
+    private void openValues(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("values.fxml"));
         fxmlLoader.setController(this);
         valuesScene = new Scene(fxmlLoader.load());
-    }
-
-    @FXML
-    private void openValues(ActionEvent event) {
         Stage stage = new Stage();
         stage.setScene(valuesScene);
         stage.show();
@@ -124,35 +117,47 @@ public class HeliostatButton extends VBox {
     }
 
     private String command(String b) {
-        return heliostatController.command(comLineId, heliostat.getId(), b);
+        return heliostatController.command(heliostat.getComLineId(), heliostat.getId(), b);
     }
 
     @FXML
     private void setFocus() {
-        textArea.appendText(heliostatController.focus(comLineId, heliostat.getId(), cbFocus.getValue()) + "\n");
+        try {
+            textArea.appendText(heliostatController.focus(heliostat.getComLineId(), heliostat.getId(), cbFocus.getValue()) + "\n");
+        } catch (Exception e) {
+            Message.show("Seleccione el foco adecuado");
+        }
     }
 
     @FXML
     private void newFocus() {
-        int focus = cbFocus.getValue();
-        int x = Integer.getInteger(tfFocusX.getText());
-        int y = Integer.getInteger(tfFocusY.getText());
-        int z = Integer.getInteger(tfFocusZ.getText());
-        textArea.appendText(heliostatController.newFocus(comLineId, heliostat.getId(), focus, x, y, z) + "\n");
+        try {
+            int focus = cbFocus.getValue();
+            int x = Integer.parseInt(tfFocusX.getText());
+            int y = Integer.parseInt(tfFocusY.getText());
+            int z = Integer.parseInt(tfFocusZ.getText());
+            textArea.appendText(heliostatController.newFocus(heliostat.getComLineId(), heliostat.getId(), focus, x, y, z) + "\n");
+        } catch (Exception e) {
+            Message.show("Seleccione el foco y las coordenadas adecuades");
+        }
     }
 
     @FXML
     private void setAzEl() {
-        int az = Integer.valueOf(tfAzB.getText());
-        int el = Integer.valueOf(tfElB.getText());
-        heliostatController.setAz(comLineId, heliostat.getId(), az);
-        heliostatController.setEl(comLineId, heliostat.getId(), el);
+        try {
+            int az = Integer.valueOf(tfAzB.getText());
+            int el = Integer.valueOf(tfElB.getText());
+            heliostatController.setAz(heliostat.getComLineId(), heliostat.getId(), az);
+            heliostatController.setEl(heliostat.getComLineId(), heliostat.getId(), el);
+        } catch (Exception e) {
+            Message.show("Introduzca valores adecuados");
+        }
     }
 
     @FXML
     private void getOffset() {
-        tfOffAz.setText(heliostatController.getOffsetAz(comLineId, heliostat.getId()));
-        tfOffEl.setText(heliostatController.getOffsetEl(comLineId, heliostat.getId()));
+        tfOffAz.setText(heliostatController.getOffsetAz(heliostat.getComLineId(), heliostat.getId()));
+        tfOffEl.setText(heliostatController.getOffsetEl(heliostat.getComLineId(), heliostat.getId()));
     }
 
     @FXML
@@ -162,43 +167,19 @@ public class HeliostatButton extends VBox {
 
     @FXML
     private void getHour() {
-        tfDate.setText(heliostatController.getHour(comLineId, heliostat.getId()));
-        tfHour.setText(heliostatController.getHour(comLineId, heliostat.getId()));
+        tfDate.setText(heliostatController.getHour(heliostat.getComLineId(), heliostat.getId()));
+        tfHour.setText(heliostatController.getHour(heliostat.getComLineId(), heliostat.getId()));
     }
 
     @FXML
     private void setHour() {
-        heliostatController.setHour(comLineId, heliostat.getId());
+        heliostatController.setHour(heliostat.getComLineId(), heliostat.getId());
     }
 
-    public void setHeliostat(int comLineId, Heliostat heliostat) {
-        this.comLineId = comLineId;
-        this.heliostat = heliostat;
-        setValues();
+    public void refreshHeliostat(Heliostat heliostat) {
+        this.heliostat.setAttributes(heliostat);
         setSkins();
-    }
-
-    public void setValues() {
-        if (tfAddress != null) {
-            tfAddress.setText(String.format("" + this.getId()));
-            tfModbus.setText(String.format("%d - %d", comLineId, heliostat.getId()));
-            tfWarning.setText(heliostat.state1ToString());
-            tfStatusCode.setText(heliostat.state0ToString());
-            tfOperation.setText(heliostat.eventOperationToString());
-            tfSecurity.setText(heliostat.eventSecurityToString());
-            tfCom.setText(heliostat.eventComToString());
-            tfClock.setText(heliostat.eventCLToString());
-            tfAz.setText(String.valueOf(heliostat.getPositionAZ()));
-            tfEl.setText(String.valueOf(heliostat.getPositionEL()));
-            tfMotAz.setText(heliostat.diagnosisAz0ToString());
-            tfMotEl.setText(heliostat.diagnosisEl0ToString());
-            tfStatusReachedAz.setText(heliostat.diagnosisAz1ToString());
-            tfStatusReachedEl.setText(heliostat.diagnosisEl1ToString());
-            tfSwingAz.setText(heliostat.diagnosisAz2ToString());
-            tfSwingEl.setText(heliostat.diagnosisEl2ToString());
-            tfNotAz.setText(heliostat.diagnosisAz3ToString());
-            tfNotEl.setText(heliostat.diagnosisEl3ToString());
-        }
+        setValues();
     }
 
     private void setSkins() {
@@ -209,6 +190,31 @@ public class HeliostatButton extends VBox {
         setSkinEventCom();
     }
 
+    public void setValues() {
+        if (valuesScene != null && valuesScene.getWindow().isShowing()) {
+            tfAddress.setText(this.getId());
+            tfModbus.setText(String.format("%d - %d", heliostat.getComLineId(), heliostat.getId()));
+            tfWarning.setText(heliostat.state1ToString());
+            tfStatusCode.setText(heliostat.state0ToString());
+            tfOperation.setText(heliostat.eventOperationToString());
+            tfSecurity.setText(heliostat.eventSecurityToString());
+            tfCom.setText(heliostat.eventComToString());
+            tfCL.setText(heliostat.eventCLToString());
+            tfAz.setText(String.valueOf(heliostat.getPositionAZ()));
+            tfEl.setText(String.valueOf(heliostat.getPositionEL()));
+            tfMotAz.setText(heliostat.diagnosisAz0ToString());
+            tfMotEl.setText(heliostat.diagnosisEl0ToString());
+            tfStatusReachedAz.setText(heliostat.diagnosisAz1ToString());
+            tfStatusReachedEl.setText(heliostat.diagnosisEl1ToString());
+            tfSwingAz.setText(heliostat.diagnosisAz2ToString());
+            tfSwingEl.setText(heliostat.diagnosisEl2ToString());
+            tfNotAz.setText(heliostat.diagnosisAz3ToString());
+            tfNotEl.setText(heliostat.diagnosisEl3ToString());
+            iEl1.setRotate(heliostat.getPositionEL());
+            iAz.setRotate(heliostat.getPositionAZ());
+        }
+    }
+
     /**
      * It changes the button GUI skin according to its first nibble state.
      */
@@ -216,7 +222,7 @@ public class HeliostatButton extends VBox {
         int nibble0 = 0x0f & heliostat.getState();
         switch (nibble0) {
             case 0x0:
-                //                state0.append("Operación local");
+                //                Operación local
                 button.getStyleClass().add("hand");
                 break;
             case 0x1:
@@ -225,7 +231,7 @@ public class HeliostatButton extends VBox {
                 break;
             case 0x2:
                 //                Busqueda de ceros
-                button.getStyleClass().add("");
+                button.getStyleClass().add("zero");
                 break;
             case 0x3:
                 //                Fuera de servicio
@@ -236,49 +242,51 @@ public class HeliostatButton extends VBox {
                 button.getStyleClass().add("shield");
                 break;
             case 0x5:
-                //                Abatimiento normal
+                //                Abatimiento
                 button.getStyleClass().add("pin");
                 break;
             case 0x6:
                 //                Blanco tierra
-                button.getStyleClass().add("");
+                button.getStyleClass().add("ground");
                 break;
             case 0x7:
                 //                Blanco pasillo 1
-                button.getStyleClass().add("");
+                button.getStyleClass().add("one");
                 break;
             case 0x8:
                 //                Blanco pasillo 2
-                button.getStyleClass().add("");
+                button.getStyleClass().add("two");
                 break;
             case 0x9:
                 //                Blanco pasillo 3
-                button.getStyleClass().add("");
+                button.getStyleClass().add("three");
                 break;
             case 0xa:
                 //                Blanco pasillo 4
-                button.getStyleClass().add("");
+                button.getStyleClass().add("four");
                 break;
             case 0xb:
                 //                Seguimiento desfasado
-                button.getStyleClass().add("orange");
+                button.getStyleClass().add("kilter");
                 break;
             case 0xc:
                 //                Blanco de emergencia
-                button.getStyleClass().add("");
+                button.getStyleClass().add("triangle");
                 break;
             case 0xd:
                 //                Seguimiento normal a caldera
-                button.getStyleClass().add("red");
+                button.getStyleClass().add("boiler");
                 break;
             case 0xe:
                 //                Foco
-                button.getStyleClass().add("red");
+                button.getStyleClass().add("focus");
                 break;
             case 0xf:
                 //                Seguimiento normal al sol
-                button.getStyleClass().add("yellow");
+                button.getStyleClass().add("solar");
                 break;
+            default:
+                button.getStyleClass().add("pin");
         }
     }
 
@@ -289,19 +297,19 @@ public class HeliostatButton extends VBox {
         int nibble1 = 0xf0 & heliostat.getState();
         if ((nibble1 & 0x80) == 0x80) {
             //            Aviso error
-            button.getStyleClass().add("triangle");
+            button.getStyleClass().add("orange");
         }
         if ((nibble1 & 0x40) == 0x40) {
             //            Aviso evento
-            button.getStyleClass().add("");
+            button.getStyleClass().add("green");
         }
         if ((nibble1 & 0x20) == 0x20) {
             //            Consigna alcanzada EL
-            button.getStyleClass().add("");
+            button.getStyleClass().add("blue");
         }
         if ((nibble1 & 0x10) == 0x10) {
             //            Consigna alcanzada AZ
-            button.getStyleClass().add("");
+            button.getStyleClass().add("blue");
         }
     }
 
@@ -315,11 +323,11 @@ public class HeliostatButton extends VBox {
         switch (coupleBits0) {
             case 0x1:
                 //                Fuera de servicio
-                button.getStyleClass().add("cross");
+                //                button.getStyleClass().add("");
                 break;
             case 0x2:
                 //                Heliostato teleconfigurado
-                button.getStyleClass().add("");
+                button.getStyleClass().add("green");
                 break;
         }
     }
@@ -329,7 +337,7 @@ public class HeliostatButton extends VBox {
         switch (coupleBits1) {
             case 0x4:
                 //                  Código de cliente erróneo
-                button.getStyleClass().add("black");
+                button.getStyleClass().add("violet");
                 break;
         }
     }
