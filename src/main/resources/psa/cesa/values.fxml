@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="689.7" prefWidth="740.3" stylesheets="@CSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="678.0" prefWidth="795.0" stylesheets="@css/CSS.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <Separator opacity="0.25" orientation="VERTICAL">
         <HBox.margin>
             <Insets bottom="5.0" left="3.0" top="5.0" />
@@ -359,30 +359,31 @@
                     </VBox>
                     <Separator opacity="0.25" orientation="VERTICAL" prefHeight="200.0" styleClass="button-grey" />
                     <AnchorPane prefHeight="162.0" prefWidth="216.0">
-                  <children>
-                     <ImageView fx:id="iEl1" fitHeight="46.0" fitWidth="216.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="@../../../../../../../../home/x/IdeaProjects/GUI/src/main/resources/psa/cesa/images/iEl1.png" />
-                        </image>
-                     </ImageView>
-                     <ImageView fitHeight="125.0" fitWidth="47.0" layoutX="72.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="@../../../../../../../../home/x/IdeaProjects/GUI/src/main/resources/psa/cesa/images/iEl0.png" />
-                        </image>
-                     </ImageView>
-                  </children>
-                  <HBox.margin>
-                     <Insets left="10.0" />
-                  </HBox.margin></AnchorPane>
-               <AnchorPane prefHeight="162.0" prefWidth="216.0">
-                  <children>
-                     <ImageView fx:id="iAz" fitHeight="150.0" fitWidth="200.0" layoutX="33.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="@../../../../../../../../home/x/IdeaProjects/GUI/src/main/resources/psa/cesa/images/iAz.png" />
-                        </image>
-                     </ImageView>
-                  </children>
-               </AnchorPane>
+                        <children>
+                            <ImageView fx:id="iEl1" fitHeight="46.0" fitWidth="216.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../../../../../../../../home/x/IdeaProjects/GUI/src/main/resources/psa/cesa/images/iEl1.png" />
+                                </image>
+                            </ImageView>
+                            <ImageView fitHeight="125.0" fitWidth="47.0" layoutX="72.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../../../../../../../../home/x/IdeaProjects/GUI/src/main/resources/psa/cesa/images/iEl0.png" />
+                                </image>
+                            </ImageView>
+                        </children>
+                        <HBox.margin>
+                            <Insets left="10.0" />
+                        </HBox.margin>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="162.0" prefWidth="216.0">
+                        <children>
+                            <ImageView fx:id="iAz" fitHeight="150.0" fitWidth="200.0" layoutX="33.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../../../../../../../../home/x/IdeaProjects/GUI/src/main/resources/psa/cesa/images/iAz.png" />
+                                </image>
+                            </ImageView>
+                        </children>
+                    </AnchorPane>
                 </children>
             </HBox>
             <Separator opacity="0.25" prefWidth="200.0">
@@ -406,6 +407,7 @@
                                 <Integer fx:value="8" />
                                 <Integer fx:value="9" />
                                 <Integer fx:value="10" />
+                                <Integer fx:value="11" />
                             </FXCollections>
                         </items>
                         <HBox.margin>

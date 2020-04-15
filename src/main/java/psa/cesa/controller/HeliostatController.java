@@ -15,7 +15,7 @@ public class HeliostatController {
             return heliostatDAO.send("http://localhost:8080/command?comLineId=" + comLineId + "&heliostatId=" + heliostatId + "&command=" + command);
         } catch (IOException e) {
             Platform.runLater(() -> {
-                Message.showExit(e.getMessage());
+                Message.show(e.getMessage());
             });
             return "No response.";
         }
@@ -26,7 +26,7 @@ public class HeliostatController {
             return heliostatDAO.send("http://localhost:8080/focus?comLineId=" + comLineId + "&heliostatId=" + heliostatId + "&focus=" + focus);
         } catch (IOException e) {
             Platform.runLater(() -> {
-                Message.showExit(e.getMessage());
+                Message.show(e.getMessage());
             });
             return "No response.";
         }
@@ -37,7 +37,7 @@ public class HeliostatController {
             return heliostatDAO.send("http://localhost:8080/newFocus?comLineId=" + comLineId + "&heliostatId=" + heliostatId + "&focus=" + focus + "&x=" + x + "&y=" + y + "&z=" + z);
         } catch (IOException e) {
             Platform.runLater(() -> {
-                Message.showExit(e.getMessage());
+                Message.show(e.getMessage());
             });
             return "No response.";
         }
@@ -48,7 +48,7 @@ public class HeliostatController {
             return heliostatDAO.send("http://localhost:8080/getOffsetAz?comLineId=" + comLineId + "&heliostatId=" + heliostatId);
         } catch (IOException e) {
             Platform.runLater(() -> {
-                Message.showExit(e.getMessage());
+                Message.show(e.getMessage());
             });
             return "No response.";
         }
@@ -59,7 +59,7 @@ public class HeliostatController {
             return heliostatDAO.send("http://localhost:8080/getOffsetEl?comLineId=" + comLineId + "&heliostatId=" + heliostatId);
         } catch (IOException e) {
             Platform.runLater(() -> {
-                Message.showExit(e.getMessage());
+                Message.show(e.getMessage());
             });
             return "No response.";
         }
@@ -70,7 +70,7 @@ public class HeliostatController {
             return heliostatDAO.send("http://localhost:8080/setAzimuth?comLineId=" + comLineId + "&heliostatId=" + heliostatId + "&azimuth=" + az);
         } catch (IOException e) {
             Platform.runLater(() -> {
-                Message.showExit(e.getMessage());
+                Message.show(e.getMessage());
             });
             return "No response.";
         }
@@ -81,7 +81,7 @@ public class HeliostatController {
             return heliostatDAO.send("http://localhost:8080/setElevation?comLineId=" + comLineId + "&heliostatId=" + heliostatId + "&elevation=" + el);
         } catch (IOException e) {
             Platform.runLater(() -> {
-                Message.showExit(e.getMessage());
+                Message.show(e.getMessage());
             });
             return "No response.";
         }
@@ -92,7 +92,7 @@ public class HeliostatController {
             return heliostatDAO.send("http://localhost:8080/getHour?comLineId=" + comLineId + "&heliostatId=" + heliostatId);
         } catch (IOException e) {
             Platform.runLater(() -> {
-                Message.showExit(e.getMessage());
+                Message.show(e.getMessage());
             });
             return "No response.";
         }
@@ -103,7 +103,7 @@ public class HeliostatController {
             return heliostatDAO.send("http://localhost:8080/setHour?comLineId=" + comLineId + "&heliostatId=" + heliostatId);
         } catch (IOException e) {
             Platform.runLater(() -> {
-                Message.showExit(e.getMessage());
+                Message.show(e.getMessage());
             });
             return "No response.";
         }

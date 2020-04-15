@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import psa.cesa.view.*?>
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="root_vbox" alignment="CENTER" stylesheets="@CSS.css"
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="root_vbox" alignment="CENTER" stylesheets="@css/CSS.css"
       xmlns="http://javafx.com/javafx/11.0.1" fx:controller="psa.cesa.view.Primary">
     <children>
         <MenuBar nodeOrientation="LEFT_TO_RIGHT" VBox.vgrow="ALWAYS">
@@ -37,16 +37,16 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label styleClass="label1" text="16" textFill="WHITE"/>
-                                <HeliostatButton comLineId="16" fx:id="h1609"/>
-                                <HeliostatButton comLineId="16" fx:id="h1607"/>
-                                <HeliostatButton comLineId="16" fx:id="h1605"/>
-                                <HeliostatButton comLineId="16" fx:id="h1603"/>
-                                <HeliostatButton comLineId="16" fx:id="h1601"/>
-                                <HeliostatButton comLineId="8" fx:id="h1602"/>
-                                <HeliostatButton comLineId="8" fx:id="h1604"/>
-                                <HeliostatButton comLineId="8" fx:id="h1606"/>
-                                <HeliostatButton comLineId="8" fx:id="h1608"/>
-                                <HeliostatButton comLineId="8" fx:id="h1610"/>
+                                <HeliostatButton comLineId="16" fx:id="h1609" toolTip="16-09"/>
+                                <HeliostatButton comLineId="16" fx:id="h1607" toolTip="16-07"/>
+                                <HeliostatButton comLineId="16" fx:id="h1605" toolTip="16-05"/>
+                                <HeliostatButton comLineId="16" fx:id="h1603" toolTip="16-03"/>
+                                <HeliostatButton comLineId="16" fx:id="h1601" toolTip="16-01"/>
+                                <HeliostatButton comLineId="8" fx:id="h1602" toolTip="16-02"/>
+                                <HeliostatButton comLineId="8" fx:id="h1604" toolTip="16-04"/>
+                                <HeliostatButton comLineId="8" fx:id="h1606" toolTip="16-06"/>
+                                <HeliostatButton comLineId="8" fx:id="h1608" toolTip="16-08"/>
+                                <HeliostatButton comLineId="8" fx:id="h1610" toolTip="16-10"/>
                                 <Label styleClass="label1" text="16" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -58,19 +58,19 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label styleClass="label1" text="15" textFill="WHITE"/>
-                                <HeliostatButton comLineId="16" fx:id="h1511"/>
-                                <HeliostatButton comLineId="16" fx:id="h1509"/>
-                                <HeliostatButton comLineId="16" fx:id="h1507"/>
-                                <HeliostatButton comLineId="16" fx:id="h1505"/>
-                                <HeliostatButton comLineId="16" fx:id="h1503"/>
-                                <HeliostatButton comLineId="16" fx:id="h1501"/>
-                                <HeliostatButton comLineId="8" fx:id="h1500"/>
-                                <HeliostatButton comLineId="8" fx:id="h1502"/>
-                                <HeliostatButton comLineId="8" fx:id="h1504"/>
-                                <HeliostatButton comLineId="8" fx:id="h1506"/>
-                                <HeliostatButton comLineId="8" fx:id="h1508"/>
-                                <HeliostatButton comLineId="8" fx:id="h1510"/>
-                                <HeliostatButton comLineId="8" fx:id="h1512"/>
+                                <HeliostatButton comLineId="16" fx:id="h1511" toolTip="15-11"/>
+                                <HeliostatButton comLineId="16" fx:id="h1509" toolTip="15-09"/>
+                                <HeliostatButton comLineId="16" fx:id="h1507" toolTip="15-07"/>
+                                <HeliostatButton comLineId="16" fx:id="h1505" toolTip="15-05"/>
+                                <HeliostatButton comLineId="16" fx:id="h1503" toolTip="15-03"/>
+                                <HeliostatButton comLineId="16" fx:id="h1501" toolTip="15-01"/>
+                                <HeliostatButton comLineId="8" fx:id="h1500" toolTip="15-00"/>
+                                <HeliostatButton comLineId="8" fx:id="h1502" toolTip="15-02"/>
+                                <HeliostatButton comLineId="8" fx:id="h1504" toolTip="15-04"/>
+                                <HeliostatButton comLineId="8" fx:id="h1506" toolTip="15-06"/>
+                                <HeliostatButton comLineId="8" fx:id="h1508" toolTip="15-08"/>
+                                <HeliostatButton comLineId="8" fx:id="h1510" toolTip="15-10"/>
+                                <HeliostatButton comLineId="8" fx:id="h1512" toolTip="15-12"/>
                                 <Label styleClass="label1" text="15" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -79,22 +79,22 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label styleClass="label1" text="14" textFill="WHITE"/>
-                                <HeliostatButton comLineId="16" fx:id="h1415"/>
-                                <HeliostatButton comLineId="16" fx:id="h1413"/>
-                                <HeliostatButton comLineId="16" fx:id="h1411"/>
-                                <HeliostatButton comLineId="16" fx:id="h1409"/>
-                                <HeliostatButton comLineId="16" fx:id="h1407"/>
-                                <HeliostatButton comLineId="16" fx:id="h1405"/>
-                                <HeliostatButton comLineId="16" fx:id="h1403"/>
-                                <HeliostatButton comLineId="16" fx:id="h1401"/>
-                                <HeliostatButton comLineId="8" fx:id="h1402"/>
-                                <HeliostatButton comLineId="8" fx:id="h1404"/>
-                                <HeliostatButton comLineId="8" fx:id="h1406"/>
-                                <HeliostatButton comLineId="8" fx:id="h1408"/>
-                                <HeliostatButton comLineId="8" fx:id="h1410"/>
-                                <HeliostatButton comLineId="8" fx:id="h1412"/>
-                                <HeliostatButton comLineId="8" fx:id="h1414"/>
-                                <HeliostatButton comLineId="8" fx:id="h1416"/>
+                                <HeliostatButton comLineId="16" fx:id="h1415" toolTip="14-15"/>
+                                <HeliostatButton comLineId="16" fx:id="h1413" toolTip="14-13"/>
+                                <HeliostatButton comLineId="16" fx:id="h1411" toolTip="14-11"/>
+                                <HeliostatButton comLineId="16" fx:id="h1409" toolTip="14-09"/>
+                                <HeliostatButton comLineId="16" fx:id="h1407" toolTip="14-07"/>
+                                <HeliostatButton comLineId="16" fx:id="h1405" toolTip="14-05"/>
+                                <HeliostatButton comLineId="16" fx:id="h1403" toolTip="14-03"/>
+                                <HeliostatButton comLineId="16" fx:id="h1401" toolTip="14-01"/>
+                                <HeliostatButton comLineId="8" fx:id="h1402" toolTip="14-02"/>
+                                <HeliostatButton comLineId="8" fx:id="h1404" toolTip="14-04"/>
+                                <HeliostatButton comLineId="8" fx:id="h1406" toolTip="14-06"/>
+                                <HeliostatButton comLineId="8" fx:id="h1408" toolTip="14-08"/>
+                                <HeliostatButton comLineId="8" fx:id="h1410" toolTip="14-10"/>
+                                <HeliostatButton comLineId="8" fx:id="h1412" toolTip="14-12"/>
+                                <HeliostatButton comLineId="8" fx:id="h1414" toolTip="14-14"/>
+                                <HeliostatButton comLineId="8" fx:id="h1416" toolTip="14-16"/>
                                 <Label styleClass="label1" text="14" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -103,25 +103,25 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label styleClass="label1" text="13" textFill="WHITE"/>
-                                <HeliostatButton comLineId="15" fx:id="h1317"/>
-                                <HeliostatButton comLineId="15" fx:id="h1315"/>
-                                <HeliostatButton comLineId="15" fx:id="h1313"/>
-                                <HeliostatButton comLineId="15" fx:id="h1311"/>
-                                <HeliostatButton comLineId="15" fx:id="h1309"/>
-                                <HeliostatButton comLineId="15" fx:id="h1307"/>
-                                <HeliostatButton comLineId="15" fx:id="h1305"/>
-                                <HeliostatButton comLineId="15" fx:id="h1303"/>
-                                <HeliostatButton comLineId="15" fx:id="h1301"/>
-                                <HeliostatButton comLineId="7" fx:id="h1300"/>
-                                <HeliostatButton comLineId="7" fx:id="h1302"/>
-                                <HeliostatButton comLineId="7" fx:id="h1304"/>
-                                <HeliostatButton comLineId="7" fx:id="h1306"/>
-                                <HeliostatButton comLineId="7" fx:id="h1308"/>
-                                <HeliostatButton comLineId="7" fx:id="h1310"/>
-                                <HeliostatButton comLineId="7" fx:id="h1312"/>
-                                <HeliostatButton comLineId="7" fx:id="h1314"/>
-                                <HeliostatButton comLineId="7" fx:id="h1316"/>
-                                <HeliostatButton comLineId="7" fx:id="h1318"/>
+                                <HeliostatButton comLineId="15" fx:id="h1317" toolTip="13-17"/>
+                                <HeliostatButton comLineId="15" fx:id="h1315" toolTip="13-15"/>
+                                <HeliostatButton comLineId="15" fx:id="h1313" toolTip="13-13"/>
+                                <HeliostatButton comLineId="15" fx:id="h1311" toolTip="13-11"/>
+                                <HeliostatButton comLineId="15" fx:id="h1309" toolTip="13-09"/>
+                                <HeliostatButton comLineId="15" fx:id="h1307" toolTip="13-07"/>
+                                <HeliostatButton comLineId="15" fx:id="h1305" toolTip="13-05"/>
+                                <HeliostatButton comLineId="15" fx:id="h1303" toolTip="13-03"/>
+                                <HeliostatButton comLineId="15" fx:id="h1301" toolTip="13-01"/>
+                                <HeliostatButton comLineId="7" fx:id="h1300" toolTip="13-00"/>
+                                <HeliostatButton comLineId="7" fx:id="h1302" toolTip="13-02"/>
+                                <HeliostatButton comLineId="7" fx:id="h1304" toolTip="13-04"/>
+                                <HeliostatButton comLineId="7" fx:id="h1306" toolTip="13-06"/>
+                                <HeliostatButton comLineId="7" fx:id="h1308" toolTip="13-08"/>
+                                <HeliostatButton comLineId="7" fx:id="h1310" toolTip="13-10"/>
+                                <HeliostatButton comLineId="7" fx:id="h1312" toolTip="13-12"/>
+                                <HeliostatButton comLineId="7" fx:id="h1314" toolTip="13-14"/>
+                                <HeliostatButton comLineId="7" fx:id="h1316" toolTip="13-16"/>
+                                <HeliostatButton comLineId="7" fx:id="h1318" toolTip="13-18"/>
                                 <Label styleClass="label1" text="13" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -130,26 +130,26 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label styleClass="label1" text="12" textFill="WHITE"/>
-                                <HeliostatButton comLineId="15" fx:id="h1219"/>
-                                <HeliostatButton comLineId="15" fx:id="h1217"/>
-                                <HeliostatButton comLineId="15" fx:id="h1215"/>
-                                <HeliostatButton comLineId="15" fx:id="h1213"/>
-                                <HeliostatButton comLineId="15" fx:id="h1211"/>
-                                <HeliostatButton comLineId="15" fx:id="h1209"/>
-                                <HeliostatButton comLineId="15" fx:id="h1207"/>
-                                <HeliostatButton comLineId="15" fx:id="h1205"/>
-                                <HeliostatButton comLineId="15" fx:id="h1203"/>
-                                <HeliostatButton comLineId="15" fx:id="h1201"/>
-                                <HeliostatButton comLineId="7" fx:id="h1202"/>
-                                <HeliostatButton comLineId="7" fx:id="h1204"/>
-                                <HeliostatButton comLineId="7" fx:id="h1206"/>
-                                <HeliostatButton comLineId="7" fx:id="h1208"/>
-                                <HeliostatButton comLineId="7" fx:id="h1210"/>
-                                <HeliostatButton comLineId="7" fx:id="h1212"/>
-                                <HeliostatButton comLineId="7" fx:id="h1214"/>
-                                <HeliostatButton comLineId="7" fx:id="h1216"/>
-                                <HeliostatButton comLineId="7" fx:id="h1218"/>
-                                <HeliostatButton comLineId="7" fx:id="h1220"/>
+                                <HeliostatButton comLineId="15" fx:id="h1219" toolTip="12-19"/>
+                                <HeliostatButton comLineId="15" fx:id="h1217" toolTip="12-17"/>
+                                <HeliostatButton comLineId="15" fx:id="h1215" toolTip="12-15"/>
+                                <HeliostatButton comLineId="15" fx:id="h1213" toolTip="12-13"/>
+                                <HeliostatButton comLineId="15" fx:id="h1211" toolTip="12-11"/>
+                                <HeliostatButton comLineId="15" fx:id="h1209" toolTip="12-09"/>
+                                <HeliostatButton comLineId="15" fx:id="h1207" toolTip="12-07"/>
+                                <HeliostatButton comLineId="15" fx:id="h1205" toolTip="12-05"/>
+                                <HeliostatButton comLineId="15" fx:id="h1203" toolTip="12-03"/>
+                                <HeliostatButton comLineId="15" fx:id="h1201" toolTip="12-01"/>
+                                <HeliostatButton comLineId="7" fx:id="h1202" toolTip="12-02"/>
+                                <HeliostatButton comLineId="7" fx:id="h1204" toolTip="12-04"/>
+                                <HeliostatButton comLineId="7" fx:id="h1206" toolTip="12-06"/>
+                                <HeliostatButton comLineId="7" fx:id="h1208" toolTip="12-08"/>
+                                <HeliostatButton comLineId="7" fx:id="h1210" toolTip="12-10"/>
+                                <HeliostatButton comLineId="7" fx:id="h1212" toolTip="12-12"/>
+                                <HeliostatButton comLineId="7" fx:id="h1214" toolTip="12-14"/>
+                                <HeliostatButton comLineId="7" fx:id="h1216" toolTip="12-16"/>
+                                <HeliostatButton comLineId="7" fx:id="h1218" toolTip="12-18"/>
+                                <HeliostatButton comLineId="7" fx:id="h1220" toolTip="12-20"/>
                                 <Label styleClass="label1" text="12" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -158,29 +158,29 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label styleClass="label1" text="11" textFill="WHITE"/>
-                                <HeliostatButton comLineId="14" fx:id="h1121"/>
-                                <HeliostatButton comLineId="14" fx:id="h1119"/>
-                                <HeliostatButton comLineId="14" fx:id="h1117"/>
-                                <HeliostatButton comLineId="14" fx:id="h1115"/>
-                                <HeliostatButton comLineId="14" fx:id="h1113"/>
-                                <HeliostatButton comLineId="14" fx:id="h1111"/>
-                                <HeliostatButton comLineId="14" fx:id="h1109"/>
-                                <HeliostatButton comLineId="14" fx:id="h1107"/>
-                                <HeliostatButton comLineId="14" fx:id="h1105"/>
-                                <HeliostatButton comLineId="14" fx:id="h1103"/>
-                                <HeliostatButton comLineId="14" fx:id="h1101"/>
-                                <HeliostatButton comLineId="6" fx:id="h1100"/>
-                                <HeliostatButton comLineId="6" fx:id="h1102"/>
-                                <HeliostatButton comLineId="6" fx:id="h1104"/>
-                                <HeliostatButton comLineId="6" fx:id="h1106"/>
-                                <HeliostatButton comLineId="6" fx:id="h1108"/>
-                                <HeliostatButton comLineId="6" fx:id="h1110"/>
-                                <HeliostatButton comLineId="6" fx:id="h1112"/>
-                                <HeliostatButton comLineId="6" fx:id="h1114"/>
-                                <HeliostatButton comLineId="6" fx:id="h1116"/>
-                                <HeliostatButton comLineId="6" fx:id="h1118"/>
-                                <HeliostatButton comLineId="6" fx:id="h1120"/>
-                                <HeliostatButton comLineId="6" fx:id="h1122"/>
+                                <HeliostatButton comLineId="14" fx:id="h1121" toolTip="11-21"/>
+                                <HeliostatButton comLineId="14" fx:id="h1119" toolTip="11-19"/>
+                                <HeliostatButton comLineId="14" fx:id="h1117" toolTip="11-17"/>
+                                <HeliostatButton comLineId="14" fx:id="h1115" toolTip="11-15"/>
+                                <HeliostatButton comLineId="14" fx:id="h1113" toolTip="11-13"/>
+                                <HeliostatButton comLineId="14" fx:id="h1111" toolTip="11-11"/>
+                                <HeliostatButton comLineId="14" fx:id="h1109" toolTip="11-09"/>
+                                <HeliostatButton comLineId="14" fx:id="h1107" toolTip="11-07"/>
+                                <HeliostatButton comLineId="14" fx:id="h1105" toolTip="11-05"/>
+                                <HeliostatButton comLineId="14" fx:id="h1103" toolTip="11-03"/>
+                                <HeliostatButton comLineId="14" fx:id="h1101" toolTip="11-01"/>
+                                <HeliostatButton comLineId="6" fx:id="h1100" toolTip="11-00"/>
+                                <HeliostatButton comLineId="6" fx:id="h1102" toolTip="11-02"/>
+                                <HeliostatButton comLineId="6" fx:id="h1104" toolTip="11-04"/>
+                                <HeliostatButton comLineId="6" fx:id="h1106" toolTip="11-06"/>
+                                <HeliostatButton comLineId="6" fx:id="h1108" toolTip="11-08"/>
+                                <HeliostatButton comLineId="6" fx:id="h1110" toolTip="11-10"/>
+                                <HeliostatButton comLineId="6" fx:id="h1112" toolTip="11-12"/>
+                                <HeliostatButton comLineId="6" fx:id="h1114" toolTip="11-14"/>
+                                <HeliostatButton comLineId="6" fx:id="h1116" toolTip="11-16"/>
+                                <HeliostatButton comLineId="6" fx:id="h1118" toolTip="11-18"/>
+                                <HeliostatButton comLineId="6" fx:id="h1120" toolTip="11-20"/>
+                                <HeliostatButton comLineId="6" fx:id="h1122" toolTip="11-22"/>
                                 <Label styleClass="label1" text="11" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -189,38 +189,38 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label styleClass="label1" text="10" textFill="WHITE"/>
-                                <HeliostatButton comLineId="14" fx:id="h1031"/>
-                                <HeliostatButton comLineId="14" fx:id="h1029"/>
-                                <HeliostatButton comLineId="14" fx:id="h1027"/>
-                                <HeliostatButton comLineId="14" fx:id="h1025"/>
-                                <HeliostatButton comLineId="14" fx:id="h1023"/>
-                                <HeliostatButton comLineId="14" fx:id="h1021"/>
-                                <HeliostatButton comLineId="14" fx:id="h1019"/>
-                                <HeliostatButton comLineId="13" fx:id="h1017"/>
-                                <HeliostatButton comLineId="13" fx:id="h1015"/>
-                                <HeliostatButton comLineId="13" fx:id="h1013"/>
-                                <HeliostatButton comLineId="13" fx:id="h1011"/>
-                                <HeliostatButton comLineId="13" fx:id="h1009"/>
-                                <HeliostatButton comLineId="13" fx:id="h1007"/>
-                                <HeliostatButton comLineId="13" fx:id="h1005"/>
-                                <HeliostatButton comLineId="13" fx:id="h1003"/>
-                                <HeliostatButton comLineId="13" fx:id="h1001"/>
-                                <HeliostatButton comLineId="5" fx:id="h1002"/>
-                                <HeliostatButton comLineId="5" fx:id="h1004"/>
-                                <HeliostatButton comLineId="5" fx:id="h1006"/>
-                                <HeliostatButton comLineId="5" fx:id="h1008"/>
-                                <HeliostatButton comLineId="5" fx:id="h1010"/>
-                                <HeliostatButton comLineId="5" fx:id="h1012"/>
-                                <HeliostatButton comLineId="5" fx:id="h1014"/>
-                                <HeliostatButton comLineId="5" fx:id="h1016"/>
-                                <HeliostatButton comLineId="5" fx:id="h1018"/>
-                                <HeliostatButton comLineId="6" fx:id="h1020"/>
-                                <HeliostatButton comLineId="6" fx:id="h1022"/>
-                                <HeliostatButton comLineId="6" fx:id="h1024"/>
-                                <HeliostatButton comLineId="6" fx:id="h1026"/>
-                                <HeliostatButton comLineId="6" fx:id="h1028"/>
-                                <HeliostatButton comLineId="6" fx:id="h1030"/>
-                                <HeliostatButton comLineId="6" fx:id="h1032"/>
+                                <HeliostatButton comLineId="14" fx:id="h1031" toolTip="10-31"/>
+                                <HeliostatButton comLineId="14" fx:id="h1029" toolTip="10-29"/>
+                                <HeliostatButton comLineId="14" fx:id="h1027" toolTip="10-27"/>
+                                <HeliostatButton comLineId="14" fx:id="h1025" toolTip="10-25"/>
+                                <HeliostatButton comLineId="14" fx:id="h1023" toolTip="10-23"/>
+                                <HeliostatButton comLineId="14" fx:id="h1021" toolTip="10-21"/>
+                                <HeliostatButton comLineId="14" fx:id="h1019" toolTip="10-19"/>
+                                <HeliostatButton comLineId="13" fx:id="h1017" toolTip="10-17"/>
+                                <HeliostatButton comLineId="13" fx:id="h1015" toolTip="10-15"/>
+                                <HeliostatButton comLineId="13" fx:id="h1013" toolTip="10-13"/>
+                                <HeliostatButton comLineId="13" fx:id="h1011" toolTip="10-11"/>
+                                <HeliostatButton comLineId="13" fx:id="h1009" toolTip="10-09"/>
+                                <HeliostatButton comLineId="13" fx:id="h1007" toolTip="10-07"/>
+                                <HeliostatButton comLineId="13" fx:id="h1005" toolTip="10-05"/>
+                                <HeliostatButton comLineId="13" fx:id="h1003" toolTip="10-03"/>
+                                <HeliostatButton comLineId="13" fx:id="h1001" toolTip="10-01"/>
+                                <HeliostatButton comLineId="5" fx:id="h1002" toolTip="10-02"/>
+                                <HeliostatButton comLineId="5" fx:id="h1004" toolTip="10-04"/>
+                                <HeliostatButton comLineId="5" fx:id="h1006" toolTip="10-06"/>
+                                <HeliostatButton comLineId="5" fx:id="h1008" toolTip="10-08"/>
+                                <HeliostatButton comLineId="5" fx:id="h1010" toolTip="10-10"/>
+                                <HeliostatButton comLineId="5" fx:id="h1012" toolTip="10-12"/>
+                                <HeliostatButton comLineId="5" fx:id="h1014" toolTip="10-14"/>
+                                <HeliostatButton comLineId="5" fx:id="h1016" toolTip="10-16"/>
+                                <HeliostatButton comLineId="5" fx:id="h1018" toolTip="10-18"/>
+                                <HeliostatButton comLineId="6" fx:id="h1020" toolTip="10-20"/>
+                                <HeliostatButton comLineId="6" fx:id="h1022" toolTip="10-22"/>
+                                <HeliostatButton comLineId="6" fx:id="h1024" toolTip="10-24"/>
+                                <HeliostatButton comLineId="6" fx:id="h1026" toolTip="10-26"/>
+                                <HeliostatButton comLineId="6" fx:id="h1028" toolTip="10-28"/>
+                                <HeliostatButton comLineId="6" fx:id="h1030" toolTip="10-30"/>
+                                <HeliostatButton comLineId="6" fx:id="h1032" toolTip="10-32"/>
                                 <Label styleClass="label1" text="10" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -229,37 +229,37 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label styleClass="label1" text="09" textFill="WHITE"/>
-                                <HeliostatButton comLineId="12" fx:id="h0929"/>
-                                <HeliostatButton comLineId="12" fx:id="h0927"/>
-                                <HeliostatButton comLineId="12" fx:id="h0925"/>
-                                <HeliostatButton comLineId="12" fx:id="h0923"/>
-                                <HeliostatButton comLineId="12" fx:id="h0921"/>
-                                <HeliostatButton comLineId="12" fx:id="h0919"/>
-                                <HeliostatButton comLineId="13" fx:id="h0917"/>
-                                <HeliostatButton comLineId="13" fx:id="h0915"/>
-                                <HeliostatButton comLineId="13" fx:id="h0913"/>
-                                <HeliostatButton comLineId="13" fx:id="h0911"/>
-                                <HeliostatButton comLineId="13" fx:id="h0909"/>
-                                <HeliostatButton comLineId="13" fx:id="h0907"/>
-                                <HeliostatButton comLineId="13" fx:id="h0905"/>
-                                <HeliostatButton comLineId="13" fx:id="h0903"/>
-                                <HeliostatButton comLineId="13" fx:id="h0901"/>
-                                <HeliostatButton comLineId="5" fx:id="h0900"/>
-                                <HeliostatButton comLineId="5" fx:id="h0902"/>
-                                <HeliostatButton comLineId="5" fx:id="h0904"/>
-                                <HeliostatButton comLineId="5" fx:id="h0906"/>
-                                <HeliostatButton comLineId="5" fx:id="h0908"/>
-                                <HeliostatButton comLineId="5" fx:id="h0910"/>
-                                <HeliostatButton comLineId="5" fx:id="h0912"/>
-                                <HeliostatButton comLineId="5" fx:id="h0914"/>
-                                <HeliostatButton comLineId="5" fx:id="h0916"/>
-                                <HeliostatButton comLineId="5" fx:id="h0918"/>
-                                <HeliostatButton comLineId="4" fx:id="h0920"/>
-                                <HeliostatButton comLineId="4" fx:id="h0922"/>
-                                <HeliostatButton comLineId="4" fx:id="h0924"/>
-                                <HeliostatButton comLineId="4" fx:id="h0926"/>
-                                <HeliostatButton comLineId="4" fx:id="h0928"/>
-                                <HeliostatButton comLineId="4" fx:id="h0930"/>
+                                <HeliostatButton comLineId="12" fx:id="h0929" toolTip="09-29"/>
+                                <HeliostatButton comLineId="12" fx:id="h0927" toolTip="09-27"/>
+                                <HeliostatButton comLineId="12" fx:id="h0925" toolTip="09-25"/>
+                                <HeliostatButton comLineId="12" fx:id="h0923" toolTip="09-23"/>
+                                <HeliostatButton comLineId="12" fx:id="h0921" toolTip="09-21"/>
+                                <HeliostatButton comLineId="12" fx:id="h0919" toolTip="09-19"/>
+                                <HeliostatButton comLineId="13" fx:id="h0917" toolTip="09-17"/>
+                                <HeliostatButton comLineId="13" fx:id="h0915" toolTip="09-15"/>
+                                <HeliostatButton comLineId="13" fx:id="h0913" toolTip="09-13"/>
+                                <HeliostatButton comLineId="13" fx:id="h0911" toolTip="09-11"/>
+                                <HeliostatButton comLineId="13" fx:id="h0909" toolTip="09-09"/>
+                                <HeliostatButton comLineId="13" fx:id="h0907" toolTip="09-07"/>
+                                <HeliostatButton comLineId="13" fx:id="h0905" toolTip="09-05"/>
+                                <HeliostatButton comLineId="13" fx:id="h0903" toolTip="09-03"/>
+                                <HeliostatButton comLineId="13" fx:id="h0901" toolTip="09-01"/>
+                                <HeliostatButton comLineId="5" fx:id="h0900" toolTip="09-00"/>
+                                <HeliostatButton comLineId="5" fx:id="h0902" toolTip="09-02"/>
+                                <HeliostatButton comLineId="5" fx:id="h0904" toolTip="09-04"/>
+                                <HeliostatButton comLineId="5" fx:id="h0906" toolTip="09-06"/>
+                                <HeliostatButton comLineId="5" fx:id="h0908" toolTip="09-08"/>
+                                <HeliostatButton comLineId="5" fx:id="h0910" toolTip="09-10"/>
+                                <HeliostatButton comLineId="5" fx:id="h0912" toolTip="09-12"/>
+                                <HeliostatButton comLineId="5" fx:id="h0914" toolTip="09-14"/>
+                                <HeliostatButton comLineId="5" fx:id="h0916" toolTip="09-16"/>
+                                <HeliostatButton comLineId="5" fx:id="h0918" toolTip="09-18"/>
+                                <HeliostatButton comLineId="4" fx:id="h0920" toolTip="09-20"/>
+                                <HeliostatButton comLineId="4" fx:id="h0922" toolTip="09-22"/>
+                                <HeliostatButton comLineId="4" fx:id="h0924" toolTip="09-24"/>
+                                <HeliostatButton comLineId="4" fx:id="h0926" toolTip="09-26"/>
+                                <HeliostatButton comLineId="4" fx:id="h0928" toolTip="09-28"/>
+                                <HeliostatButton comLineId="4" fx:id="h0930" toolTip="09-30"/>
                                 <Label styleClass="label1" text="09" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -268,34 +268,34 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label styleClass="label1" text="08" textFill="WHITE"/>
-                                <HeliostatButton comLineId="12" fx:id="h0827"/>
-                                <HeliostatButton comLineId="12" fx:id="h0825"/>
-                                <HeliostatButton comLineId="12" fx:id="h0823"/>
-                                <HeliostatButton comLineId="12" fx:id="h0821"/>
-                                <HeliostatButton comLineId="12" fx:id="h0819"/>
-                                <HeliostatButton comLineId="12" fx:id="h0817"/>
-                                <HeliostatButton comLineId="12" fx:id="h0815"/>
-                                <HeliostatButton comLineId="12" fx:id="h0813"/>
-                                <HeliostatButton comLineId="12" fx:id="h0811"/>
-                                <HeliostatButton comLineId="12" fx:id="h0809"/>
-                                <HeliostatButton comLineId="12" fx:id="h0807"/>
-                                <HeliostatButton comLineId="12" fx:id="h0805"/>
-                                <HeliostatButton comLineId="12" fx:id="h0803"/>
-                                <HeliostatButton comLineId="12" fx:id="h0801"/>
-                                <HeliostatButton comLineId="4" fx:id="h0802"/>
-                                <HeliostatButton comLineId="4" fx:id="h0804"/>
-                                <HeliostatButton comLineId="4" fx:id="h0806"/>
-                                <HeliostatButton comLineId="4" fx:id="h0808"/>
-                                <HeliostatButton comLineId="4" fx:id="h0810"/>
-                                <HeliostatButton comLineId="4" fx:id="h0812"/>
-                                <HeliostatButton comLineId="4" fx:id="h0814"/>
-                                <HeliostatButton comLineId="4" fx:id="h0816"/>
-                                <HeliostatButton comLineId="4" fx:id="h0818"/>
-                                <HeliostatButton comLineId="4" fx:id="h0820"/>
-                                <HeliostatButton comLineId="4" fx:id="h0822"/>
-                                <HeliostatButton comLineId="4" fx:id="h0824"/>
-                                <HeliostatButton comLineId="4" fx:id="h0826"/>
-                                <HeliostatButton comLineId="4" fx:id="h0828"/>
+                                <HeliostatButton comLineId="12" fx:id="h0827" toolTip="08-27"/>
+                                <HeliostatButton comLineId="12" fx:id="h0825" toolTip="08-25"/>
+                                <HeliostatButton comLineId="12" fx:id="h0823" toolTip="08-23"/>
+                                <HeliostatButton comLineId="12" fx:id="h0821" toolTip="08-21"/>
+                                <HeliostatButton comLineId="12" fx:id="h0819" toolTip="08-19"/>
+                                <HeliostatButton comLineId="12" fx:id="h0817" toolTip="08-17"/>
+                                <HeliostatButton comLineId="12" fx:id="h0815" toolTip="08-15"/>
+                                <HeliostatButton comLineId="12" fx:id="h0813" toolTip="08-13"/>
+                                <HeliostatButton comLineId="12" fx:id="h0811" toolTip="08-11"/>
+                                <HeliostatButton comLineId="12" fx:id="h0809" toolTip="08-09"/>
+                                <HeliostatButton comLineId="12" fx:id="h0807" toolTip="08-07"/>
+                                <HeliostatButton comLineId="12" fx:id="h0805" toolTip="08-05"/>
+                                <HeliostatButton comLineId="12" fx:id="h0803" toolTip="08-03"/>
+                                <HeliostatButton comLineId="12" fx:id="h0801" toolTip="08-01"/>
+                                <HeliostatButton comLineId="4" fx:id="h0802" toolTip="08-02"/>
+                                <HeliostatButton comLineId="4" fx:id="h0804" toolTip="08-04"/>
+                                <HeliostatButton comLineId="4" fx:id="h0806" toolTip="08-06"/>
+                                <HeliostatButton comLineId="4" fx:id="h0808" toolTip="08-08"/>
+                                <HeliostatButton comLineId="4" fx:id="h0810" toolTip="08-10"/>
+                                <HeliostatButton comLineId="4" fx:id="h0812" toolTip="08-12"/>
+                                <HeliostatButton comLineId="4" fx:id="h0814" toolTip="08-14"/>
+                                <HeliostatButton comLineId="4" fx:id="h0816" toolTip="08-16"/>
+                                <HeliostatButton comLineId="4" fx:id="h0818" toolTip="08-18"/>
+                                <HeliostatButton comLineId="4" fx:id="h0820" toolTip="08-20"/>
+                                <HeliostatButton comLineId="4" fx:id="h0822" toolTip="08-22"/>
+                                <HeliostatButton comLineId="4" fx:id="h0824" toolTip="08-24"/>
+                                <HeliostatButton comLineId="4" fx:id="h0826" toolTip="08-26"/>
+                                <HeliostatButton comLineId="4" fx:id="h0828" toolTip="08-28"/>
                                 <Label styleClass="label1" text="08" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -304,29 +304,29 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label styleClass="label1" text="07" textFill="WHITE"/>
-                                <HeliostatButton comLineId="11" fx:id="h0721"/>
-                                <HeliostatButton comLineId="11" fx:id="h0719"/>
-                                <HeliostatButton comLineId="11" fx:id="h0717"/>
-                                <HeliostatButton comLineId="11" fx:id="h0715"/>
-                                <HeliostatButton comLineId="11" fx:id="h0713"/>
-                                <HeliostatButton comLineId="11" fx:id="h0711"/>
-                                <HeliostatButton comLineId="11" fx:id="h0709"/>
-                                <HeliostatButton comLineId="11" fx:id="h0707"/>
-                                <HeliostatButton comLineId="11" fx:id="h0705"/>
-                                <HeliostatButton comLineId="11" fx:id="h0703"/>
-                                <HeliostatButton comLineId="11" fx:id="h0701"/>
-                                <HeliostatButton comLineId="3" fx:id="h0700"/>
-                                <HeliostatButton comLineId="3" fx:id="h0702"/>
-                                <HeliostatButton comLineId="3" fx:id="h0704"/>
-                                <HeliostatButton comLineId="3" fx:id="h0706"/>
-                                <HeliostatButton comLineId="3" fx:id="h0708"/>
-                                <HeliostatButton comLineId="3" fx:id="h0710"/>
-                                <HeliostatButton comLineId="3" fx:id="h0712"/>
-                                <HeliostatButton comLineId="3" fx:id="h0714"/>
-                                <HeliostatButton comLineId="3" fx:id="h0716"/>
-                                <HeliostatButton comLineId="3" fx:id="h0718"/>
-                                <HeliostatButton comLineId="3" fx:id="h0720"/>
-                                <HeliostatButton comLineId="3" fx:id="h0722"/>
+                                <HeliostatButton comLineId="11" fx:id="h0721" toolTip="07-21"/>
+                                <HeliostatButton comLineId="11" fx:id="h0719" toolTip="07-19"/>
+                                <HeliostatButton comLineId="11" fx:id="h0717" toolTip="07-17"/>
+                                <HeliostatButton comLineId="11" fx:id="h0715" toolTip="07-15"/>
+                                <HeliostatButton comLineId="11" fx:id="h0713" toolTip="07-13"/>
+                                <HeliostatButton comLineId="11" fx:id="h0711" toolTip="07-11"/>
+                                <HeliostatButton comLineId="11" fx:id="h0709" toolTip="07-09"/>
+                                <HeliostatButton comLineId="11" fx:id="h0707" toolTip="07-07"/>
+                                <HeliostatButton comLineId="11" fx:id="h0705" toolTip="07-05"/>
+                                <HeliostatButton comLineId="11" fx:id="h0703" toolTip="07-03"/>
+                                <HeliostatButton comLineId="11" fx:id="h0701" toolTip="07-01"/>
+                                <HeliostatButton comLineId="3" fx:id="h0700" toolTip="07-00"/>
+                                <HeliostatButton comLineId="3" fx:id="h0702" toolTip="07-02"/>
+                                <HeliostatButton comLineId="3" fx:id="h0704" toolTip="07-04"/>
+                                <HeliostatButton comLineId="3" fx:id="h0706" toolTip="07-06"/>
+                                <HeliostatButton comLineId="3" fx:id="h0708" toolTip="07-08"/>
+                                <HeliostatButton comLineId="3" fx:id="h0710" toolTip="07-10"/>
+                                <HeliostatButton comLineId="3" fx:id="h0712" toolTip="07-12"/>
+                                <HeliostatButton comLineId="3" fx:id="h0714" toolTip="07-14"/>
+                                <HeliostatButton comLineId="3" fx:id="h0716" toolTip="07-16"/>
+                                <HeliostatButton comLineId="3" fx:id="h0718" toolTip="07-18"/>
+                                <HeliostatButton comLineId="3" fx:id="h0720" toolTip="07-20"/>
+                                <HeliostatButton comLineId="3" fx:id="h0722" toolTip="07-22"/>
                                 <Label styleClass="label1" text="07" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -335,26 +335,26 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label styleClass="label1" text="06" textFill="WHITE"/>
-                                <HeliostatButton comLineId="11" fx:id="h0619"/>
-                                <HeliostatButton comLineId="11" fx:id="h0617"/>
-                                <HeliostatButton comLineId="11" fx:id="h0615"/>
-                                <HeliostatButton comLineId="11" fx:id="h0613"/>
-                                <HeliostatButton comLineId="11" fx:id="h0611"/>
-                                <HeliostatButton comLineId="11" fx:id="h0609"/>
-                                <HeliostatButton comLineId="11" fx:id="h0607"/>
-                                <HeliostatButton comLineId="11" fx:id="h0605"/>
-                                <HeliostatButton comLineId="10" fx:id="h0603"/>
-                                <HeliostatButton comLineId="10" fx:id="h0601"/>
-                                <HeliostatButton comLineId="2" fx:id="h0602"/>
-                                <HeliostatButton comLineId="2" fx:id="h0604"/>
-                                <HeliostatButton comLineId="3" fx:id="h0606"/>
-                                <HeliostatButton comLineId="3" fx:id="h0608"/>
-                                <HeliostatButton comLineId="3" fx:id="h0610"/>
-                                <HeliostatButton comLineId="3" fx:id="h0612"/>
-                                <HeliostatButton comLineId="3" fx:id="h0614"/>
-                                <HeliostatButton comLineId="3" fx:id="h0616"/>
-                                <HeliostatButton comLineId="3" fx:id="h0618"/>
-                                <HeliostatButton comLineId="3" fx:id="h0620"/>
+                                <HeliostatButton comLineId="11" fx:id="h0619" toolTip="06-19"/>
+                                <HeliostatButton comLineId="11" fx:id="h0617" toolTip="06-17"/>
+                                <HeliostatButton comLineId="11" fx:id="h0615" toolTip="06-15"/>
+                                <HeliostatButton comLineId="11" fx:id="h0613" toolTip="06-13"/>
+                                <HeliostatButton comLineId="11" fx:id="h0611" toolTip="06-11"/>
+                                <HeliostatButton comLineId="11" fx:id="h0609" toolTip="06-09"/>
+                                <HeliostatButton comLineId="11" fx:id="h0607" toolTip="06-07"/>
+                                <HeliostatButton comLineId="11" fx:id="h0605" toolTip="06-05"/>
+                                <HeliostatButton comLineId="10" fx:id="h0603" toolTip="06-03"/>
+                                <HeliostatButton comLineId="10" fx:id="h0601" toolTip="06-01"/>
+                                <HeliostatButton comLineId="2" fx:id="h0602" toolTip="06-02"/>
+                                <HeliostatButton comLineId="2" fx:id="h0604" toolTip="06-04"/>
+                                <HeliostatButton comLineId="3" fx:id="h0606" toolTip="06-06"/>
+                                <HeliostatButton comLineId="3" fx:id="h0608" toolTip="06-08"/>
+                                <HeliostatButton comLineId="3" fx:id="h0610" toolTip="06-10"/>
+                                <HeliostatButton comLineId="3" fx:id="h0612" toolTip="06-12"/>
+                                <HeliostatButton comLineId="3" fx:id="h0614" toolTip="06-14"/>
+                                <HeliostatButton comLineId="3" fx:id="h0616" toolTip="06-16"/>
+                                <HeliostatButton comLineId="3" fx:id="h0618" toolTip="06-18"/>
+                                <HeliostatButton comLineId="3" fx:id="h0620" toolTip="06-20"/>
                                 <Label styleClass="label1" text="06" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -363,23 +363,23 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label styleClass="label1" text="05" textFill="WHITE"/>
-                                <HeliostatButton comLineId="10" fx:id="h0515"/>
-                                <HeliostatButton comLineId="10" fx:id="h0513"/>
-                                <HeliostatButton comLineId="10" fx:id="h0511"/>
-                                <HeliostatButton comLineId="10" fx:id="h0509"/>
-                                <HeliostatButton comLineId="10" fx:id="h0507"/>
-                                <HeliostatButton comLineId="10" fx:id="h0505"/>
-                                <HeliostatButton comLineId="10" fx:id="h0503"/>
-                                <HeliostatButton comLineId="10" fx:id="h0501"/>
-                                <HeliostatButton comLineId="2" fx:id="h0500"/>
-                                <HeliostatButton comLineId="2" fx:id="h0502"/>
-                                <HeliostatButton comLineId="2" fx:id="h0504"/>
-                                <HeliostatButton comLineId="2" fx:id="h0506"/>
-                                <HeliostatButton comLineId="2" fx:id="h0508"/>
-                                <HeliostatButton comLineId="2" fx:id="h0510"/>
-                                <HeliostatButton comLineId="2" fx:id="h0512"/>
-                                <HeliostatButton comLineId="2" fx:id="h0514"/>
-                                <HeliostatButton comLineId="2" fx:id="h0516"/>
+                                <HeliostatButton comLineId="10" fx:id="h0515" toolTip="05-15"/>
+                                <HeliostatButton comLineId="10" fx:id="h0513" toolTip="05-13"/>
+                                <HeliostatButton comLineId="10" fx:id="h0511" toolTip="05-11"/>
+                                <HeliostatButton comLineId="10" fx:id="h0509" toolTip="05-09"/>
+                                <HeliostatButton comLineId="10" fx:id="h0507" toolTip="05-07"/>
+                                <HeliostatButton comLineId="10" fx:id="h0505" toolTip="05-05"/>
+                                <HeliostatButton comLineId="10" fx:id="h0503" toolTip="05-03"/>
+                                <HeliostatButton comLineId="10" fx:id="h0501" toolTip="05-01"/>
+                                <HeliostatButton comLineId="2" fx:id="h0500" toolTip="05-00"/>
+                                <HeliostatButton comLineId="2" fx:id="h0502" toolTip="05-02"/>
+                                <HeliostatButton comLineId="2" fx:id="h0504" toolTip="05-04"/>
+                                <HeliostatButton comLineId="2" fx:id="h0506" toolTip="05-06"/>
+                                <HeliostatButton comLineId="2" fx:id="h0508" toolTip="05-08"/>
+                                <HeliostatButton comLineId="2" fx:id="h0510" toolTip="05-10"/>
+                                <HeliostatButton comLineId="2" fx:id="h0512" toolTip="05-12"/>
+                                <HeliostatButton comLineId="2" fx:id="h0514" toolTip="05-14"/>
+                                <HeliostatButton comLineId="2" fx:id="h0516" toolTip="05-16"/>
                                 <Label styleClass="label1" text="05" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -388,22 +388,22 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label styleClass="label1" text="04" textFill="WHITE"/>
-                                <HeliostatButton comLineId="10" fx:id="h0415"/>
-                                <HeliostatButton comLineId="10" fx:id="h0413"/>
-                                <HeliostatButton comLineId="10" fx:id="h0411"/>
-                                <HeliostatButton comLineId="10" fx:id="h0409"/>
-                                <HeliostatButton comLineId="10" fx:id="h0407"/>
-                                <HeliostatButton comLineId="10" fx:id="h0405"/>
-                                <HeliostatButton comLineId="10" fx:id="h0403"/>
-                                <HeliostatButton comLineId="10" fx:id="h0401"/>
-                                <HeliostatButton comLineId="2" fx:id="h0402"/>
-                                <HeliostatButton comLineId="2" fx:id="h0404"/>
-                                <HeliostatButton comLineId="2" fx:id="h0406"/>
-                                <HeliostatButton comLineId="2" fx:id="h0408"/>
-                                <HeliostatButton comLineId="2" fx:id="h0410"/>
-                                <HeliostatButton comLineId="2" fx:id="h0412"/>
-                                <HeliostatButton comLineId="2" fx:id="h0414"/>
-                                <HeliostatButton comLineId="2" fx:id="h0416"/>
+                                <HeliostatButton comLineId="10" fx:id="h0415" toolTip="04-15"/>
+                                <HeliostatButton comLineId="10" fx:id="h0413" toolTip="04-13"/>
+                                <HeliostatButton comLineId="10" fx:id="h0411" toolTip="04-11"/>
+                                <HeliostatButton comLineId="10" fx:id="h0409" toolTip="04-09"/>
+                                <HeliostatButton comLineId="10" fx:id="h0407" toolTip="04-07"/>
+                                <HeliostatButton comLineId="10" fx:id="h0405" toolTip="04-05"/>
+                                <HeliostatButton comLineId="10" fx:id="h0403" toolTip="04-03"/>
+                                <HeliostatButton comLineId="10" fx:id="h0401" toolTip="04-01"/>
+                                <HeliostatButton comLineId="2" fx:id="h0402" toolTip="04-02"/>
+                                <HeliostatButton comLineId="2" fx:id="h0404" toolTip="04-04"/>
+                                <HeliostatButton comLineId="2" fx:id="h0406" toolTip="04-06"/>
+                                <HeliostatButton comLineId="2" fx:id="h0408" toolTip="04-08"/>
+                                <HeliostatButton comLineId="2" fx:id="h0410" toolTip="04-10"/>
+                                <HeliostatButton comLineId="2" fx:id="h0412" toolTip="04-12"/>
+                                <HeliostatButton comLineId="2" fx:id="h0414" toolTip="04-14"/>
+                                <HeliostatButton comLineId="2" fx:id="h0416" toolTip="04-16"/>
                                 <Label styleClass="label1" text="04" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -412,19 +412,19 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label styleClass="label1" text="03" textFill="WHITE"/>
-                                <HeliostatButton comLineId="9" fx:id="h0311"/>
-                                <HeliostatButton comLineId="9" fx:id="h0309"/>
-                                <HeliostatButton comLineId="9" fx:id="h0307"/>
-                                <HeliostatButton comLineId="9" fx:id="h0305"/>
-                                <HeliostatButton comLineId="9" fx:id="h0303"/>
-                                <HeliostatButton comLineId="9" fx:id="h0301"/>
-                                <HeliostatButton comLineId="1" fx:id="h0300"/>
-                                <HeliostatButton comLineId="1" fx:id="h0302"/>
-                                <HeliostatButton comLineId="1" fx:id="h0304"/>
-                                <HeliostatButton comLineId="1" fx:id="h0306"/>
-                                <HeliostatButton comLineId="1" fx:id="h0308"/>
-                                <HeliostatButton comLineId="1" fx:id="h0310"/>
-                                <HeliostatButton comLineId="1" fx:id="h0312"/>
+                                <HeliostatButton comLineId="9" fx:id="h0311" toolTip="03-11"/>
+                                <HeliostatButton comLineId="9" fx:id="h0309" toolTip="03-09"/>
+                                <HeliostatButton comLineId="9" fx:id="h0307" toolTip="03-07"/>
+                                <HeliostatButton comLineId="9" fx:id="h0305" toolTip="03-05"/>
+                                <HeliostatButton comLineId="9" fx:id="h0303" toolTip="03-03"/>
+                                <HeliostatButton comLineId="9" fx:id="h0301" toolTip="03-01"/>
+                                <HeliostatButton comLineId="1" fx:id="h0300" toolTip="03-00"/>
+                                <HeliostatButton comLineId="1" fx:id="h0302" toolTip="03-02"/>
+                                <HeliostatButton comLineId="1" fx:id="h0304" toolTip="03-04"/>
+                                <HeliostatButton comLineId="1" fx:id="h0306" toolTip="03-06"/>
+                                <HeliostatButton comLineId="1" fx:id="h0308" toolTip="03-08"/>
+                                <HeliostatButton comLineId="1" fx:id="h0310" toolTip="03-10"/>
+                                <HeliostatButton comLineId="1" fx:id="h0312" toolTip="03-12"/>
                                 <Label styleClass="label1" text="03" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -433,16 +433,16 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label styleClass="label1" text="02" textFill="WHITE"/>
-                                <HeliostatButton comLineId="9" fx:id="h0209"/>
-                                <HeliostatButton comLineId="9" fx:id="h0207"/>
-                                <HeliostatButton comLineId="9" fx:id="h0205"/>
-                                <HeliostatButton comLineId="9" fx:id="h0203"/>
-                                <HeliostatButton comLineId="9" fx:id="h0201"/>
-                                <HeliostatButton comLineId="1" fx:id="h0202"/>
-                                <HeliostatButton comLineId="1" fx:id="h0204"/>
-                                <HeliostatButton comLineId="1" fx:id="h0206"/>
-                                <HeliostatButton comLineId="1" fx:id="h0208"/>
-                                <HeliostatButton comLineId="1" fx:id="h0210"/>
+                                <HeliostatButton comLineId="9" fx:id="h0209" toolTip="02-09"/>
+                                <HeliostatButton comLineId="9" fx:id="h0207" toolTip="02-07"/>
+                                <HeliostatButton comLineId="9" fx:id="h0205" toolTip="02-05"/>
+                                <HeliostatButton comLineId="9" fx:id="h0203" toolTip="02-03"/>
+                                <HeliostatButton comLineId="9" fx:id="h0201" toolTip="02-01"/>
+                                <HeliostatButton comLineId="1" fx:id="h0202" toolTip="02-02"/>
+                                <HeliostatButton comLineId="1" fx:id="h0204" toolTip="02-04"/>
+                                <HeliostatButton comLineId="1" fx:id="h0206" toolTip="02-06"/>
+                                <HeliostatButton comLineId="1" fx:id="h0208" toolTip="02-08"/>
+                                <HeliostatButton comLineId="1" fx:id="h0210" toolTip="02-10"/>
                                 <Label styleClass="label1" text="02" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>
@@ -451,15 +451,15 @@
                             <children>
                                 <Region HBox.hgrow="ALWAYS"/>
                                 <Label styleClass="label1" text="01" textFill="WHITE"/>
-                                <HeliostatButton comLineId="9" fx:id="h0107"/>
-                                <HeliostatButton comLineId="9" fx:id="h0105"/>
-                                <HeliostatButton comLineId="9" fx:id="h0103"/>
-                                <HeliostatButton comLineId="9" fx:id="h0101"/>
-                                <HeliostatButton comLineId="1" fx:id="h0100"/>
-                                <HeliostatButton comLineId="1" fx:id="h0102"/>
-                                <HeliostatButton comLineId="1" fx:id="h0104"/>
-                                <HeliostatButton comLineId="1" fx:id="h0106"/>
-                                <HeliostatButton comLineId="1" fx:id="h0108"/>
+                                <HeliostatButton comLineId="9" fx:id="h0107" toolTip="01-07"/>
+                                <HeliostatButton comLineId="9" fx:id="h0105" toolTip="01-05"/>
+                                <HeliostatButton comLineId="9" fx:id="h0103" toolTip="01-03"/>
+                                <HeliostatButton comLineId="9" fx:id="h0101" toolTip="01-01"/>
+                                <HeliostatButton comLineId="1" fx:id="h0100" toolTip="01-00"/>
+                                <HeliostatButton comLineId="1" fx:id="h0102" toolTip="01-02"/>
+                                <HeliostatButton comLineId="1" fx:id="h0104" toolTip="01-04"/>
+                                <HeliostatButton comLineId="1" fx:id="h0106" toolTip="01-06"/>
+                                <HeliostatButton comLineId="1" fx:id="h0108" toolTip="01-08"/>
                                 <Label styleClass="label1" text="01" textFill="WHITE"/>
                                 <Region HBox.hgrow="ALWAYS"/>
                             </children>

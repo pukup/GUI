@@ -76,6 +76,10 @@ public class Primary implements Initializable {
         timer.schedule(timerCacheTask, 0, 1000);
     }
 
+    //    private void loadTimer() {
+    //        RefreshTimeLine refreshTimeLine = new RefreshTimeLine(this);
+    //    }
+
     @FXML
     private void zoom() {
         rows_vbox.styleProperty().bind(Bindings.format("-fx-font-size: %.2fpt;", zoom_slider.getValue()));
@@ -113,21 +117,21 @@ public class Primary implements Initializable {
     }
 
     public void refreshRows() {
-        refreshRow16();
-        refreshRow15();
-        refreshRow14();
-        refreshRow13();
-        refreshRow12();
-        refreshRow11();
-        refreshRow10();
-        refreshRow09();
-        refreshRow08();
-        refreshRow07();
-        refreshRow06();
-        refreshRow05();
-        refreshRow04();
-        refreshRow03();
-        refreshRow02();
+        //        refreshRow16();
+        //        refreshRow15();
+        //        refreshRow14();
+        //        refreshRow13();
+        //        refreshRow12();
+        //        refreshRow11();
+        //        refreshRow10();
+        //        refreshRow09();
+        //        refreshRow08();
+        //        refreshRow07();
+        //        refreshRow06();
+        //        refreshRow05();
+        //        refreshRow04();
+        //        refreshRow03();
+        //        refreshRow02();
         refreshRow01();
     }
 

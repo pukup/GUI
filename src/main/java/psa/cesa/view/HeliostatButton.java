@@ -5,10 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -44,10 +41,12 @@ public class HeliostatButton extends VBox {
 
     private Scene valuesScene;
 
-    public HeliostatButton(@NamedArg("comLineId") int comLineId) {
+    public HeliostatButton(@NamedArg("comLineId") int comLineId, @NamedArg("toolTip") String toolTip) {
         try {
             loadButton();
             heliostat = new Heliostat(comLineId);
+            Tooltip tooltip = new Tooltip(toolTip);
+            Tooltip.install(button, tooltip);
             heliostatController = new HeliostatController();
         } catch (IOException exception) {
             throw new RuntimeException(exception);
@@ -60,6 +59,8 @@ public class HeliostatButton extends VBox {
         fxmlLoader.setController(this);
         fxmlLoader.load();
     }
+
+
 
     @FXML
     private void openValues(ActionEvent event) throws IOException {
@@ -185,8 +186,8 @@ public class HeliostatButton extends VBox {
     private void setSkins() {
         setSkinState0();
         setSkinState1();
-        setSkinEventOperation();
-        setSkinEventSecurity();
+        //        setSkinEventOperation();
+        //        setSkinEventSecurity();
         setSkinEventCom();
     }
 
@@ -223,70 +224,71 @@ public class HeliostatButton extends VBox {
         switch (nibble0) {
             case 0x0:
                 //                Operación local
-                button.getStyleClass().add("hand");
+                button.getStyleClass().set(1, "hand");
                 break;
             case 0x1:
                 //                Consiga fija
-                button.getStyleClass().add("pin");
+                button.getStyleClass().set(1, "pin");
                 break;
             case 0x2:
                 //                Busqueda de ceros
-                button.getStyleClass().add("zero");
+                button.getStyleClass().set(1, "zero");
                 break;
             case 0x3:
                 //                Fuera de servicio
-                button.getStyleClass().add("cross");
+                button.getStyleClass().set(1, "cross");
                 break;
             case 0x4:
                 //                Posición de defensa
-                button.getStyleClass().add("shield");
+                button.getStyleClass().set(1, "shield");
                 break;
             case 0x5:
                 //                Abatimiento
-                button.getStyleClass().add("pin");
+                button.getStyleClass().set(1, "pin");
                 break;
             case 0x6:
                 //                Blanco tierra
-                button.getStyleClass().add("ground");
+                button.getStyleClass().set(1, "ground");
                 break;
             case 0x7:
                 //                Blanco pasillo 1
-                button.getStyleClass().add("one");
+                button.getStyleClass().set(1, "one");
                 break;
             case 0x8:
                 //                Blanco pasillo 2
-                button.getStyleClass().add("two");
+                button.getStyleClass().set(1, "two");
                 break;
             case 0x9:
                 //                Blanco pasillo 3
-                button.getStyleClass().add("three");
+                button.getStyleClass().set(1, "three");
                 break;
             case 0xa:
                 //                Blanco pasillo 4
-                button.getStyleClass().add("four");
+                button.getStyleClass().set(1, "four");
                 break;
             case 0xb:
                 //                Seguimiento desfasado
-                button.getStyleClass().add("kilter");
+                button.getStyleClass().set(1, "kilter");
                 break;
             case 0xc:
                 //                Blanco de emergencia
-                button.getStyleClass().add("triangle");
+                button.getStyleClass().set(1, "triangle");
                 break;
             case 0xd:
                 //                Seguimiento normal a caldera
-                button.getStyleClass().add("boiler");
+                button.getStyleClass().set(1, "boil");
                 break;
             case 0xe:
                 //                Foco
-                button.getStyleClass().add("focus");
+                button.getStyleClass().set(1, "focus");
                 break;
             case 0xf:
                 //                Seguimiento normal al sol
-                button.getStyleClass().add("solar");
+                button.getStyleClass().set(1, "solar");
                 break;
             default:
-                button.getStyleClass().add("pin");
+                button.getStyleClass().set(1, "pin");
+                break;
         }
     }
 
@@ -295,66 +297,69 @@ public class HeliostatButton extends VBox {
      */
     public void setSkinState1() {
         int nibble1 = 0xf0 & heliostat.getState();
-        if ((nibble1 & 0x80) == 0x80) {
-            //            Aviso error
-            button.getStyleClass().add("orange");
-        }
-        if ((nibble1 & 0x40) == 0x40) {
-            //            Aviso evento
-            button.getStyleClass().add("green");
-        }
-        if ((nibble1 & 0x20) == 0x20) {
-            //            Consigna alcanzada EL
-            button.getStyleClass().add("blue");
+        if ((nibble1 & 0x00) == 0x00) {
+            button.getStyleClass().set(2, "radius-green");
         }
         if ((nibble1 & 0x10) == 0x10) {
             //            Consigna alcanzada AZ
-            button.getStyleClass().add("blue");
+            button.getStyleClass().set(2, "radius-green");
+        }
+        if ((nibble1 & 0x20) == 0x20) {
+            //            Consigna alcanzada EL
+            button.getStyleClass().set(2, "radius-green");
+        }
+        if ((nibble1 & 0x40) == 0x40) {
+            //            Aviso evento
+            button.getStyleClass().set(2, "radius-yellow");
+        }
+        if ((nibble1 & 0x80) == 0x80) {
+            //            Aviso error
+            button.getStyleClass().set(2, "radius-red");
         }
     }
 
-    /**
-     * Converts the two least significant bits from event byte to a string message.
-     *
-     * @return operation event message.
-     */
-    public void setSkinEventOperation() {
-        int coupleBits0 = 0x3 & heliostat.getEvent();
-        switch (coupleBits0) {
-            case 0x1:
-                //                Fuera de servicio
-                //                button.getStyleClass().add("");
-                break;
-            case 0x2:
-                //                Heliostato teleconfigurado
-                button.getStyleClass().add("green");
-                break;
-        }
-    }
+    //    /**
+    //     * Converts the two least significant bits from event byte to a string message.
+    //     *
+    //     * @return operation event message.
+    //     */
+    //    public void setSkinEventOperation() {
+    //        int coupleBits0 = 0x3 & heliostat.getEvent();
+    //        switch (coupleBits0) {
+    //            case 0x1:
+    //                //                Fuera de servicio
+    //                //                button.getStyleClass().add("");
+    //                break;
+    //            case 0x2:
+    //                //                Heliostato teleconfigurado
+    //                button.getStyleClass().set(3, "green");
+    //                break;
+    //        }
+    //    }
 
-    public void setSkinEventSecurity() {
-        int coupleBits1 = 0xc & heliostat.getEvent();
-        switch (coupleBits1) {
-            case 0x4:
-                //                  Código de cliente erróneo
-                button.getStyleClass().add("violet");
-                break;
-        }
-    }
+    //    public void setSkinEventSecurity() {
+    //        int coupleBits1 = 0xc & heliostat.getEvent();
+    //        switch (coupleBits1) {
+    //            case 0x4:
+    //                //                  Código de cliente erróneo
+    //                button.getStyleClass().set(4, "violet");
+    //                break;
+    //        }
+    //    }
 
     public void setSkinEventCom() {
         int coupleBits2 = 0x30 & heliostat.getEvent();
         switch (coupleBits2) {
             case 0x00:
-                button.getStyleClass().add("blue");
+                button.getStyleClass().set(3, "blue");
                 break;
             case 0x10:
                 //                Fallo de comunicaciones
-                button.getStyleClass().add("grey");
+                button.getStyleClass().set(3, "black");
                 break;
             case 0x20:
                 //                No acpeta el comando
-                button.getStyleClass().add("black");
+                button.getStyleClass().set(3, "grey");
                 break;
         }
     }

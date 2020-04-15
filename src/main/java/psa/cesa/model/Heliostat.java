@@ -126,15 +126,15 @@ public class Heliostat {
     }
 
     public void setAttributes(Heliostat heliostat) {
-        this.id = heliostat.getId();
-        this.state = heliostat.getState();
-        this.event = heliostat.getEvent();
-        this.diagnosisAZ = heliostat.getDiagnosysAZ();
-        this.diagnosisEL = heliostat.getDiagnosysEL();
-        this.positionAZ = heliostat.getPositionAZ();
-        this.positionEL = heliostat.getPositionEL();
-        this.setPointAZ = heliostat.getSetPointAZ();
-        this.setPointEL = heliostat.getSetPointEL();
+        id = heliostat.getId();
+        state = heliostat.getState();
+        event = heliostat.getEvent();
+        diagnosisAZ = heliostat.getDiagnosysAZ();
+        diagnosisEL = heliostat.getDiagnosysEL();
+        positionAZ = heliostat.getPositionAZ();
+        positionEL = heliostat.getPositionEL();
+        setPointAZ = heliostat.getSetPointAZ();
+        setPointEL = heliostat.getSetPointEL();
     }
 
     /**
@@ -213,7 +213,7 @@ public class Heliostat {
             state1.append("Consigna alcanzada");
         }
         if ((nibble1 & 0x40) == 0x40) {
-            state1.append("Evento ");
+            state1.append(" Evento ");
         }
         if ((nibble1 & 0x80) == 0x80) {
             state1.append("Error");

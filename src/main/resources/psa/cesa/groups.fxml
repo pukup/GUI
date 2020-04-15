@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.*?>
 <HBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
       minHeight="-Infinity"
-      minWidth="-Infinity" prefHeight="570.0" prefWidth="673.0" stylesheets="@CSS.css"
+      minWidth="-Infinity" prefHeight="570.0" prefWidth="673.0" stylesheets="@css/CSS.css"
       xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="psa.cesa.view.Groups">
     <Separator opacity="0.25" orientation="VERTICAL">
         <HBox.margin>
             <Insets bottom="13.0" left="3.0" top="14.0"/>
         </HBox.margin>
     </Separator>
-    <VBox alignment="CENTER" stylesheets="@CSS.css" HBox.hgrow="ALWAYS">
+    <VBox alignment="CENTER" stylesheets="@css/CSS.css" HBox.hgrow="ALWAYS">
         <children>
             <Separator opacity="0.25" prefWidth="200.0">
                 <VBox.margin>
@@ -34,7 +34,7 @@
                                 </VBox.margin>
                             </ImageView>
                             <Label style="-fx-text-fill: black; -fx-font-weight: bold; -fx-font-size: 12;"
-                                   stylesheets="@CSS.css" text="CESAOpera">
+                                   stylesheets="@css/CSS.css" text="CESAOpera">
                                 <VBox.margin>
                                     <Insets top="10.0"/>
                                 </VBox.margin>
@@ -181,13 +181,13 @@
                 <children>
                     <VBox prefHeight="39.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                         <children>
-                            <Label stylesheets="@CSS.css" text="Azimut">
+                            <Label stylesheets="@css/CSS.css" text="Azimut">
                                 <VBox.margin>
                                     <Insets/>
                                 </VBox.margin>
                             </Label>
                             <TextField alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="150.0"/>
-                            <Label stylesheets="@CSS.css" text="Elevacion">
+                            <Label stylesheets="@css/CSS.css" text="Elevacion">
                                 <VBox.margin>
                                     <Insets top="10.0"/>
                                 </VBox.margin>
@@ -215,13 +215,13 @@
                     </Separator>
                     <VBox prefHeight="39.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                         <children>
-                            <Label stylesheets="@CSS.css" text="Fecha">
+                            <Label stylesheets="@css/CSS.css" text="Fecha">
                                 <VBox.margin>
                                     <Insets/>
                                 </VBox.margin>
                             </Label>
                             <TextField alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="150.0"/>
-                            <Label stylesheets="@CSS.css" text="Hora">
+                            <Label stylesheets="@css/CSS.css" text="Hora">
                                 <VBox.margin>
                                     <Insets top="10.0"/>
                                 </VBox.margin>

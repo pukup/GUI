@@ -1,20 +1,25 @@
 package psa.cesa.controller;
 
-import javafx.application.Platform;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.util.Duration;
 import psa.cesa.model.ComLine;
 import psa.cesa.view.Primary;
 
-import java.util.TimerTask;
-
-public class TimerCacheTask extends TimerTask {
+public class RefreshTimeLine {
 
     private Primary primary;
 
     private ComLine comLine16, comLine15, comLine14, comLine13, comLine12, comLine11, comLine10, comLine9, comLine8, comLine7, comLine6, comLine5, comLine4, comLine3, comLine2, comLine1;
 
-    public TimerCacheTask(Primary primary) {
+    public RefreshTimeLine(Primary primary) {
         this.primary = primary;
         getCache();
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(2500), ae -> refresh()));
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.play();
+
     }
 
     private void getCache() {
@@ -36,19 +41,9 @@ public class TimerCacheTask extends TimerTask {
         comLine1 = ComLineController.getAPICache(1);
     }
 
-    @Override
-    public void run() {
+    public void refresh() {
         getCache();
-        refreshRows();
-    }
-
-    private void refreshRows() {
-        Platform.runLater(new Runnable() {
-            @Override
-            public void run() {
-                primary.refreshRows();
-            }
-        });
+        primary.refreshRows();
     }
 
     public ComLine getComLine16() {
