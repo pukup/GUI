@@ -60,6 +60,17 @@
 .text-area .content {
     -fx-background-color: transparent;
 }
+.list-view {
+    -fx-font-family: Consolas;
+    -fx-font-size: 12;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: white;
+    -fx-border-width: 0.5 0.5 0.5 0.5;
+    -fx-background-color: transparent;
+}
+.list-view .content {
+    -fx-background-color: transparent;
+}
 .image-view{
     -fx-background-color: transparent;
 }
